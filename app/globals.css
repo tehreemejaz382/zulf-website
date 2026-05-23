@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  /* Brand Colors */
+  --color-black: #0A0A0A;
+  --color-gold: #C5A46E;
+  --color-white: #FFFFFF;
+  --color-gold-dark: #A88A55;
+}
+
+/* Elegant Typography */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Luxury Button Style */
+.btn-gold {
+  @apply inline-flex items-center justify-center px-8 py-3.5 
+         border border-[#C5A46E] text-[#C5A46E] tracking-[2px] text-sm 
+         transition-all duration-300 hover:bg-[#C5A46E] hover:text-black;
+}
+
+/* Section Spacing */
+.section {
+  @apply py-20 md:py-24;
+}
+
+/* Gold Accent Lines */
+.gold-line {
+  @apply w-8 h-px bg-[#C5A46E];
+}

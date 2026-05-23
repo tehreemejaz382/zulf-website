@@ -1,0 +1,182 @@
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+
+export default function ZulfHomepage() {
+  return (
+    <div className="bg-[#0A0A0A] text-white">
+      
+      {/* ==================== HERO ==================== */}
+      <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden px-4 md:px-6">
+        <div className="absolute inset-0 bg-[#0A0A0A]" />
+        <div className="absolute inset-0 bg-[radial-gradient(#C5A46E_0.35px,transparent_1px)] bg-[length:4px_4px] opacity-[0.05]" />
+
+        <div className="relative z-10 max-w-5xl px-4 md:px-6 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="text-[56px] sm:text-[68px] md:text-[92px] lg:text-[100px] leading-[0.9] tracking-[-4px] font-serif mb-6"
+          >
+            Your Crown<br />Deserves a Ritual.
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.15 }}
+            className="max-w-md mx-auto text-lg md:text-xl text-white/70 tracking-wide mb-10"
+          >
+            Fortified with mustard oil, fenugreek, onion, and rosemary —<br className="hidden md:block" />
+            crafted for every crown that refuses to thin.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.3 }}
+          >
+            <a href="#product" className="btn-gold px-8 md:px-12 py-4 text-base tracking-[3px]">
+              OWN YOUR CROWN
+            </a>
+          </motion.div>
+        </div>
+
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
+          <div className="text-[10px] tracking-[4px] text-white/40 mb-3">SCROLL TO BEGIN</div>
+          <div className="w-px h-10 bg-white/20" />
+        </div>
+      </section>
+
+      {/* ==================== BRAND PROMISE ==================== */}
+      <section className="section border-t border-white/10 px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="gold-line mx-auto mb-8" />
+          <h2 className="text-3xl md:text-[42px] leading-tight tracking-[-1.2px] font-serif">
+            In Pakistan, 76% of people experience hair loss.<br />
+            We built ZULF for the ones who refuse to accept it.
+          </h2>
+          <p className="mt-6 text-sm tracking-[2px] text-white/50">Source: Journal of Health and Rehabilitation Research, 2024</p>
+        </div>
+      </section>
+
+      {/* ==================== PRODUCT FEATURE ==================== */}
+      <section id="product" className="section border-t border-white/10 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-x-16 items-center">
+          <div>
+            <div className="uppercase tracking-[3px] text-[#C5A46E] text-sm mb-3">ZULF HAIR ELIXIR</div>
+            <h2 className="text-5xl md:text-6xl tracking-[-2px] font-serif leading-none mb-8">100ml · Handcrafted in Pakistan</h2>
+            <p className="text-lg text-white/80 mb-8 leading-relaxed">
+              A concentrated botanical elixir formulated to address the root causes of hair fall —
+              weakened follicles, scalp inflammation, and nutrient deprivation.
+            </p>
+            <a href="#shop" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW — Rs. 1,999</a>
+          </div>
+
+          <div className="mt-10 md:mt-0">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              <img src="/images/product/front.png" alt="ZULF Hair Elixir" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== INGREDIENT PREVIEW ==================== */}
+      <section className="section border-t border-white/10 bg-[#050505] px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl tracking-[-1px] font-serif">Four Ingredients. One Purpose.</h2>
+            <p className="mt-3 text-white/60">Each chosen for centuries of South Asian tradition and modern botanical research.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "Mustard Oil", src: "/images/ingredients/mustard-oil.png" },
+              { name: "Fenugreek", src: "/images/ingredients/fenugreek.png" },
+              { name: "Onion", src: "/images/ingredients/onion.png" },
+              { name: "Rosemary", src: "/images/ingredients/rosemary.png" }
+            ].map((item, index) => (
+              <div key={index} className="group overflow-hidden rounded-xl border border-white/10 bg-[#0A0A0A]">
+                <div className="relative h-60">
+                  <img src={item.src} alt={item.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+                </div>
+                <div className="p-7">
+                  <h4 className="text-2xl font-serif tracking-tight mb-3">{item.name}</h4>
+                  <p className="text-white/70 text-[15px]">
+                    {index === 0 && "Wood-pressed to preserve its full nutritional profile."}
+                    {index === 1 && "Rich in proteins traditionally used to support hair thickness."}
+                    {index === 2 && "Contains natural sulfur compounds known to support scalp health."}
+                    {index === 3 && "A powerful botanical with a long history of use for hair care."}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== BENEFITS ==================== */}
+      <section className="section border-t border-white/10 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-center text-4xl tracking-[-1px] font-serif mb-14">What Changes When You Use ZULF</h2>
+         
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              { label: "PRIMARY BENEFIT", title: "Reduced Hair Fall", desc: "Addresses the root causes of hair fall by nourishing follicles and calming the scalp." },
+              { label: "SCALP HEALTH", title: "Healthier Scalp", desc: "Helps reduce scalp inflammation and supports a balanced, comfortable environment." },
+              { label: "STRAND STRENGTH", title: "Stronger Strands", desc: "Regular nourishment helps improve strand resilience and reduces breakage over time." }
+            ].map((item, i) => (
+              <div key={i}>
+                <div className="text-[#C5A46E] text-xs tracking-[2.5px] mb-3">{item.label}</div>
+                <h4 className="text-2xl font-serif tracking-tight mb-4">{item.title}</h4>
+                <p className="text-white/70">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="relative w-full h-[340px] rounded-2xl overflow-hidden border border-white/10">
+            <img src="/images/homepage/benefits-texture.png" alt="Hair Texture" className="w-full h-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== HALAL & QUALITY ==================== */}
+      <section className="section border-t border-white/10 bg-[#050505] px-4 md:px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl tracking-[-0.5px] font-serif mb-12">Made With Integrity</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: "100% Halal", desc: "Every ingredient is plant-derived. No animal byproducts. No alcohol." },
+              { title: "No Parabens, Sulphates & Silicones", desc: "Clean formulation. Free from harsh chemicals that can damage hair and scalp." },
+              { title: "Kachi Ghani (Wood-Pressed)", desc: "Mustard oil is wood-pressed in small batches to preserve its full nutritional profile." }
+            ].map((item, i) => (
+              <div key={i} className="border border-white/10 p-8 text-left rounded-xl">
+                <div className="text-[#C5A46E] text-xs tracking-[2px] mb-4">STANDARD 0{i + 1}</div>
+                <h5 className="text-2xl font-serif tracking-tight mb-4">{item.title}</h5>
+                <p className="text-white/70 text-[15px]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== FINAL CTA ==================== */}
+      <section className="section border-t border-white/10 px-4 md:px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-x-16 items-center">
+          <div>
+            <h2 className="text-6xl tracking-[-2px] font-serif leading-none mb-8">Your Crown.<br />Your Ritual.<br />Your Choice.</h2>
+            <p className="text-xl text-white/70 mb-8">ZULF Hair Elixir — 100ml · Four Ingredients · One Decision</p>
+            <a href="#shop" className="btn-gold tracking-[2px] px-10 py-4">SHOP ZULF HAIR ELIXIR — Rs. 1,999</a>
+          </div>
+
+          <div className="mt-12 md:mt-0">
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10">
+              <img src="/images/homepage/final-cta-bottle.png" alt="ZULF" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
