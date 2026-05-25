@@ -46,7 +46,7 @@ export default function ProductPage() {
           </button>
 
           <p className="text-xs text-white/60 tracking-widest mb-8">
-            Free delivery above Rs. 3,900 • Dispatched within 24 hours • 30-day returns
+            Dispatched within 24 hours • 15-day returns
           </p>
 
           <div className="mb-8">
