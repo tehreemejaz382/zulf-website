@@ -23,7 +23,7 @@ export default function ProductPage() {
               <img src="/images/product/back.png" alt="Back Label" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg border border-white/10">
-              <img src="/images/product/dropper-closeup.png" alt="Dropper" className="w-full h-full object-cover" />
+              <img src="/images/product/oil-bottle-onion.png" alt="Bottle with Onion" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg border border-white/10">
               <img src="/images/product/oil-drop-macro.png" alt="Oil Drop" className="w-full h-full object-cover" />
