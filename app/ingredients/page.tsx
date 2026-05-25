@@ -4,25 +4,25 @@ import Link from 'next/link';
 const ingredients = [
   {
     name: "Wood-Pressed Mustard Oil",
-    image: "/images/ingredients/mustard-oil.png",
+    image: "/images/ingredients/mustard-oil.webp",
     description: "Extracted through traditional wood-pressing (Kachi Ghani) to preserve its natural nutrients, antioxidants, and fatty acids. Used for centuries in South Asia for scalp nourishment and hair strength.",
     science: "Rich in omega-3 and omega-6 fatty acids. Traditionally believed to improve blood circulation to the scalp and support hair follicle health."
   },
   {
     name: "Fenugreek (Methi)",
-    image: "/images/ingredients/fenugreek.png",
+    image: "/images/ingredients/fenugreek.webp",
     description: "Fenugreek seeds have been used for generations in South Asian hair rituals. Rich in proteins, lecithin, and nicotinic acid.",
     science: "Studies suggest fenugreek may help improve hair thickness and reduce hair fall. A 2006 clinical study observed favorable effects on hair growth in participants using fenugreek-based supplements."
   },
   {
     name: "Onion (Pyaaz)",
-    image: "/images/ingredients/onion.png",
+    image: "/images/ingredients/onion.webp",
     description: "Onion has long been used in traditional hair remedies across South Asia. Contains natural sulfur compounds and quercetin.",
     science: "Sulfur is essential for keratin production. Traditional use and some studies suggest onion may support scalp health and hair growth, particularly in cases of patchy hair loss."
   },
   {
     name: "Rosemary",
-    image: "/images/ingredients/rosemary.png",
+    image: "/images/ingredients/rosemary.webp",
     description: "A powerful aromatic herb with a long history of use in hair and scalp care. Known for its antioxidant and soothing properties.",
     science: "A 2015 randomized study published in Skinmed found rosemary oil to be comparable to 2% minoxidil in promoting hair growth over six months, with fewer side effects reported."
   }

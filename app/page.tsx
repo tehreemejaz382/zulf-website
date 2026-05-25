@@ -75,7 +75,7 @@ export default function ZulfHomepage() {
 
           <div className="mt-10 md:mt-0">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src="/images/product/front.png" alt="ZULF Hair Elixir" className="w-full h-full object-cover" />
+              <img src="/images/product/front.webp" alt="ZULF Hair Elixir" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -91,10 +91,10 @@ export default function ZulfHomepage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Mustard Oil", src: "/images/ingredients/mustard-oil.png" },
-              { name: "Fenugreek", src: "/images/ingredients/fenugreek.png" },
-              { name: "Onion", src: "/images/ingredients/onion.png" },
-              { name: "Rosemary", src: "/images/ingredients/rosemary.png" }
+              { name: "Mustard Oil", src: "/images/ingredients/mustard-oil.webp" },
+              { name: "Fenugreek", src: "/images/ingredients/fenugreek.webp" },
+              { name: "Onion", src: "/images/ingredients/onion.webp" },
+              { name: "Rosemary", src: "/images/ingredients/rosemary.webp" }
             ].map((item, index) => (
               <div key={index} className="group overflow-hidden rounded-xl border border-white/10 bg-[#0A0A0A]">
                 <div className="relative h-60">
@@ -135,7 +135,7 @@ export default function ZulfHomepage() {
           </div>
 
           <div className="relative w-full h-[340px] rounded-2xl overflow-hidden border border-white/10">
-            <img src="/images/homepage/benefits-texture.png" alt="Hair Texture" className="w-full h-full object-cover" />
+            <img src="/images/homepage/benefits-texture.webp" alt="Hair Texture" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -171,7 +171,7 @@ export default function ZulfHomepage() {
 
           <div className="mt-12 md:mt-0">
             <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10">
-              <img src="/images/homepage/final-cta-bottle.png" alt="ZULF" className="w-full h-full object-cover" />
+              <img src="/images/homepage/final-cta-bottle.webp" alt="ZULF" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

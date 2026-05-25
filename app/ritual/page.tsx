@@ -43,7 +43,7 @@ export default function RitualPage() {
       {/* Hero Image */}
       <div className="relative w-full h-[420px] mb-16 overflow-hidden rounded-xl border border-white/10">
         <img 
-          src="/images/product/oil-drop-macro.png" 
+          src="/images/product/oil-drop-macro.webp" 
           alt="ZULF Ritual - Oil Drop" 
           className="w-full h-full object-cover" 
         />

@@ -15,21 +15,21 @@ export default function ProductPage() {
         {/* Image Gallery */}
         <div className="space-y-4">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl border border-white/10">
-            <img src="/images/product/front.png" alt="ZULF Hair Elixir" className="w-full h-full object-cover" />
+            <img src="/images/product/front.webp" alt="ZULF Hair Elixir" className="w-full h-full object-cover" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative aspect-square overflow-hidden rounded-lg border border-white/10">
-              <img src="/images/product/back.png" alt="Back Label" className="w-full h-full object-cover" />
+              <img src="/images/product/back.webp" alt="Back Label" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg border border-white/10">
-              <img src="/images/product/oil-bottle-onion.png" alt="Bottle with Onion" className="w-full h-full object-cover" />
+              <img src="/images/product/oil-bottle-onion.webp" alt="Bottle with Onion" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg border border-white/10">
-              <img src="/images/product/oil-drop-macro.png" alt="Oil Drop" className="w-full h-full object-cover" />
+              <img src="/images/product/oil-drop-macro.webp" alt="Oil Drop" className="w-full h-full object-cover" />
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg border border-white/10">
-              <img src="/images/product/bottle-black-marble.png" alt="Bottle on Marble" className="w-full h-full object-cover" />
+              <img src="/images/product/bottle-black-marble.webp" alt="Bottle on Marble" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

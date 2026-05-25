@@ -24,7 +24,7 @@ export default function CartPage() {
             {/* Product Image */}
             <div className="relative w-28 h-28 flex-shrink-0 overflow-hidden rounded-lg border border-white/10">
               <Image 
-                src="/images/product/front.png" 
+                src="/images/product/front.webp" 
                 alt="ZULF Hair Elixir" 
                 fill 
                 className="object-cover" 
