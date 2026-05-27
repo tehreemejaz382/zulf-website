@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact ZULF — Get in Touch',
+  description: 'Have a question about ZULF Hair Elixir? Contact us via WhatsApp at +92 310 462 2755 or send us a message. We respond within 24 hours.',
+};
+
 import React from 'react';
 
 export default function ContactPage() {

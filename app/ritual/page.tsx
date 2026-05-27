@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'The Ritual — How to Use ZULF Hair Elixir',
+  description: 'Learn the ZULF hair care ritual. A step-by-step guide to applying ZULF Hair Elixir for maximum absorption and results. Turn your hair care into a daily ceremony.',
+};
+
 import React from 'react';
 import Link from 'next/link';
 

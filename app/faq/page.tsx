@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'FAQ — Common Questions About ZULF Hair Elixir',
+  description: 'Find answers to common questions about ZULF Hair Elixir — ingredients, halal certification, shipping, returns, how to use, and results timeline.',
+};
+
 import React from 'react';
 
 const faqs = [

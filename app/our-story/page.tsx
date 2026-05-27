@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Story — Why ZULF Was Created',
+  description: 'ZULF was born from a desire to bring luxury, halal-certified hair care to Pakistan. Discover the story behind the elixir and the vision of Feed Your Roots. Own Your Crown.',
+};
+
 import React from 'react';
 import Link from 'next/link';
 

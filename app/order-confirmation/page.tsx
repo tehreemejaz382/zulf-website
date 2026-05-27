@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Order Confirmed — ZULF Hair Elixir',
+  description: 'Your ZULF Hair Elixir order has been confirmed. We will dispatch within 24 hours. Thank you for choosing ZULF.',
+};
+
 import React from 'react';
 import Link from 'next/link';
 

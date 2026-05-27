@@ -17,8 +17,20 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'ZULF | Hair Elixir',
-  description: 'Feed Your Roots. Own Your Crown.',
+  title: {
+    default: 'ZULF Hair Elixir | Feed Your Roots. Own Your Crown.',
+    template: '%s | ZULF Hair Elixir',
+  },
+  description: 'ZULF Hair Elixir is a concentrated botanical hair oil made with Wood-Pressed Mustard Oil, Fenugreek, Onion, and Rosemary. 100% Halal. Handcrafted in Pakistan.',
+  keywords: ["hair oil Pakistan","halal hair oil","mustard oil for hair","hair fall treatment Pakistan","ZULF hair elixir"],
+  openGraph: {
+    title: 'ZULF Hair Elixir | Feed Your Roots. Own Your Crown.',
+    description: 'ZULF Hair Elixir is a concentrated botanical hair oil made with Wood-Pressed Mustard Oil, Fenugreek, Onion, and Rosemary. 100% Halal. Handcrafted in Pakistan.',
+    url: 'https://www.zulfhair.com',
+    siteName: 'ZULF Hair Elixir',
+    locale: 'en_PK',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

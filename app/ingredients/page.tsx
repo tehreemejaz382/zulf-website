@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Ingredients — The Science Behind ZULF Hair Elixir',
+  description: 'Discover the four powerful botanicals in ZULF Hair Elixir: Wood-Pressed Mustard Oil, Fenugreek, Onion, and Rosemary — each chosen for proven hair growth and scalp health benefits.',
+};
+
 import React from 'react';
 import Link from 'next/link';
 
