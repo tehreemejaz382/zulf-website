@@ -27,7 +27,7 @@ export default function ContactPage() {
       </a>
 
       <div className="space-y-4 text-white/80 text-sm tracking-widest mb-10">
-        <p>Email: contact@zulfhair.com</p>
+        <p>Email: <a href="mailto:hello@zulfhair.com" className="hover:text-[#C5A46E] transition-colors">hello@zulfhair.com</a></p>
         <p>Phone: +92 310 462 2755</p>
         <p>Website: www.zulfhair.com</p>
       </div>
@@ -36,8 +36,12 @@ export default function ContactPage() {
         We respond to every message within 24 hours.
       </div>
 
-      <div className="mt-16 text-xs text-white/50 tracking-widest">
-        Instagram &nbsp;•&nbsp; WhatsApp
+      <div className="mt-16 text-xs text-white/50 tracking-widest flex justify-center gap-x-4">
+        <a href="https://web.facebook.com/zulfhair/" target="_blank" className="hover:text-[#C5A46E] transition-colors">Facebook</a>
+        <span>•</span>
+        <a href="https://www.instagram.com/zulfhairofficial/" target="_blank" className="hover:text-[#C5A46E] transition-colors">Instagram</a>
+        <span>•</span>
+        <a href="https://wa.me/923104622755" target="_blank" className="hover:text-[#C5A46E] transition-colors">WhatsApp</a>
       </div>
     </div>
   );

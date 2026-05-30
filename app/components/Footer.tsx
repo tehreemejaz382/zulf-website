@@ -26,7 +26,8 @@ const Footer = () => {
         <div className="text-center text-sm text-white/60 mb-8 space-y-1">
           <p>www.zulfhair.com &nbsp;&nbsp;|&nbsp;&nbsp; +92 310 462 2755</p>
           <div className="flex justify-center gap-x-6 pt-2">
-            <a href="https://instagram.com" target="_blank" className="hover:text-white">Instagram</a>
+            <a href="https://web.facebook.com/zulfhair/" target="_blank" className="hover:text-white">Facebook</a>
+            <a href="https://www.instagram.com/zulfhairofficial/" target="_blank" className="hover:text-white">Instagram</a>
             <a href="https://wa.me/923104622755" target="_blank" className="hover:text-white">WhatsApp</a>
           </div>
         </div>
