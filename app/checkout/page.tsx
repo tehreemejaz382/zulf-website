@@ -11,8 +11,8 @@ export default function CheckoutPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const pricePerBottle = 1500;
-  const deliveryCharges = 200; // Rs. 200 delivery charge for Pakistan
+  const pricePerBottle = 1999;
+  const deliveryCharges = 300; // Rs. 300 delivery charge for Pakistan
 
   const totalAmount = (quantity * pricePerBottle) + deliveryCharges;
 
@@ -40,7 +40,7 @@ export default function CheckoutPage() {
     try {
       const response = await fetch(API_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(data),
       });
 
