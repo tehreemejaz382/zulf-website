@@ -1,174 +1,247 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+
+const API_URL = "https://script.google.com/macros/s/AKfycbxkM9FUYrjYUa02ByRkIsrPe0Va_C_u2XkcSgGR5oHOqSeinJn_w33xwojYEZPIjE8/exec";
 
 export default function CheckoutPage() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    address: '',
-    city: '',
-    province: '',
-  });
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [quantity, setQuantity] = useState(1);
+  const pricePerBottle = 1500;
+  const deliveryCharges = 200; // Rs. 200 delivery charge for Pakistan
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const totalAmount = (quantity * pricePerBottle) + deliveryCharges;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Order placed successfully! (This is a demo)');
+    setLoading(true);
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      action: "newOrder",
+      customerName: formData.get("fullName"),
+      phone: formData.get("phone"),
+      email: formData.get("email") || "",
+      city: formData.get("city"),
+      address: formData.get("address"),
+      product: "Zulf Hair Elixir",
+      quantity: quantity,
+      unitPrice: pricePerBottle,
+      shippingCharges: deliveryCharges,
+      orderSource: "Website",
+      customerNotes: formData.get("notes") || "",
+    };
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      // Google Apps Script responds with redirect sometimes, but standard fetch follows it
+      let result;
+      if (response.redirected) {
+        const redirectedResponse = await fetch(response.url);
+        result = await redirectedResponse.json();
+      } else {
+        result = await response.json();
+      }
+
+      if (result.success) {
+        // Redirect to confirmation page with orderId
+        router.push(`/checkout/confirmation?orderId=${result.orderId}`);
+      } else {
+        setError(result.error || "Failed to place order. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 pt-10 pb-20">
-      <h1 className="text-4xl tracking-[-1px] font-serif mb-10">Checkout</h1>
+    <div className="min-h-screen bg-black text-white pt-24 pb-12">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h1 className="text-3xl md:text-4xl font-serif text-[#C5A46E] mb-8 text-center uppercase tracking-widest">
+          Secure Checkout
+        </h1>
 
-      <div className="grid lg:grid-cols-5 gap-x-12">
-        
-        {/* Checkout Form */}
-        <div className="lg:col-span-3">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Form Section */}
+          <div className="flex-1 bg-zinc-900/50 p-6 md:p-8 rounded-xl border border-zinc-800">
+            <h2 className="text-xl text-[#C5A46E] mb-6 font-semibold uppercase tracking-wider border-b border-zinc-800 pb-4">
+              Delivery Details
+            </h2>
+
+            {error && (
+              <div className="bg-red-900/50 border border-red-500 text-red-200 p-4 rounded-md mb-6">
+                {error}
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm text-zinc-400 mb-2">Full Name *</label>
+                  <input
+                    required
+                    name="fullName"
+                    type="text"
+                    className="w-full bg-zinc-950 border border-zinc-800 p-3 rounded-md focus:border-[#C5A46E] focus:outline-none transition-colors"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm text-zinc-400 mb-2">Phone Number *</label>
+                  <input
+                    required
+                    name="phone"
+                    type="tel"
+                    className="w-full bg-zinc-950 border border-zinc-800 p-3 rounded-md focus:border-[#C5A46E] focus:outline-none transition-colors"
+                    placeholder="03XXXXXXXXX"
+                  />
+                </div>
+              </div>
+
               <div>
-                <label className="block text-sm tracking-widest mb-2">FIRST NAME</label>
-                <input 
-                  type="text" 
-                  name="firstName" 
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="w-full bg-transparent border border-white/20 px-4 py-3 focus:outline-none focus:border-[#C5A46E]" 
-                  required 
+                <label className="block text-sm text-zinc-400 mb-2">Email Address (Optional)</label>
+                <input
+                  name="email"
+                  type="email"
+                  className="w-full bg-zinc-950 border border-zinc-800 p-3 rounded-md focus:border-[#C5A46E] focus:outline-none transition-colors"
+                  placeholder="For order confirmation email"
                 />
               </div>
+
               <div>
-                <label className="block text-sm tracking-widest mb-2">LAST NAME</label>
-                <input 
-                  type="text" 
-                  name="lastName" 
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="w-full bg-transparent border border-white/20 px-4 py-3 focus:outline-none focus:border-[#C5A46E]" 
-                  required 
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm tracking-widest mb-2">EMAIL ADDRESS</label>
-              <input 
-                type="email" 
-                name="email" 
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full bg-transparent border border-white/20 px-4 py-3 focus:outline-none focus:border-[#C5A46E]" 
-                required 
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm tracking-widest mb-2">PHONE NUMBER</label>
-              <input 
-                type="tel" 
-                name="phone" 
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full bg-transparent border border-white/20 px-4 py-3 focus:outline-none focus:border-[#C5A46E]" 
-                required 
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm tracking-widest mb-2">DELIVERY ADDRESS</label>
-              <input 
-                type="text" 
-                name="address" 
-                value={formData.address}
-                onChange={handleChange}
-                className="w-full bg-transparent border border-white/20 px-4 py-3 focus:outline-none focus:border-[#C5A46E]" 
-                required 
-              />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm tracking-widest mb-2">CITY</label>
-                <input 
-                  type="text" 
-                  name="city" 
-                  value={formData.city}
-                  onChange={handleChange}
-                  className="w-full bg-transparent border border-white/20 px-4 py-3 focus:outline-none focus:border-[#C5A46E]" 
-                  required 
-                />
-              </div>
-              <div>
-                <label className="block text-sm tracking-widest mb-2">PROVINCE</label>
-                <select 
-                  name="province" 
-                  value={formData.province}
-                  onChange={handleChange}
-                  className="w-full bg-[#0A0A0A] border border-white/20 px-4 py-3 focus:outline-none focus:border-[#C5A46E]" 
+                <label className="block text-sm text-zinc-400 mb-2">City *</label>
+                <select
                   required
+                  name="city"
+                  className="w-full bg-zinc-950 border border-zinc-800 p-3 rounded-md focus:border-[#C5A46E] focus:outline-none transition-colors appearance-none"
                 >
-                  <option value="">Select Province</option>
-                  <option value="Punjab">Punjab</option>
-                  <option value="Sindh">Sindh</option>
-                  <option value="KPK">Khyber Pakhtunkhwa</option>
-                  <option value="Balochistan">Balochistan</option>
+                  <option value="">Select your city</option>
+                  <option value="Karachi">Karachi</option>
+                  <option value="Lahore">Lahore</option>
                   <option value="Islamabad">Islamabad</option>
+                  <option value="Rawalpindi">Rawalpindi</option>
+                  <option value="Faisalabad">Faisalabad</option>
+                  <option value="Multan">Multan</option>
+                  <option value="Peshawar">Peshawar</option>
+                  <option value="Quetta">Quetta</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
-            </div>
 
-            {/* Payment Method */}
-            <div className="pt-6">
-              <label className="block text-sm tracking-widest mb-3">PAYMENT METHOD</label>
-              <div className="border border-white/20 p-4 rounded">
-                <label className="flex items-center gap-3">
-                  <input type="radio" name="payment" defaultChecked />
-                  <span>Cash on Delivery (COD)</span>
-                </label>
-                <p className="text-xs text-white/50 mt-2 ml-6">Pay when your order is delivered.</p>
+              <div>
+                <label className="block text-sm text-zinc-400 mb-2">Complete Address *</label>
+                <textarea
+                  required
+                  name="address"
+                  rows={3}
+                  className="w-full bg-zinc-950 border border-zinc-800 p-3 rounded-md focus:border-[#C5A46E] focus:outline-none transition-colors"
+                  placeholder="House/Apartment no, Street, Area"
+                ></textarea>
               </div>
-            </div>
 
-            <button 
-              type="submit"
-              className="btn-gold w-full py-4 mt-6 tracking-[2px] text-base"
-            >
-              PLACE ORDER
-            </button>
-          </form>
-        </div>
+              <div>
+                <label className="block text-sm text-zinc-400 mb-2">Special Instructions (Optional)</label>
+                <input
+                  name="notes"
+                  type="text"
+                  className="w-full bg-zinc-950 border border-zinc-800 p-3 rounded-md focus:border-[#C5A46E] focus:outline-none transition-colors"
+                  placeholder="E.g., Please call before delivery"
+                />
+              </div>
 
-        {/* Order Summary Sidebar */}
-        <div className="lg:col-span-2 mt-12 lg:mt-0">
-          <div className="bg-[#111] p-6 rounded-xl border border-white/10 sticky top-24">
-            <h4 className="font-medium tracking-widest text-sm mb-6">ORDER SUMMARY</h4>
-            
-            <div className="space-y-4 text-sm">
-              <div className="flex justify-between">
-                <span>ZULF Hair Elixir × 1</span>
-                <span>Rs. 1,999</span>
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-[#C5A46E] text-black font-bold py-4 px-8 rounded-full hover:bg-white transition-colors duration-300 uppercase tracking-widest text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {loading ? "Processing..." : "Place Order (Cash on Delivery)"}
+                </button>
+                <p className="text-zinc-500 text-xs text-center mt-4">
+                  By placing this order, you agree to pay cash upon delivery.
+                </p>
               </div>
-              <div className="flex justify-between">
-                <span>Shipping</span>
-                <span>Rs. 300</span>
-              </div>
-              <div className="border-t border-white/10 pt-4 flex justify-between font-medium text-lg">
-                <span>Total</span>
-                <span>Rs. 2,249</span>
-              </div>
-            </div>
+            </form>
+          </div>
 
-            <div className="mt-8 text-xs text-white/60 tracking-widest">
-              <p>✓ Secure Checkout</p>
-              <p>✓ 100% Halal</p>
-              <p>✓ 30-Day Return Policy</p>
+          {/* Order Summary */}
+          <div className="lg:w-[400px]">
+            <div className="bg-zinc-900/50 p-6 md:p-8 rounded-xl border border-zinc-800 sticky top-24">
+              <h2 className="text-xl text-[#C5A46E] mb-6 font-semibold uppercase tracking-wider border-b border-zinc-800 pb-4">
+                Order Summary
+              </h2>
+
+              <div className="flex gap-4 mb-6">
+                <div className="w-20 h-20 bg-zinc-950 border border-zinc-800 rounded-md overflow-hidden relative">
+                  {/* Ideally, we'd use next/image here, but fallback to simple div if no image */}
+                  <div className="absolute inset-0 flex items-center justify-center text-[#C5A46E] font-serif font-bold">
+                    ZULF
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-lg">Zulf Hair Elixir</h3>
+                  <p className="text-zinc-400 text-sm">Premium Hair Oil</p>
+                  <p className="text-[#C5A46E] font-medium mt-1">Rs. {pricePerBottle.toLocaleString()}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mb-8 pb-8 border-b border-zinc-800">
+                <span className="text-zinc-400">Quantity</span>
+                <div className="flex items-center gap-4 bg-zinc-950 rounded-full border border-zinc-800 px-4 py-1">
+                  <button
+                    type="button"
+                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                    className="text-2xl text-zinc-500 hover:text-white pb-1"
+                  >
+                    -
+                  </button>
+                  <span className="w-8 text-center font-medium">{quantity}</span>
+                  <button
+                    type="button"
+                    onClick={() => setQuantity(Math.min(5, quantity + 1))}
+                    className="text-2xl text-zinc-500 hover:text-white pb-1"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-zinc-400">Subtotal ({quantity} items)</span>
+                  <span>Rs. {(quantity * pricePerBottle).toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-zinc-400">Delivery Charges</span>
+                  <span>Rs. {deliveryCharges}</span>
+                </div>
+                <div className="flex justify-between pt-4 border-t border-zinc-800 font-bold text-lg text-[#C5A46E]">
+                  <span>Total</span>
+                  <span>Rs. {totalAmount.toLocaleString()}</span>
+                </div>
+              </div>
+
+              <div className="mt-8 bg-zinc-950 p-4 rounded-md border border-zinc-800 flex items-center gap-3">
+                <svg className="w-6 h-6 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <p className="text-sm text-zinc-300">
+                  <span className="font-bold">Cash on Delivery</span> available. You will only pay when you receive the product.
+                </p>
+              </div>
             </div>
           </div>
         </div>

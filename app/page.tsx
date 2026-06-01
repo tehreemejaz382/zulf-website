@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function ZulfHomepage() {
   return (
@@ -70,7 +71,7 @@ export default function ZulfHomepage() {
               A concentrated botanical elixir formulated to address the root causes of hair fall —
               weakened follicles, scalp inflammation, and nutrient deprivation.
             </p>
-            <a href="#shop" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW — Rs. 1,999</a>
+            <Link href="/checkout" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW - Rs. 1,500</Link>
           </div>
 
           <div className="mt-10 md:mt-0">
@@ -166,7 +167,7 @@ export default function ZulfHomepage() {
           <div>
             <h2 className="text-6xl tracking-[-2px] font-serif leading-none mb-8">Your Crown.<br />Your Ritual.<br />Your Choice.</h2>
             <p className="text-xl text-white/70 mb-8">ZULF Hair Elixir — 100ml · Four Ingredients · One Decision</p>
-            <a href="#shop" className="btn-gold tracking-[2px] px-10 py-4">SHOP ZULF HAIR ELIXIR — Rs. 1,999</a>
+            <Link href="/checkout" className="btn-gold tracking-[2px] px-10 py-4">SHOP ZULF HAIR ELIXIR - Rs. 1,500</Link>
           </div>
 
           <div className="mt-12 md:mt-0">
