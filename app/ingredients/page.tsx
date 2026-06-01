@@ -77,7 +77,7 @@ export default function IngredientsPage() {
       {/* Sourcing Statement */}
       <div className="mt-20 pt-12 border-t border-white/10 text-center max-w-2xl mx-auto">
         <p className="text-white/70">
-          All ingredients are sourced from verified suppliers. Our mustard oil is wood-pressed in small batches to preserve its full nutritional profile. No heat treatment. No refinement.
+          All ingredients are sourced from verified suppliers. Our mustard oil is wood-pressed in small batches to preserve its full nutritional profile. No refinement.
         </p>
       </div>
 

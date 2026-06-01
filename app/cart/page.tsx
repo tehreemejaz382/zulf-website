@@ -8,7 +8,7 @@ export default function CartPage() {
   const [quantity, setQuantity] = useState(1);
 
   const price = 1999;
-  const shipping = 250;
+  const shipping = 300;
   const total = price * quantity + shipping;
 
   return (

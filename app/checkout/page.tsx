@@ -157,7 +157,7 @@ export default function CheckoutPage() {
               </div>
               <div className="flex justify-between">
                 <span>Shipping</span>
-                <span>Rs. 250</span>
+                <span>Rs. 300</span>
               </div>
               <div className="border-t border-white/10 pt-4 flex justify-between font-medium text-lg">
                 <span>Total</span>
