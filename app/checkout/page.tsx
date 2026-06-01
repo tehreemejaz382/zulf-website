@@ -44,14 +44,7 @@ export default function CheckoutPage() {
         body: JSON.stringify(data),
       });
 
-      // Google Apps Script responds with redirect sometimes, but standard fetch follows it
-      let result;
-      if (response.redirected) {
-        const redirectedResponse = await fetch(response.url);
-        result = await redirectedResponse.json();
-      } else {
-        result = await response.json();
-      }
+      const result = await response.json();
 
       if (result.success) {
         // Redirect to confirmation page with orderId
