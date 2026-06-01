@@ -63,14 +63,14 @@ export default function CheckoutPage() {
   return (
     <div className="min-h-screen bg-black text-white pt-24 pb-12">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h1 className="text-3xl md:text-4xl font-serif text-[#C5A46E] mb-8 text-center uppercase tracking-widest">
+        <h1 className="text-3xl md:text-4xl text-[#C5A46E] mb-8 text-center uppercase tracking-widest" style={{ fontFamily: "var(--font-playfair, serif)" }}>
           Secure Checkout
         </h1>
 
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Form Section */}
           <div className="flex-1 bg-zinc-900/50 p-6 md:p-8 rounded-xl border border-zinc-800">
-            <h2 className="text-xl text-[#C5A46E] mb-6 font-semibold uppercase tracking-wider border-b border-zinc-800 pb-4">
+            <h2 className="text-xl text-[#C5A46E] mb-6 uppercase tracking-wider border-b border-zinc-800 pb-4" style={{ fontFamily: "var(--font-playfair, serif)" }}>
               Delivery Details
             </h2>
 
@@ -173,7 +173,7 @@ export default function CheckoutPage() {
           {/* Order Summary */}
           <div className="lg:w-[400px]">
             <div className="bg-zinc-900/50 p-6 md:p-8 rounded-xl border border-zinc-800 sticky top-24">
-              <h2 className="text-xl text-[#C5A46E] mb-6 font-semibold uppercase tracking-wider border-b border-zinc-800 pb-4">
+              <h2 className="text-xl text-[#C5A46E] mb-6 uppercase tracking-wider border-b border-zinc-800 pb-4" style={{ fontFamily: "var(--font-playfair, serif)" }}>
                 Order Summary
               </h2>
 
