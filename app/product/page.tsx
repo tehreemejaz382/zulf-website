@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const images = [
   { src: '/images/product/front.webp', alt: 'ZULF Hair Elixir — Front' },
@@ -68,9 +69,9 @@ export default function ProductPage() {
 
           <div className="text-3xl font-medium mb-6">Rs. {price}</div>
 
-          <button className="w-full btn-gold py-4 text-base tracking-[2px] mb-4">
+          <Link href="/checkout" className="block w-full text-center btn-gold py-4 text-base tracking-[2px] mb-4">
             ADD TO CART — Rs. {price}
-          </button>
+          </Link>
 
           <p className="text-xs text-white/60 tracking-widest mb-8">
             Dispatched within 24 hours • 15-day returns

@@ -21,7 +21,7 @@ function ConfirmationContent() {
       </h2>
 
       <p className="text-zinc-300 text-lg mb-8 max-w-md mx-auto">
-        Thank you for choosing Zulf Hair. Your order has been received and is being processed.
+        Thank you for choosing Zulf. Your order has been received and is being processed.
       </p>
 
       {orderId && (
