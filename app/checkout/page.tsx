@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbwlPCRUvQUVFsE2eG_w6Cm495KmgAJWrM0NvFTw0zjop9tI4Vf9Zy__y75QmeiXgy4E/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbweIjZGUzSHMBBHzGD_-GU0J0gC8ZWjdVIFj7D1SQbwC-rpvUrrtVDjhqbMcEJtuN26/exec";
 
 export default function CheckoutPage() {
   const router = useRouter();
