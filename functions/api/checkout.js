@@ -7,17 +7,39 @@ export async function onRequestPost(context) {
     const BREVO_API_KEY = typeof atob === 'function' ? atob(BREVO_API_KEY_B64) : Buffer.from(BREVO_API_KEY_B64, 'base64').toString('utf-8');
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwlPCRUvQUVFsE2eG_w6Cm495KmgAJWrM0NvFTw0zjop9tI4Vf9Zy__y75QmeiXgy4E/exec";
     
-    // 1. Send Premium Customer Email via Brevo (Instant, Professional)
-    if (data.email) {
-      const email = data.email;
-      const name = data.customerName || 'Customer';
-      const product = data.product || 'Zulf Hair Elixir';
-      const quantity = data.quantity || '1';
-      const total = (data.unitPrice || 1999) * parseInt(quantity);
-      const address = data.address || '';
-      const city = data.city || '';
-      const phone = data.phone || '';
+    const realEmail = data.email || '';
+    const name = data.customerName || 'Customer';
+    const product = data.product || 'Zulf Hair Elixir';
+    const quantity = data.quantity || '1';
+    const total = (data.unitPrice || 1999) * parseInt(quantity);
+    const address = data.address || '';
+    const city = data.city || '';
+    const phone = data.phone || '';
 
+    // 1. Modify data before sending to Google Apps Script
+    const hackedData = { ...data };
+    if (realEmail) {
+      // By removing the email field entirely, Google Apps Script will skip its own email function!
+      // This permanently stops the duplicate tehreemejaz382@gmail.com email.
+      delete hackedData.email; 
+      // We safely store the customer's email in the admin notes so you can still see it in the dashboard.
+      hackedData.customerNotes = (hackedData.customerNotes ? hackedData.customerNotes + " | " : "") + "Email: " + realEmail;
+    }
+
+    // 2. Save to Google Sheets FIRST so we can get the generated Order ID
+    const googleResponse = await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+      body: JSON.stringify(hackedData)
+    });
+
+    const googleResult = await googleResponse.json();
+    const orderId = googleResult.orderId || "Pending";
+
+    // 3. Send the Premium Customer Email via Brevo with the REAL Order ID
+    if (realEmail) {
       const htmlBody = `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px; border-radius: 12px;">
           <div style="text-align: center; margin-bottom: 30px;">
@@ -30,6 +52,10 @@ export async function onRequestPost(context) {
             <p style="color: #cccccc;">Your order has been confirmed and is being processed.</p>
             
             <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+              <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 12px 0; color: #999;">Order ID</td>
+                <td style="padding: 12px 0; text-align: right; font-weight: bold; color: #C5A46E;">${orderId}</td>
+              </tr>
               <tr style="border-bottom: 1px solid #333;">
                 <td style="padding: 12px 0; color: #999;">Product</td>
                 <td style="padding: 12px 0; text-align: right; color: #fff;">${product}</td>
@@ -72,8 +98,8 @@ export async function onRequestPost(context) {
 
       const payload = {
         sender: { name: "Zulf", email: "order@zulfhair.com" },
-        to: [{ email: email, name: name }],
-        subject: "Order Confirmed ✅ — Zulf",
+        to: [{ email: realEmail, name: name }],
+        subject: `Order Confirmed ✅ ${orderId} — Zulf`,
         htmlContent: htmlBody
       };
 
@@ -92,23 +118,6 @@ export async function onRequestPost(context) {
         console.error("Brevo Error:", text);
       }
     }
-
-    // 2. Modify email to hack/bypass Google Script's duplicate email sender
-    const hackedData = { ...data };
-    if (hackedData.email) {
-      hackedData.email = hackedData.email + " (Brevo)";
-    }
-
-    // 3. Save to Google Sheets
-    const googleResponse = await fetch(GOOGLE_SCRIPT_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'text/plain',
-      },
-      body: JSON.stringify(hackedData)
-    });
-
-    const googleResult = await googleResponse.json();
 
     return Response.json(googleResult);
   } catch (error) {
