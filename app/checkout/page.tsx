@@ -11,21 +11,46 @@ export default function CheckoutPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [phoneError, setPhoneError] = useState("");
   const pricePerBottle = 1999;
   const deliveryCharges = 300; // Rs. 300 delivery charge for Pakistan
 
   const totalAmount = (quantity * pricePerBottle) + deliveryCharges;
 
+  const validatePhone = (phone: string): string => {
+    // Remove spaces, dashes, and dots
+    const cleaned = phone.replace(/[\s\-\.]/g, "");
+    if (!cleaned) return "Phone number is required";
+    if (!/^\d+$/.test(cleaned)) return "Phone number must contain only digits";
+    if (cleaned.length < 10) return "Phone number is too short";
+    if (cleaned.length > 12) return "Phone number is too long";
+    if (cleaned.startsWith("0") && cleaned.length !== 11) return "Pakistani numbers must be 11 digits (e.g. 03001234567)";
+    if (cleaned.startsWith("0") && !cleaned.startsWith("03")) return "Mobile number must start with 03";
+    if (cleaned === "0" || cleaned === "00" || /^0+$/.test(cleaned)) return "Please enter a valid phone number";
+    return "";
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
     setError("");
+    setPhoneError("");
 
     const formData = new FormData(e.currentTarget);
+    const phone = (formData.get("phone") as string || "").trim();
+
+    // Validate phone number
+    const phoneValidation = validatePhone(phone);
+    if (phoneValidation) {
+      setPhoneError(phoneValidation);
+      return;
+    }
+
+    setLoading(true);
+
     const data = {
       action: "newOrder",
       customerName: formData.get("fullName"),
-      phone: formData.get("phone"),
+      phone: phone,
       email: formData.get("email") || "",
       city: formData.get("city"),
       address: formData.get("address"),
@@ -98,9 +123,19 @@ export default function CheckoutPage() {
                     required
                     name="phone"
                     type="tel"
-                    className="w-full bg-zinc-950 border border-zinc-800 p-3 rounded-md focus:border-[#C5A46E] focus:outline-none transition-colors"
-                    placeholder="03XXXXXXXXX"
+                    maxLength={11}
+                    pattern="03[0-9]{9}"
+                    onChange={(e) => {
+                      const val = e.target.value.replace(/[^\d]/g, "");
+                      e.target.value = val;
+                      if (phoneError) setPhoneError("");
+                    }}
+                    className={`w-full bg-zinc-950 border ${phoneError ? 'border-red-500' : 'border-zinc-800'} p-3 rounded-md focus:border-[#C5A46E] focus:outline-none transition-colors`}
+                    placeholder="03001234567"
                   />
+                  {phoneError && (
+                    <p className="text-red-400 text-xs mt-1">{phoneError}</p>
+                  )}
                 </div>
               </div>
 

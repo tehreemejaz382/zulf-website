@@ -2,9 +2,8 @@ export async function onRequestPost(context) {
   try {
     const data = await context.request.json();
     
-    // Base64 decode the key to securely bypass GitHub's secret scanner
-    const BREVO_API_KEY_B64 = "eGtleXNpYi02NjI2OWU1YzgxNDU2MGEyODAxNWVhYjJhZjZjMjgzM2I5ZDE0ZGJkNTA0NjFiNTg5ZjM1NWFkMDdmODkwZDQwLWo4aWREQ3FOT3BLWDUydEc=";
-    const BREVO_API_KEY = typeof atob === 'function' ? atob(BREVO_API_KEY_B64) : Buffer.from(BREVO_API_KEY_B64, 'base64').toString('utf-8');
+    // Read Brevo API key from Cloudflare Pages environment variable (secure, never in code)
+    const BREVO_API_KEY = context.env.BREVO_API_KEY || "";
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwlPCRUvQUVFsE2eG_w6Cm495KmgAJWrM0NvFTw0zjop9tI4Vf9Zy__y75QmeiXgy4E/exec";
     
     const realEmail = data.email || '';
@@ -16,30 +15,28 @@ export async function onRequestPost(context) {
     const city = data.city || '';
     const phone = data.phone || '';
 
-    // 1. Modify data before sending to Google Apps Script
-    const hackedData = { ...data };
+    // 1. Remove email before sending to Google Apps Script
+    //    This prevents Google Apps Script from sending its own duplicate email
+    const gsData = { ...data };
     if (realEmail) {
-      // By removing the email field entirely, Google Apps Script will skip its own email function!
-      // This permanently stops the duplicate tehreemejaz382@gmail.com email.
-      delete hackedData.email; 
-      // We safely store the customer's email in the admin notes so you can still see it in the dashboard.
-      hackedData.customerNotes = (hackedData.customerNotes ? hackedData.customerNotes + " | " : "") + "Email: " + realEmail;
+      delete gsData.email;
+      gsData.customerNotes = (gsData.customerNotes ? gsData.customerNotes + " | " : "") + "Email: " + realEmail;
     }
 
-    // 2. Save to Google Sheets FIRST so we can get the generated Order ID
+    // 2. Save to Google Sheets FIRST so we get the Order ID
     const googleResponse = await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'text/plain',
       },
-      body: JSON.stringify(hackedData)
+      body: JSON.stringify(gsData)
     });
 
     const googleResult = await googleResponse.json();
     const orderId = googleResult.orderId || "Pending";
 
     // 3. Send the Premium Customer Email via Brevo with the REAL Order ID
-    if (realEmail) {
+    if (realEmail && BREVO_API_KEY) {
       const htmlBody = `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px; border-radius: 12px;">
           <div style="text-align: center; margin-bottom: 30px;">
