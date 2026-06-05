@@ -46,10 +46,10 @@ export default function ZulfHomepage() {
         </AnimatePresence>
 
         {/* Dark Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/40 md:via-black/30 to-transparent z-[1]" />
 
         {/* Hero Text Content */}
-        <div className="absolute inset-0 z-[2] flex items-start pt-32 md:pt-48 justify-start px-6 md:px-16 lg:px-24">
+        <div className="absolute inset-0 z-[2] flex items-start pt-28 md:pt-48 justify-start px-6 md:px-16 lg:px-24">
           <div className="max-w-2xl text-left">
             <motion.h1
               initial={{ opacity: 0, x: -40 }}
