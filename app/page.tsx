@@ -46,36 +46,36 @@ export default function ZulfHomepage() {
         </AnimatePresence>
 
         {/* Dark Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/40 md:via-black/30 to-transparent z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/90 via-black/40 md:via-black/30 to-transparent z-[1]" />
 
         {/* Hero Text Content */}
-        <div className="absolute inset-0 z-[2] flex items-start pt-28 md:pt-48 justify-start px-6 md:px-16 lg:px-24">
-          <div className="max-w-2xl text-left">
+        <div className="absolute inset-0 z-[2] flex items-end md:items-start pb-24 md:pb-0 pt-0 md:pt-48 justify-center md:justify-start px-6 md:px-16 lg:px-24">
+          <div className="max-w-2xl text-center md:text-left flex flex-col items-center md:items-start">
             <motion.h1
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[62px] leading-[0.95] tracking-[-2px] font-serif mb-4"
+              className="text-[40px] sm:text-[46px] md:text-[52px] lg:text-[62px] leading-[0.95] tracking-[-2px] font-serif mb-4"
             >
               Your Crown<br />Deserves a Ritual.
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.15 }}
-              className="max-w-md text-sm md:text-base text-white/60 tracking-wide mb-8"
+              className="max-w-md text-[15px] md:text-base text-white/70 tracking-wide mb-8"
             >
               Fortified with mustard oil, fenugreek, onion, and rosemary —<br className="hidden md:block" />
               crafted for every crown that refuses to thin.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.3 }}
             >
-              <a href="#product" className="btn-gold px-8 md:px-12 py-4 text-base tracking-[3px]">
+              <a href="#product" className="btn-gold px-8 md:px-12 py-4 text-sm md:text-base tracking-[3px]">
                 OWN YOUR CROWN
               </a>
             </motion.div>
