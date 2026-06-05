@@ -65,10 +65,10 @@ export default function ZulfHomepage() {
       <section id="product" className="section border-t border-white/10 px-4 md:px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-x-16 items-center">
           <div>
-            <div className="uppercase tracking-[3px] text-[#C5A46E] text-sm mb-3">ZULF HAIR ELIXIR</div>
-            <h2 className="text-5xl md:text-6xl tracking-[-2px] font-serif leading-none mb-8">100ml · Handcrafted in Pakistan</h2>
+            <div className="uppercase tracking-[3px] text-[#C5A46E] text-sm mb-3">BY ZULF</div>
+            <h2 className="text-5xl md:text-6xl tracking-[-2px] font-serif leading-none mb-8">Hair Elixir</h2>
             <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              A concentrated botanical elixir formulated to address the root causes of hair fall —
+              A concentrated organic elixir formulated to address the root causes of hair fall —
               weakened follicles, scalp inflammation, and nutrient deprivation.
             </p>
             <Link href="/checkout" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW - Rs. 1,999</Link>
@@ -166,8 +166,8 @@ export default function ZulfHomepage() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-x-16 items-center">
           <div>
             <h2 className="text-6xl tracking-[-2px] font-serif leading-none mb-8">Your Crown.<br />Your Ritual.<br />Your Choice.</h2>
-            <p className="text-xl text-white/70 mb-8">ZULF Hair Elixir — 100ml · Four Ingredients · One Decision</p>
-            <Link href="/checkout" className="btn-gold tracking-[2px] px-10 py-4">SHOP ZULF HAIR ELIXIR - Rs. 1,999</Link>
+            <p className="text-xl text-white/70 mb-8">Hair Elixir by ZULF — Four Ingredients · One Decision</p>
+            <Link href="/checkout" className="btn-gold tracking-[2px] px-10 py-4">SHOP HAIR ELIXIR - Rs. 1,999</Link>
           </div>
 
           <div className="mt-12 md:mt-0">
