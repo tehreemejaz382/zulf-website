@@ -1,96 +1,100 @@
 'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
+const heroSlides = [
+  '/images/homepage/hero-1.webp',
+  '/images/homepage/hero-2.webp',
+  '/images/homepage/hero-3.webp',
+  '/images/homepage/hero-4.webp',
+  '/images/homepage/hero-5.webp',
+];
+
 export default function ZulfHomepage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="bg-[#0A0A0A] text-white">
       
       {/* ==================== HERO ==================== */}
-      <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden px-4 md:px-6">
-        <div className="absolute inset-0 bg-[#0A0A0A]" />
-        <div className="absolute inset-0 bg-[radial-gradient(#C5A46E_0.35px,transparent_1px)] bg-[length:4px_4px] opacity-[0.05]" />
+      <section className="relative h-[100dvh] overflow-hidden">
 
-        <div className="relative z-10 max-w-5xl px-4 md:px-6 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[56px] sm:text-[68px] md:text-[92px] lg:text-[100px] leading-[0.9] tracking-[-4px] font-serif mb-6"
-          >
-            Your Crown<br />Deserves a Ritual.
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            className="max-w-md mx-auto text-lg md:text-xl text-white/70 tracking-wide mb-10"
-          >
-            Fortified with mustard oil, fenugreek, onion, and rosemary —<br className="hidden md:block" />
-            crafted for every crown that refuses to thin.
-          </motion.p>
-
+        {/* Full-Screen Sliding Images */}
+        <AnimatePresence mode="wait">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.3 }}
+            key={currentSlide}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute inset-0"
           >
-            <a href="#product" className="btn-gold px-8 md:px-12 py-4 text-base tracking-[3px]">
-              OWN YOUR CROWN
-            </a>
+            <img
+              src={heroSlides[currentSlide]}
+              alt="ZULF Hair Elixir"
+              className="w-full h-full object-cover"
+            />
           </motion.div>
-        </div>
+        </AnimatePresence>
 
-        {/* Sliding Image Marquee */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.6 }}
-          className="relative z-10 w-full mt-16 mb-20 overflow-hidden"
-        >
-          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#0A0A0A] to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#0A0A0A] to-transparent z-10" />
-          
-          <div className="marquee-track">
-            {[
-              { src: '/images/product/front.webp', alt: 'Hair Elixir Front' },
-              { src: '/images/ingredients/mustard-oil.webp', alt: 'Mustard Oil' },
-              { src: '/images/product/oil-drop-macro.webp', alt: 'Oil Drop' },
-              { src: '/images/ingredients/fenugreek.webp', alt: 'Fenugreek' },
-              { src: '/images/product/bottle-black-marble.webp', alt: 'Bottle on Marble' },
-              { src: '/images/ingredients/onion.webp', alt: 'Onion' },
-              { src: '/images/product/back.webp', alt: 'Back Label' },
-              { src: '/images/ingredients/rosemary.webp', alt: 'Rosemary' },
-              { src: '/images/product/oil-bottle-onion.webp', alt: 'Bottle with Onion' },
-            ].map((img, i) => (
-              <div key={`a-${i}`} className="marquee-item">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
-              </div>
-            ))}
-            {[
-              { src: '/images/product/front.webp', alt: 'Hair Elixir Front' },
-              { src: '/images/ingredients/mustard-oil.webp', alt: 'Mustard Oil' },
-              { src: '/images/product/oil-drop-macro.webp', alt: 'Oil Drop' },
-              { src: '/images/ingredients/fenugreek.webp', alt: 'Fenugreek' },
-              { src: '/images/product/bottle-black-marble.webp', alt: 'Bottle on Marble' },
-              { src: '/images/ingredients/onion.webp', alt: 'Onion' },
-              { src: '/images/product/back.webp', alt: 'Back Label' },
-              { src: '/images/ingredients/rosemary.webp', alt: 'Rosemary' },
-              { src: '/images/product/oil-bottle-onion.webp', alt: 'Bottle with Onion' },
-            ].map((img, i) => (
-              <div key={`b-${i}`} className="marquee-item">
-                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
-              </div>
-            ))}
+        {/* Dark Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30 z-[1]" />
+
+        {/* Hero Text Content */}
+        <div className="absolute inset-0 z-[2] flex items-end pb-28 md:pb-32 justify-center px-4 md:px-6">
+          <div className="max-w-5xl text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="text-[48px] sm:text-[62px] md:text-[82px] lg:text-[96px] leading-[0.9] tracking-[-4px] font-serif mb-6"
+            >
+              Your Crown<br />Deserves a Ritual.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.15 }}
+              className="max-w-md mx-auto text-lg md:text-xl text-white/70 tracking-wide mb-10"
+            >
+              Fortified with mustard oil, fenugreek, onion, and rosemary —<br className="hidden md:block" />
+              crafted for every crown that refuses to thin.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.3 }}
+            >
+              <a href="#product" className="btn-gold px-8 md:px-12 py-4 text-base tracking-[3px]">
+                OWN YOUR CROWN
+              </a>
+            </motion.div>
           </div>
-        </motion.div>
-
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <div className="text-[10px] tracking-[4px] text-white/40 mb-3">SCROLL TO BEGIN</div>
-          <div className="w-px h-10 bg-white/20" />
         </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[3] flex gap-2">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentSlide(i)}
+              className={`h-[2px] rounded-full transition-all duration-500 ${
+                i === currentSlide ? 'w-8 bg-[#C5A46E]' : 'w-4 bg-white/30 hover:bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+
       </section>
 
       {/* ==================== BRAND PROMISE ==================== */}
