@@ -46,7 +46,7 @@ export default function ZulfHomepage() {
         </AnimatePresence>
 
         {/* Dark Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-[1]" />
 
         {/* Hero Text Content */}
         <div className="absolute inset-0 z-[2] flex items-end pb-28 md:pb-32 justify-center px-4 md:px-6">
@@ -55,7 +55,7 @@ export default function ZulfHomepage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[48px] sm:text-[62px] md:text-[82px] lg:text-[96px] leading-[0.9] tracking-[-4px] font-serif mb-6"
+              className="text-[36px] sm:text-[42px] md:text-[52px] lg:text-[62px] leading-[0.95] tracking-[-2px] font-serif mb-4"
             >
               Your Crown<br />Deserves a Ritual.
             </motion.h1>
@@ -64,7 +64,7 @@ export default function ZulfHomepage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.15 }}
-              className="max-w-md mx-auto text-lg md:text-xl text-white/70 tracking-wide mb-10"
+              className="max-w-md mx-auto text-sm md:text-base text-white/60 tracking-wide mb-8"
             >
               Fortified with mustard oil, fenugreek, onion, and rosemary —<br className="hidden md:block" />
               crafted for every crown that refuses to thin.
