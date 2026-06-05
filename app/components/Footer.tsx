@@ -19,6 +19,7 @@ const Footer = () => {
           <Link href="/ingredients">Ingredients</Link>
           <Link href="/ritual">The Ritual</Link>
           <Link href="/faq">FAQ</Link>
+          <Link href="/return-policy">Returns</Link>
           <Link href="/contact">Contact</Link>
         </div>
 
