@@ -49,7 +49,7 @@ export default function ZulfHomepage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-[1]" />
 
         {/* Hero Text Content */}
-        <div className="absolute inset-0 z-[2] flex items-end pb-28 md:pb-32 justify-center px-4 md:px-6">
+        <div className="absolute inset-0 z-[2] flex items-end pb-20 md:pb-32 justify-center px-5 md:px-6">
           <div className="max-w-5xl text-center">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -83,7 +83,7 @@ export default function ZulfHomepage() {
         </div>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[3] flex gap-2">
+        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-[3] flex gap-2">
           {heroSlides.map((_, i) => (
             <button
               key={i}
@@ -101,8 +101,8 @@ export default function ZulfHomepage() {
       <section className="section border-t border-white/10 px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="gold-line mx-auto mb-8" />
-          <h2 className="text-3xl md:text-[42px] leading-tight tracking-[-1.2px] font-serif">
-            In Pakistan, an alarming 76% of people experience hair loss.<br />
+          <h2 className="text-2xl md:text-[42px] leading-tight tracking-[-1.2px] font-serif">
+            In Pakistan, an alarming 76% of people experience hair loss.<br className="hidden md:block" />
             We built ZULF for the ones who refuse to accept it.
           </h2>
           <p className="mt-6 text-sm tracking-[2px] text-white/50">Source: Journal of Health and Rehabilitation Research, 2024</p>
@@ -114,7 +114,7 @@ export default function ZulfHomepage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-x-16 items-center">
           <div>
             <div className="uppercase tracking-[3px] text-[#C5A46E] text-sm mb-3">BY ZULF</div>
-            <h2 className="text-5xl md:text-6xl tracking-[-2px] font-serif leading-none mb-8">Hair Elixir</h2>
+            <h2 className="text-4xl md:text-6xl tracking-[-2px] font-serif leading-none mb-6 md:mb-8">Hair Elixir</h2>
             <p className="text-lg text-white/80 mb-8 leading-relaxed">
               A concentrated organic elixir formulated to address the root causes of hair fall —
               weakened follicles, scalp inflammation, and nutrient deprivation.
@@ -134,11 +134,11 @@ export default function ZulfHomepage() {
       <section className="section border-t border-white/10 bg-[#050505] px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <h2 className="text-4xl tracking-[-1px] font-serif">Four Ingredients. One Purpose.</h2>
+            <h2 className="text-3xl md:text-4xl tracking-[-1px] font-serif">Four Ingredients. One Purpose.</h2>
             <p className="mt-3 text-white/60">Each chosen for centuries of South Asian tradition and modern botanical research.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { name: "Mustard Oil", src: "/images/ingredients/mustard-oil.webp" },
               { name: "Fenugreek", src: "/images/ingredients/fenugreek.webp" },
@@ -167,7 +167,7 @@ export default function ZulfHomepage() {
       {/* ==================== BENEFITS ==================== */}
       <section className="section border-t border-white/10 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-center text-4xl tracking-[-1px] font-serif mb-14">What Changes When You Use Hair Elixir</h2>
+          <h2 className="text-center text-2xl md:text-4xl tracking-[-1px] font-serif mb-10 md:mb-14">What Changes When You Use Hair Elixir</h2>
          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
@@ -183,7 +183,7 @@ export default function ZulfHomepage() {
             ))}
           </div>
 
-          <div className="relative w-full h-[340px] rounded-2xl overflow-hidden border border-white/10">
+          <div className="relative w-full h-[200px] md:h-[340px] rounded-2xl overflow-hidden border border-white/10">
             <img src="/images/homepage/benefits-texture.webp" alt="Hair Texture" className="w-full h-full object-cover" />
           </div>
         </div>
@@ -213,7 +213,7 @@ export default function ZulfHomepage() {
       <section className="section border-t border-white/10 px-4 md:px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-x-16 items-center">
           <div>
-            <h2 className="text-6xl tracking-[-2px] font-serif leading-none mb-8">Your Crown.<br />Your Ritual.<br />Your Choice.</h2>
+            <h2 className="text-4xl md:text-6xl tracking-[-2px] font-serif leading-none mb-6 md:mb-8">Your Crown.<br />Your Ritual.<br />Your Choice.</h2>
             <p className="text-xl text-white/70 mb-8">Hair Elixir by ZULF — Four Ingredients · One Decision</p>
             <Link href="/checkout" className="btn-gold tracking-[2px] px-10 py-4">SHOP HAIR ELIXIR - Rs. 1,999</Link>
           </div>

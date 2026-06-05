@@ -64,7 +64,7 @@ export default function ProductPage() {
 
         {/* Product Info */}
         <div className="flex flex-col">
-          <h1 className="text-4xl md:text-5xl tracking-[-1.5px] font-serif mb-2">Hair Elixir by ZULF</h1>
+          <h1 className="text-3xl md:text-5xl tracking-[-1.5px] font-serif mb-2">Hair Elixir by ZULF</h1>
           <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
 
           <div className="text-3xl font-medium mb-6">Rs. {price}</div>
@@ -78,7 +78,7 @@ export default function ProductPage() {
           </p>
 
           {/* Deep Copy Section */}
-          <div className="space-y-10 text-white/80 leading-relaxed text-base">
+          <div className="space-y-8 md:space-y-10 text-white/80 leading-relaxed text-[15px] md:text-base">
             
             {/* The Hook */}
             <div>
@@ -94,7 +94,7 @@ export default function ProductPage() {
             {/* Benefits */}
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">HOW HAIR ELIXIR TRANSFORMS YOUR HAIR</h3>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 <li><strong className="text-white">1. Hairfall Elimination:</strong> Fortifies the root architecture with such overwhelming density that shedding is not just reduced—it is systematically and visibly eliminated.</li>
                 <li><strong className="text-white">2. Delays Premature Greying:</strong> Packed with potent natural antioxidants from Onion and Rosemary, the elixir neutralizes oxidative stress in the scalp—a major factor in delaying the onset of early grey hair.</li>
                 <li><strong className="text-white">3. Hard Water Defense:</strong> The rich fatty acids in wood-pressed Mustard Oil create a protective lipid barrier over your hair shaft. This locks out harsh groundwater minerals, preventing your hair from drying out and snapping after every shower.</li>
