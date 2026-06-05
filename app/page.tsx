@@ -8,7 +8,7 @@ export default function ZulfHomepage() {
     <div className="bg-[#0A0A0A] text-white">
       
       {/* ==================== HERO ==================== */}
-      <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden px-4 md:px-6">
+      <section className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden px-4 md:px-6">
         <div className="absolute inset-0 bg-[#0A0A0A]" />
         <div className="absolute inset-0 bg-[radial-gradient(#C5A46E_0.35px,transparent_1px)] bg-[length:4px_4px] opacity-[0.05]" />
 
@@ -42,6 +42,50 @@ export default function ZulfHomepage() {
             </a>
           </motion.div>
         </div>
+
+        {/* Sliding Image Marquee */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.6 }}
+          className="relative z-10 w-full mt-16 mb-20 overflow-hidden"
+        >
+          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#0A0A0A] to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#0A0A0A] to-transparent z-10" />
+          
+          <div className="marquee-track">
+            {[
+              { src: '/images/product/front.webp', alt: 'Hair Elixir Front' },
+              { src: '/images/ingredients/mustard-oil.webp', alt: 'Mustard Oil' },
+              { src: '/images/product/oil-drop-macro.webp', alt: 'Oil Drop' },
+              { src: '/images/ingredients/fenugreek.webp', alt: 'Fenugreek' },
+              { src: '/images/product/bottle-black-marble.webp', alt: 'Bottle on Marble' },
+              { src: '/images/ingredients/onion.webp', alt: 'Onion' },
+              { src: '/images/product/back.webp', alt: 'Back Label' },
+              { src: '/images/ingredients/rosemary.webp', alt: 'Rosemary' },
+              { src: '/images/product/oil-bottle-onion.webp', alt: 'Bottle with Onion' },
+            ].map((img, i) => (
+              <div key={`a-${i}`} className="marquee-item">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+              </div>
+            ))}
+            {[
+              { src: '/images/product/front.webp', alt: 'Hair Elixir Front' },
+              { src: '/images/ingredients/mustard-oil.webp', alt: 'Mustard Oil' },
+              { src: '/images/product/oil-drop-macro.webp', alt: 'Oil Drop' },
+              { src: '/images/ingredients/fenugreek.webp', alt: 'Fenugreek' },
+              { src: '/images/product/bottle-black-marble.webp', alt: 'Bottle on Marble' },
+              { src: '/images/ingredients/onion.webp', alt: 'Onion' },
+              { src: '/images/product/back.webp', alt: 'Back Label' },
+              { src: '/images/ingredients/rosemary.webp', alt: 'Rosemary' },
+              { src: '/images/product/oil-bottle-onion.webp', alt: 'Bottle with Onion' },
+            ].map((img, i) => (
+              <div key={`b-${i}`} className="marquee-item">
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
           <div className="text-[10px] tracking-[4px] text-white/40 mb-3">SCROLL TO BEGIN</div>
