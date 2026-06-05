@@ -63,9 +63,9 @@ export default function ProductPage() {
         </div>
 
         {/* Product Info */}
-        <div>
-          <h1 className="text-5xl tracking-[-1.5px] font-serif mb-2">ZULF Hair Elixir</h1>
-          <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Wood-Pressed • Handcrafted in Pakistan</p>
+        <div className="flex flex-col">
+          <h1 className="text-4xl md:text-5xl tracking-[-1.5px] font-serif mb-2">Hair Elixir by ZULF</h1>
+          <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
 
           <div className="text-3xl font-medium mb-6">Rs. {price}</div>
 
@@ -73,35 +73,67 @@ export default function ProductPage() {
             ADD TO CART — Rs. {price}
           </Link>
 
-          <p className="text-xs text-white/60 tracking-widest mb-8">
+          <p className="text-xs text-white/60 tracking-widest mb-10 text-center">
             Dispatched within 24 hours • 15-day returns
           </p>
 
-          <div className="mb-8">
-            <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-3">DESCRIPTION</h3>
-            <p className="text-white/80 leading-relaxed">
-              A concentrated botanical elixir formulated to address the root causes of hair fall.
-            </p>
-          </div>
+          {/* Deep Copy Section */}
+          <div className="space-y-10 text-white/80 leading-relaxed text-base">
+            
+            {/* The Hook */}
+            <div>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">YOUR CROWN DESERVES A RITUAL</h3>
+              <p className="mb-4">
+                In Pakistan, our hair faces extreme challenges—from harsh weather and hard water to severe daily stress. It is no surprise that an alarming 76% of people experience serious hair loss and thinning. You cannot fix these problems by masking them with chemical shampoos. You have to address the root cause.
+              </p>
+              <p>
+                <strong>Hair Elixir by ZULF</strong> is a concentrated, 100% organic oil meticulously formulated to defend your hair against the harshest elements. By combining four of South Asia's most trusted traditional ingredients, this elixir is built to stop shedding, delay greying, and restore absolute control over your crown. Feed your roots, and stop the fall.
+              </p>
+            </div>
 
-          <div className="mb-8">
-            <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-3">KEY INGREDIENTS</h3>
-            <div className="space-y-1 text-white/80">
-              <p>• Wood-Pressed Mustard Oil</p>
-              <p>• Fenugreek (Methi)</p>
-              <p>• Onion (Pyaaz)</p>
-              <p>• Rosemary</p>
+            {/* Benefits */}
+            <div>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">HOW HAIR ELIXIR TRANSFORMS YOUR HAIR</h3>
+              <ul className="space-y-4">
+                <li><strong className="text-white">1. Hairfall Elimination:</strong> Fortifies the root architecture with such overwhelming density that shedding is not just reduced—it is systematically and visibly eliminated.</li>
+                <li><strong className="text-white">2. Delays Premature Greying:</strong> Packed with potent natural antioxidants from Onion and Rosemary, the elixir neutralizes oxidative stress in the scalp—a major factor in delaying the onset of early grey hair.</li>
+                <li><strong className="text-white">3. Hard Water Defense:</strong> The rich fatty acids in wood-pressed Mustard Oil create a protective lipid barrier over your hair shaft. This locks out harsh groundwater minerals, preventing your hair from drying out and snapping after every shower.</li>
+                <li><strong className="text-white">4. Clears Severe Dandruff & Scalp Itch:</strong> Onion's natural anti-bacterial and sulfur-rich properties detoxify the scalp. It clears stubborn dandruff and creates a clean, balanced environment that stops summer itching immediately.</li>
+                <li><strong className="text-white">5. Smooths Hair Texture & Frizz:</strong> Fenugreek acts as a powerful natural conditioner (rich in emollient lecithin). It intensely hydrates the hair cuticle, turning rough, humidity-frizzed hair into heavy, manageable silk.</li>
+              </ul>
+            </div>
+
+            {/* Ingredients */}
+            <div>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">FOUR INGREDIENTS. ONE PURPOSE.</h3>
+              <p className="mb-4">We honor centuries of South Asian tradition by using only what works. No fillers.</p>
+              <ul className="space-y-2">
+                <li>• <strong className="text-white">Wood-Pressed Mustard Oil:</strong> Extracted cold (Kachi Ghani) to preserve its full nutritional profile, providing the ultimate defense and deep conditioning.</li>
+                <li>• <strong className="text-white">Fenugreek:</strong> Rich in proteins traditionally relied upon to smooth texture and defend against thinning.</li>
+                <li>• <strong className="text-white">Onion:</strong> Contains natural sulfur compounds essential for clearing the scalp and delaying aging.</li>
+                <li>• <strong className="text-white">Rosemary:</strong> A powerful aromatic organic ingredient with a long, proven history of soothing the scalp and promoting density.</li>
+              </ul>
+            </div>
+
+            {/* The Ritual */}
+            <div>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">THE RITUAL</h3>
+              <p>
+                Apply 6 to 8 drops of Hair Elixir directly to the scalp and roots. Using only your fingertips, massage gently in slow circles for three to five minutes. Leave the elixir on for a minimum of one hour to allow deep absorption, or leave it overnight for maximum nourishment. Cleanse with a mild shampoo. Use on alternate days for the best results.
+              </p>
             </div>
           </div>
 
-          <div className="pt-6 border-t border-white/10">
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-widest text-white/70">
+          <div className="pt-10 mt-10 border-t border-white/10">
+            <div className="flex flex-wrap gap-x-6 gap-y-4 text-xs tracking-widest text-white/70">
               <span>100% HALAL</span>
               <span>NO PARABENS</span>
               <span>NO SULPHATES</span>
-              <span>WOOD-PRESSED</span>
+              <span>NO MINERAL OILS</span>
+              <span>HANDCRAFTED IN PAKISTAN</span>
             </div>
           </div>
+
         </div>
       </div>
 
