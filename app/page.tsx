@@ -25,31 +25,33 @@ export default function ZulfHomepage() {
     <div className="bg-[#0A0A0A] text-white">
       
       {/* ==================== HERO ==================== */}
-      <section className="relative h-[100dvh] overflow-hidden">
+      <section className="relative flex flex-col md:block h-[100dvh] overflow-hidden bg-[#0A0A0A]">
 
-        {/* Full-Screen Sliding Images */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-0"
-          >
-            <img
-              src={heroSlides[currentSlide]}
-              alt="ZULF Hair Elixir"
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
-        </AnimatePresence>
+        {/* Sliding Images (Top 60% on mobile, Full screen on desktop) */}
+        <div className="relative w-full h-[60dvh] md:h-full md:absolute md:inset-0 z-[0]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute inset-0"
+            >
+              <img
+                src={heroSlides[currentSlide]}
+                alt="ZULF Hair Elixir"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </AnimatePresence>
 
-        {/* Dark Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/90 via-black/40 md:via-black/30 to-transparent z-[1]" />
+          {/* Dark Overlay for Text Readability (Only on desktop) */}
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent z-[1]" />
+        </div>
 
-        {/* Hero Text Content */}
-        <div className="absolute inset-0 z-[2] flex items-end md:items-start pb-24 md:pb-0 pt-0 md:pt-48 justify-center md:justify-start px-6 md:px-16 lg:px-24">
+        {/* Hero Text Content (Bottom 40% on mobile, Top-Left Overlay on desktop) */}
+        <div className="relative md:absolute md:inset-0 z-[2] flex-1 flex items-center md:items-start pt-0 md:pt-48 justify-center md:justify-start px-6 md:px-16 lg:px-24 bg-[#0A0A0A] md:bg-transparent">
           <div className="max-w-2xl text-center md:text-left flex flex-col items-center md:items-start">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -83,7 +85,7 @@ export default function ZulfHomepage() {
         </div>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-[3] flex gap-2">
+        <div className="absolute top-[60dvh] md:top-auto md:bottom-10 -translate-y-8 md:translate-y-0 left-1/2 -translate-x-1/2 z-[3] flex gap-2">
           {heroSlides.map((_, i) => (
             <button
               key={i}
