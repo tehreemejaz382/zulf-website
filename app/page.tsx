@@ -119,13 +119,13 @@ export default function ZulfHomepage() {
       {/* ==================== BENEFITS ==================== */}
       <section className="section border-t border-white/10 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-center text-4xl tracking-[-1px] font-serif mb-14">What Changes When You Use ZULF</h2>
+          <h2 className="text-center text-4xl tracking-[-1px] font-serif mb-14">What Changes When You Use Hair Elixir</h2>
          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { label: "PRIMARY BENEFIT", title: "Reduced Hair Fall", desc: "Addresses the root causes of hair fall by nourishing follicles and calming the scalp." },
-              { label: "SCALP HEALTH", title: "Healthier Scalp", desc: "Helps reduce scalp inflammation and supports a balanced, comfortable environment." },
-              { label: "STRAND STRENGTH", title: "Stronger Strands", desc: "Regular nourishment helps improve strand resilience and reduces breakage over time." }
+              { label: "PRIMARY BENEFIT", title: "Hairfall Elimination", desc: "Anchors roots deeply into the scalp with overwhelming density to systematically eliminate shedding." },
+              { label: "SCALP HEALTH", title: "Clears Dandruff & Itch", desc: "Detoxifies the scalp from fungal buildup to create a balanced environment that stops itching immediately." },
+              { label: "ENVIRONMENTAL SHIELD", title: "Hard Water Defense", desc: "Forms a protective lipid barrier to lock out harsh groundwater minerals and prevent dry, snapping hair." }
             ].map((item, i) => (
               <div key={i}>
                 <div className="text-[#C5A46E] text-xs tracking-[2.5px] mb-3">{item.label}</div>
