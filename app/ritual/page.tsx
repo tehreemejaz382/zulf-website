@@ -12,7 +12,7 @@ const ritualSteps = [
   {
     number: "I",
     title: "Warm the Oil",
-    description: "Warm 6 to 8 drops between your palms for twenty seconds until the oil reaches body temperature."
+    description: "Warm 6 to 8 drops between your palms for twenty seconds which increases the scalp permeability."
   },
   {
     number: "II",
@@ -21,8 +21,14 @@ const ritualSteps = [
   },
   {
     number: "III",
-    title: "Massage Gently",
-    description: "Using only your fingertips, massage gently in slow circles for three to five minutes."
+    title: "The Mechanical Massage (3-5 Minutes)",
+    description: (
+      <>
+        Using only the pads of your fingertips, massage the scalp in slow, firm circles.
+        <br /><br />
+        <em className="text-white/50 text-sm block">The Science: This is not just for relaxation. Clinical studies in mechanobiology show that standard scalp massages induce physical stretching forces on the Dermal Papilla Cells (hDPCs) at the base of your hair follicles. This mechanical stress alters gene expression, increasing the thickness and diameter of the individual hair shafts over time.</em>
+      </>
+    )
   },
   {
     number: "IV",
@@ -32,7 +38,7 @@ const ritualSteps = [
   {
     number: "V",
     title: "Cleanse",
-    description: "Cleanse with a mild, sulphate-free shampoo. Use on alternate days for best results."
+    description: "Cleanse with a mild shampoo. Use on alternate days for best results. The scalp requires recovery time between treatments."
   }
 ];
 
@@ -66,7 +72,7 @@ export default function RitualPage() {
             </div>
             <div>
               <h3 className="text-2xl font-serif tracking-tight mb-3">{step.title}</h3>
-              <p className="text-white/80 leading-relaxed">{step.description}</p>
+              <div className="text-white/80 leading-relaxed">{step.description}</div>
             </div>
           </div>
         ))}

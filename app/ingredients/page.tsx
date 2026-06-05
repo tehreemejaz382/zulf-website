@@ -12,26 +12,50 @@ const ingredients = [
   {
     name: "Wood-Pressed Mustard Oil",
     image: "/images/ingredients/mustard-oil.webp",
-    description: "Extracted through traditional wood-pressing (Kachi Ghani) to preserve its natural nutrients, antioxidants, and fatty acids. Used for centuries in South Asia for scalp nourishment and hair strength.",
-    science: "Rich in omega-3 and omega-6 fatty acids. Traditionally believed to improve blood circulation to the scalp and support hair follicle health."
+    description: "Extracted through the traditional Kachi Ghani (wood-pressing) method at low temperatures to prevent the destruction of heat-sensitive compounds. It serves as the foundational carrier oil.",
+    science: (
+      <>
+        <span className="block mb-2"><strong className="text-white">Nutritional Profile:</strong> Exceptionally rich in Omega-3 and Omega-6 fatty acids, which are essential lipids for scalp barrier repair, alongside Zinc and Beta-carotene.</span>
+        <span className="block mb-2"><strong className="text-white">The Biological Mechanism:</strong> Mustard oil contains a potent organic compound called Allyl Isothiocyanate (AITC). When massaged into the scalp, AITC acts as a natural rubefacient—it creates a mild, warming sensation that triggers vasodilation (the widening of blood vessels). This drastically increases microcirculation, flooding starved hair follicles with the oxygen and nutrient-rich blood required to prolong the anagen (growth) phase.</span>
+        <span className="block"><strong className="text-white">The Benefit:</strong> It warms the scalp and pumps fresh blood, oxygen, and nutrients straight to your hair roots to wake them up and keep them growing longer.</span>
+      </>
+    )
   },
   {
-    name: "Fenugreek (Methi)",
+    name: "Fenugreek",
     image: "/images/ingredients/fenugreek.webp",
-    description: "Fenugreek seeds have been used for generations in South Asian hair rituals. Rich in proteins, lecithin, and nicotinic acid.",
-    science: "Studies suggest fenugreek may help improve hair thickness and reduce hair fall. A 2006 clinical study observed favorable effects on hair growth in participants using fenugreek-based supplements."
+    description: "A powerful South Asian botanical heavily researched for its ability to target the hormonal and structural causes of hair thinning.",
+    science: (
+      <>
+        <span className="block mb-2"><strong className="text-white">Nutritional Profile:</strong> Composed of roughly 25% protein and rich in Lecithin, a natural emollient that hydrates the scalp and smooths the hair cuticle to prevent mechanical breakage.</span>
+        <span className="block mb-2"><strong className="text-white">The Biological Mechanism:</strong> Fenugreek seeds contain steroidal saponins, most notably Diosgenin. Diosgenin exhibits phytoestrogenic properties that are theorized to act as natural blockers against DHT (dihydrotestosterone)—the primary hormone responsible for follicle miniaturization. Furthermore, the high concentration of Nicotinic Acid (Vitamin B3) works at a cellular level to reconstruct the hair shaft and soothe scalp inflammation.</span>
+        <span className="block"><strong className="text-white">The Benefit:</strong> It defends your hair against the hormones that cause baldness and thinning, while simultaneously rebuilding weak, lifeless strands and calming an itchy, irritated scalp.</span>
+      </>
+    )
   },
   {
-    name: "Onion (Pyaaz)",
+    name: "Onion",
     image: "/images/ingredients/onion.webp",
-    description: "Onion has long been used in traditional hair remedies across South Asia. Contains natural sulfur compounds and quercetin.",
-    science: "Sulfur is essential for keratin production. Traditional use and some studies suggest onion may support scalp health and hair growth, particularly in cases of patchy hair loss."
+    description: "Far more than a traditional remedy, onion extract is a highly concentrated delivery system for structural proteins and enzymes critical to follicle survival.",
+    science: (
+      <>
+        <span className="block mb-2"><strong className="text-white">Nutritional Profile:</strong> Dense in Dietary Sulfur (the building block of keratin) and Quercetin, a formidable flavonoid antioxidant that neutralizes environmental oxidative stress.</span>
+        <span className="block mb-2"><strong className="text-white">The Biological Mechanism:</strong> As hair follicles age, they naturally accumulate hydrogen peroxide, which bleaches the hair from the inside out and damages the root. Onion extract delivers an intense dose of Catalase, an antioxidant enzyme that actively breaks down this hydrogen peroxide into harmless water and oxygen. Simultaneously, the dietary sulfur forms strong disulfide bonds, directly reinforcing the structural elasticity of the hair shaft.</span>
+        <span className="block"><strong className="text-white">The Benefit:</strong> It acts as an anti-aging shield for your hair follicles, stopping them from dying off early, while giving your hair the literal structural building blocks it needs to stop snapping and breaking.</span>
+      </>
+    )
   },
   {
     name: "Rosemary",
     image: "/images/ingredients/rosemary.webp",
-    description: "A powerful aromatic herb with a long history of use in hair and scalp care. Known for its antioxidant and soothing properties.",
-    science: "A 2015 randomized study published in Skinmed found rosemary oil to be comparable to 2% minoxidil in promoting hair growth over six months, with fewer side effects reported."
+    description: "While our other ingredients honor eastern traditions, Rosemary is a globally recognized botanical champion, proven in clinical settings to rival synthetic hair growth treatments.",
+    science: (
+      <>
+        <span className="block mb-2"><strong className="text-white">Nutritional Profile:</strong> Packed with anti-inflammatory polyphenols and volatile oils like 1,8-cineole.</span>
+        <span className="block mb-2"><strong className="text-white">The Biological Mechanism:</strong> The therapeutic power of rosemary lies in Carnosic Acid and Ursolic Acid. Research indicates that Carnosic acid can inhibit 5-alpha reductase, the enzyme that converts testosterone into hair-thinning DHT. Furthermore, it has been shown to promote the production of Nerve Growth Factor (NGF), which revitalizes the nerve endings around the hair bulb, improving cellular generation and overall density.</span>
+        <span className="block"><strong className="text-white">The Benefit:</strong> It blocks the specific enzymes that cause hair loss and revitalizes the deadened nerves in your scalp, making it one of nature's most powerful, proven ingredients for thick, dense hair growth.</span>
+      </>
+    )
   }
 ];
 
@@ -68,7 +92,7 @@ export default function IngredientsPage() {
             <div>
               <h2 className="text-4xl tracking-tight font-serif mb-6">{ingredient.name}</h2>
               <p className="text-white/80 mb-6 leading-relaxed">{ingredient.description}</p>
-              <p className="text-white/70 text-sm leading-relaxed">{ingredient.science}</p>
+              <div className="text-white/70 text-sm leading-relaxed">{ingredient.science}</div>
             </div>
           </div>
         ))}

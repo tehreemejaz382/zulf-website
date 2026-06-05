@@ -54,7 +54,7 @@ export default function ZulfHomepage() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="gold-line mx-auto mb-8" />
           <h2 className="text-3xl md:text-[42px] leading-tight tracking-[-1.2px] font-serif">
-            In Pakistan, 76% of people experience hair loss.<br />
+            In Pakistan, an alarming 76% of people experience hair loss.<br />
             We built ZULF for the ones who refuse to accept it.
           </h2>
           <p className="mt-6 text-sm tracking-[2px] text-white/50">Source: Journal of Health and Rehabilitation Research, 2024</p>
