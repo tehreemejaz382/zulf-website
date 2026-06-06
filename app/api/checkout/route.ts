@@ -13,12 +13,19 @@ export async function POST(req: Request) {
     
     // 1. Send Premium Customer Email via Brevo (Instant, Professional)
     if (data.email) {
+      const quantity = parseInt(data.quantity || '1');
+      const unitPrice = data.unitPrice || 1999;
+      const shippingCharges = data.shippingCharges || 0;
+      const discount = data.discount || 0;
+      const total = (unitPrice * quantity) + shippingCharges - discount;
+
       await sendBrevoEmail(
         data.email, 
         data.customerName || 'Customer', 
         data.product || 'Zulf Hair Elixir', 
-        data.quantity || '1', 
-        (data.unitPrice || 1999) * parseInt(data.quantity || '1'), 
+        quantity.toString(), 
+        total,
+        shippingCharges,
         data.address || '', 
         data.city || '', 
         data.phone || ''
@@ -51,7 +58,7 @@ export async function POST(req: Request) {
   }
 }
 
-async function sendBrevoEmail(email: string, name: string, product: string, quantity: string, total: number, address: string, city: string, phone: string) {
+async function sendBrevoEmail(email: string, name: string, product: string, quantity: string, total: number, shipping: number, address: string, city: string, phone: string) {
   const htmlBody = `
     <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px; border-radius: 12px;">
       <div style="text-align: center; margin-bottom: 30px;">
@@ -71,6 +78,10 @@ async function sendBrevoEmail(email: string, name: string, product: string, quan
           <tr style="border-bottom: 1px solid #333;">
             <td style="padding: 12px 0; color: #999;">Quantity</td>
             <td style="padding: 12px 0; text-align: right; color: #fff;">${quantity}</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 12px 0; color: #999;">Shipping</td>
+            <td style="padding: 12px 0; text-align: right; color: #fff;">${shipping === 0 ? 'Free' : `Rs. ${shipping}`}</td>
           </tr>
           <tr style="border-bottom: 1px solid #333;">
             <td style="padding: 12px 0; color: #999;">Payment</td>
