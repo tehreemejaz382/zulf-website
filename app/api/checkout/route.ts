@@ -108,7 +108,7 @@ async function sendBrevoEmail(email: string, name: string, product: string, quan
   `;
 
   const payload = {
-    sender: { name: "Zulf", email: "order@zulfhair.com" },
+    sender: { name: "Zulf", email: "zulfhair.com@gmail.com" },
     to: [{ email: email, name: name }],
     subject: "Order Confirmed ✅ — Zulf",
     htmlContent: htmlBody
