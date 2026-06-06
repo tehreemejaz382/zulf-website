@@ -5,7 +5,7 @@ export const runtime = 'edge';
 // Base64 decode the key to securely bypass GitHub's secret scanner
 const BREVO_API_KEY_B64 = "eGtleXNpYi02NjI2OWU1YzgxNDU2MGEyODAxNWVhYjJhZjZjMjgzM2I5ZDE0ZGJkNTA0NjFiNTg5ZjM1NWFkMDdmODkwZDQwLWo4aWREQ3FOT3BLWDUydEc=";
 const BREVO_API_KEY = typeof atob === 'function' ? atob(BREVO_API_KEY_B64) : Buffer.from(BREVO_API_KEY_B64, 'base64').toString('utf-8');
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwlPCRUvQUVFsE2eG_w6Cm495KmgAJWrM0NvFTw0zjop9tI4Vf9Zy__y75QmeiXgy4E/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxWdsSFJfDZ9ttuEu8eplGp3pS6JcuBeSzLx9A8dBLqeYaBSJ5wN7aqtUt7hjI87QYY/exec";
 
 export async function POST(req: Request) {
   try {
@@ -32,21 +32,13 @@ export async function POST(req: Request) {
       );
     }
 
-    // 2. Modify email to hack/bypass Google Script's duplicate email sender
-    // When the GS receives "email (Brevo)", MailApp fails silently due to invalid format!
-    // But it still saves the string cleanly to the sheet for the admin dashboard to read.
-    const hackedData = { ...data };
-    if (hackedData.email) {
-      hackedData.email = hackedData.email + " (Brevo)";
-    }
-
-    // 3. Save to Google Sheets (Admin Notification sent from GS)
+    // 2. Save to Google Sheets (Admin Notification sent from GS)
     const googleResponse = await fetch(GOOGLE_SCRIPT_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'text/plain', // GAS requires text/plain for CORS
       },
-      body: JSON.stringify(hackedData)
+      body: JSON.stringify(data)
     });
 
     const googleResult = await googleResponse.json();
