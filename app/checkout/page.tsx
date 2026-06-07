@@ -46,6 +46,9 @@ export default function CheckoutPage() {
 
     setLoading(true);
 
+    const utmSource = typeof window !== "undefined" ? localStorage.getItem("utm_source") : null;
+    const orderSource = utmSource ? `Website (${utmSource})` : "Website";
+
     const data = {
       action: "newOrder",
       customerName: formData.get("fullName"),
@@ -57,7 +60,7 @@ export default function CheckoutPage() {
       quantity: quantity,
       unitPrice: pricePerBottle,
       shippingCharges: deliveryCharges,
-      orderSource: "Website",
+      orderSource: orderSource,
       customerNotes: formData.get("notes") || "",
     };
 

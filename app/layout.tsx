@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import TrackingScripts from './components/TrackingScripts';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -31,6 +32,10 @@ export const metadata: Metadata = {
     locale: 'en_PK',
     type: 'website',
   },
+  other: {
+    // Replace this with your actual domain verification tag content if needed
+    'facebook-domain-verification': process.env.NEXT_PUBLIC_FACEBOOK_DOMAIN_VERIFICATION || '',
+  },
 };
 
 export default function RootLayout({
@@ -41,6 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-[#0A0A0A] text-white antialiased pt-20">
+        <TrackingScripts />
         <Navbar />
         <main>{children}</main>
         <Footer />

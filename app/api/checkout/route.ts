@@ -44,6 +44,63 @@ export async function POST(req: Request) {
 
     const googleResult = await googleResponse.json();
 
+    // 3. Send Purchase Event to Facebook Conversions API (CAPI)
+    const FB_PIXEL_ID = process.env.FACEBOOK_PIXEL_ID || "";
+    const FB_CAPI_TOKEN = process.env.FACEBOOK_CAPI_TOKEN || "";
+
+    if (FB_PIXEL_ID && FB_CAPI_TOKEN) {
+      try {
+        const encoder = new TextEncoder();
+        const hash = async (str: string) => {
+           if (!str) return undefined;
+           const buf = await crypto.subtle.digest("SHA-256", encoder.encode(str));
+           return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        };
+
+        const em = await hash((data.email || "").toLowerCase().trim());
+        const ph = await hash((data.phone || "").replace(/[^\d]/g, ""));
+        
+        const fbPayload = {
+          data: [
+            {
+              event_name: "Purchase",
+              event_time: Math.floor(Date.now() / 1000),
+              action_source: "website",
+              user_data: {
+                em: em ? [em] : [],
+                ph: ph ? [ph] : [],
+                client_ip_address: req.headers.get("x-forwarded-for"),
+                client_user_agent: req.headers.get("User-Agent"),
+              },
+              custom_data: {
+                currency: "PKR",
+                value: (data.unitPrice || 1999) * parseInt(data.quantity || '1') + (data.shippingCharges || 0) - (data.discount || 0),
+                contents: [
+                  {
+                    id: "ZULF_HAIR_ELIXIR",
+                    quantity: parseInt(data.quantity || '1'),
+                    item_price: data.unitPrice || 1999
+                  }
+                ]
+              }
+            }
+          ]
+        };
+
+        const fbResponse = await fetch(`https://graph.facebook.com/v19.0/${FB_PIXEL_ID}/events?access_token=${FB_CAPI_TOKEN}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(fbPayload)
+        });
+        
+        if (!fbResponse.ok) {
+           console.error("FB CAPI Error:", await fbResponse.text());
+        }
+      } catch (fbErr) {
+        console.error("FB CAPI Exception:", fbErr);
+      }
+    }
+
     return NextResponse.json(googleResult);
   } catch (error: any) {
     console.error("Checkout error:", error);

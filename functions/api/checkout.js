@@ -127,6 +127,63 @@ export async function onRequestPost(context) {
       }
     }
 
+    // 4. Send Purchase Event to Facebook Conversions API (CAPI)
+    const FB_PIXEL_ID = context.env?.FACEBOOK_PIXEL_ID || "";
+    const FB_CAPI_TOKEN = context.env?.FACEBOOK_CAPI_TOKEN || "";
+
+    if (FB_PIXEL_ID && FB_CAPI_TOKEN) {
+      try {
+        const encoder = new TextEncoder();
+        const hash = async (str) => {
+           if (!str) return undefined;
+           const buf = await crypto.subtle.digest("SHA-256", encoder.encode(str));
+           return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        };
+
+        const em = await hash((data.email || "").toLowerCase().trim());
+        const ph = await hash((data.phone || "").replace(/[^\d]/g, ""));
+        
+        const fbPayload = {
+          data: [
+            {
+              event_name: "Purchase",
+              event_time: Math.floor(Date.now() / 1000),
+              action_source: "website",
+              user_data: {
+                em: em ? [em] : [],
+                ph: ph ? [ph] : [],
+                client_ip_address: context.request.headers.get("CF-Connecting-IP") || context.request.headers.get("x-forwarded-for"),
+                client_user_agent: context.request.headers.get("User-Agent"),
+              },
+              custom_data: {
+                currency: "PKR",
+                value: total,
+                contents: [
+                  {
+                    id: "ZULF_HAIR_ELIXIR",
+                    quantity: parseInt(quantity),
+                    item_price: unitPrice
+                  }
+                ]
+              }
+            }
+          ]
+        };
+
+        const fbResponse = await fetch(`https://graph.facebook.com/v19.0/${FB_PIXEL_ID}/events?access_token=${FB_CAPI_TOKEN}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(fbPayload)
+        });
+        
+        if (!fbResponse.ok) {
+           console.error("FB CAPI Error:", await fbResponse.text());
+        }
+      } catch (fbErr) {
+        console.error("FB CAPI Exception:", fbErr);
+      }
+    }
+
     return Response.json(googleResult);
   } catch (error) {
     console.error("Checkout error:", error);
