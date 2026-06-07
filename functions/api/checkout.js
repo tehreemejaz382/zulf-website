@@ -61,6 +61,10 @@ export async function onRequestPost(context) {
                 <td style="padding: 12px 0; text-align: right; color: #fff;">${product}</td>
               </tr>
               <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 12px 0; color: #999;">Price</td>
+                <td style="padding: 12px 0; text-align: right; color: #fff;">Rs. ${unitPrice.toLocaleString()}</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #333;">
                 <td style="padding: 12px 0; color: #999;">Quantity</td>
                 <td style="padding: 12px 0; text-align: right; color: #fff;">${quantity}</td>
               </tr>

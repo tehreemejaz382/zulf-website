@@ -24,6 +24,7 @@ export async function POST(req: Request) {
         data.customerName || 'Customer', 
         data.product || 'Zulf Hair Elixir', 
         quantity.toString(), 
+        unitPrice,
         total,
         shippingCharges,
         data.address || '', 
@@ -50,7 +51,7 @@ export async function POST(req: Request) {
   }
 }
 
-async function sendBrevoEmail(email: string, name: string, product: string, quantity: string, total: number, shipping: number, address: string, city: string, phone: string) {
+async function sendBrevoEmail(email: string, name: string, product: string, quantity: string, unitPrice: number, total: number, shipping: number, address: string, city: string, phone: string) {
   const htmlBody = `
     <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px; border-radius: 12px;">
       <div style="text-align: center; margin-bottom: 30px;">
@@ -66,6 +67,10 @@ async function sendBrevoEmail(email: string, name: string, product: string, quan
           <tr style="border-bottom: 1px solid #333;">
             <td style="padding: 12px 0; color: #999;">Product</td>
             <td style="padding: 12px 0; text-align: right; color: #fff;">${product}</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #333;">
+            <td style="padding: 12px 0; color: #999;">Price</td>
+            <td style="padding: 12px 0; text-align: right; color: #fff;">Rs. ${unitPrice.toLocaleString()}</td>
           </tr>
           <tr style="border-bottom: 1px solid #333;">
             <td style="padding: 12px 0; color: #999;">Quantity</td>
