@@ -10,7 +10,10 @@ export async function onRequestPost(context) {
     const name = data.customerName || 'Customer';
     const product = data.product || 'Zulf Hair Elixir';
     const quantity = data.quantity || '1';
-    const total = (data.unitPrice || 1999) * parseInt(quantity);
+    const unitPrice = data.unitPrice || 1999;
+    const shippingCharges = data.shippingCharges || 0;
+    const discount = data.discount || 0;
+    const total = (unitPrice * parseInt(quantity)) + shippingCharges - discount;
     const address = data.address || '';
     const city = data.city || '';
     const phone = data.phone || '';
@@ -60,6 +63,10 @@ export async function onRequestPost(context) {
               <tr style="border-bottom: 1px solid #333;">
                 <td style="padding: 12px 0; color: #999;">Quantity</td>
                 <td style="padding: 12px 0; text-align: right; color: #fff;">${quantity}</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 12px 0; color: #999;">Shipping</td>
+                <td style="padding: 12px 0; text-align: right; color: #fff;">${shippingCharges === 0 ? 'Free' : `Rs. ${shippingCharges}`}</td>
               </tr>
               <tr style="border-bottom: 1px solid #333;">
                 <td style="padding: 12px 0; color: #999;">Payment</td>
