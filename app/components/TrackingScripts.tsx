@@ -30,6 +30,22 @@ export default function TrackingScripts() {
 
   return (
     <>
+      {/* Google Analytics 4 */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-SY0VBVY2JK"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-SY0VBVY2JK');
+        `}
+      </Script>
+
+      {/* Facebook Pixel */}
       <Script
         id="fb-pixel"
         strategy="afterInteractive"
