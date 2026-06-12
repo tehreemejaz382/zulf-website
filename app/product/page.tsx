@@ -96,44 +96,69 @@ export default function ProductPage() {
             {/* The Hook */}
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">YOUR CROWN DESERVES A RITUAL</h3>
-              <p className="mb-4">
-                In Pakistan, our hair faces extreme challenges—from harsh weather and hard water to severe daily stress. It is no surprise that an alarming 76% of people experience serious hair loss and thinning. You cannot fix these problems by masking them with chemical shampoos. You have to address the root cause.
-              </p>
               <p>
-                <strong>Hair Elixir by ZULF</strong> is a concentrated, 100% organic oil meticulously formulated to defend your hair against the harshest elements. By combining four of South Asia's most trusted traditional ingredients, this elixir is built to stop shedding, delay greying, and restore absolute control over your crown. Feed your roots, and stop the fall.
+                <strong>Hair Elixir by ZULF</strong> is a 100% organic oil made to protect your hair. By mixing four of South Asia's most trusted natural ingredients, this oil stops hair fall, delays early white hair, and brings your hair back to life.
               </p>
             </div>
 
             {/* Benefits */}
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">HOW HAIR ELIXIR TRANSFORMS YOUR HAIR</h3>
-              <ul className="space-y-5">
-                <li><strong className="text-white">1. Hard Water Defense:</strong> The rich fatty acids in wood-pressed Mustard Oil create a protective lipid barrier over your hair shaft. This locks out harsh groundwater minerals, preventing your hair from drying out and snapping after every shower.</li>
-                <li><strong className="text-white">2. Hairfall Elimination:</strong> Fortifies the root architecture with such overwhelming density that shedding is not just reduced—it is systematically and visibly eliminated.</li>
-                <li><strong className="text-white">3. Delays Premature Greying:</strong> Packed with potent natural antioxidants from Onion and Rosemary, the elixir neutralizes oxidative stress in the scalp—a major factor in delaying the onset of early grey hair.</li>
-                <li><strong className="text-white">4. Clears Severe Dandruff & Scalp Itch:</strong> Onion's natural anti-bacterial and sulfur-rich properties detoxify the scalp. It clears stubborn dandruff and creates a clean, balanced environment that stops summer itching immediately.</li>
-                <li><strong className="text-white">5. Smooths Hair Texture & Frizz:</strong> Fenugreek acts as a powerful natural conditioner. It intensely hydrates the hair cuticle, turning rough, humidity-frizzed hair into heavy, manageable silk.</li>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">✓</span>
+                  <span><strong className="text-white">Hard Water Defense:</strong> Creates a protective layer that blocks harsh water minerals from drying out and breaking your hair.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">✓</span>
+                  <span><strong className="text-white">Stops Hairfall:</strong> Strengthens your hair roots to visibly stop shedding within weeks.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">✓</span>
+                  <span><strong className="text-white">Delays Greying:</strong> Natural antioxidants nourish your scalp to help delay early white hair.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">✓</span>
+                  <span><strong className="text-white">Clears Dandruff:</strong> Cleans the scalp, clears stubborn dandruff, and stops itching immediately.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">✓</span>
+                  <span><strong className="text-white">Smooths Frizz:</strong> Deeply hydrates rough hair, turning it into smooth, manageable silk.</span>
+                </li>
               </ul>
             </div>
 
             {/* Ingredients */}
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">FOUR INGREDIENTS. ONE PURPOSE.</h3>
-              <p className="mb-4">We honor centuries of South Asian tradition by using only what works. No fillers.</p>
-              <ul className="space-y-2">
-                <li>• <strong className="text-white">Wood-Pressed Mustard Oil:</strong> Extracted cold (Kachi Ghani) to preserve its full nutritional profile, providing the ultimate defense and deep conditioning.</li>
-                <li>• <strong className="text-white">Fenugreek:</strong> Rich in proteins traditionally relied upon to smooth texture and defend against thinning.</li>
-                <li>• <strong className="text-white">Onion:</strong> Contains natural sulfur compounds essential for clearing the scalp and delaying aging.</li>
-                <li>• <strong className="text-white">Rosemary:</strong> A powerful aromatic organic ingredient with a long, proven history of soothing the scalp and promoting density.</li>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">Wood-Pressed Mustard Oil:</strong> Extracted cold to keep its full power. Provides deep conditioning.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">Fenugreek:</strong> Rich in proteins used for centuries to make hair thick and smooth.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">Onion:</strong> Naturally cleans the scalp and helps delay hair aging.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">Rosemary:</strong> A famous natural herb proven to soothe the scalp and promote thicker hair.</span>
+                </li>
               </ul>
             </div>
 
             {/* The Ritual */}
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE RITUAL</h3>
-              <p>
-                Apply 6 to 8 drops of Hair Elixir directly to the scalp and roots. Using only your fingertips, massage gently in slow circles for three to five minutes. Leave the elixir on for a minimum of one hour to allow deep absorption, or leave it overnight for maximum nourishment. Cleanse with a mild shampoo. Use on alternate days for the best results.
-              </p>
+              <ul className="space-y-2">
+                <li><strong className="text-white">1. Apply:</strong> Put 6 to 8 drops directly on your scalp and roots.</li>
+                <li><strong className="text-white">2. Massage:</strong> Gently rub in slow circles for 3 to 5 minutes.</li>
+                <li><strong className="text-white">3. Wait & Wash:</strong> Leave it for at least 1 hour (or overnight) then wash with mild shampoo.</li>
+              </ul>
             </div>
           </div>
 
