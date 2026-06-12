@@ -151,6 +151,30 @@ export default function ProductPage() {
               </ul>
             </div>
 
+            {/* The Zulf Difference */}
+            <div>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE ZULF DIFFERENCE: NO SHORTCUTS.</h3>
+              <p className="mb-4 text-white/90 italic">We do not mass-produce in factories. We do not dilute our formulas to cut costs. Here is why Hair Elixir is in a class of its own:</p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">Slow Wood-Pressed Mustard Oil:</strong> We never use industrial machine-pressing. Our mustard oil is traditionally wood-pressed. This slow, labor-intensive process generates zero heat, guaranteeing that 100% of the vital hair-repairing nutrients are perfectly preserved.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">100% Pure, Undiluted Rosemary:</strong> Commercial brands heavily dilute their rosemary in cheap carrier oils to save money. ZULF uses a pure, undiluted rosemary extraction to deliver unparalleled scalp stimulation and density support.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">Micro-Batch Handcrafting:</strong> Every single bottle of ZULF is handcrafted in small, highly controlled batches to ensure absolute freshness and maximum potency when it reaches your scalp.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">Zero Filler Policy:</strong> If an ingredient doesn't actively stop hairfall, it is not in the bottle. No water, no artificial fragrances, and no cheap chemical extenders. Just 100% active, organic power.</span>
+                </li>
+              </ul>
+            </div>
+
             {/* Closing Statement */}
             <div className="pt-6 text-center border-t border-white/10 mt-8">
               <p className="text-white/90 text-[17px] md:text-lg leading-relaxed font-medium">
