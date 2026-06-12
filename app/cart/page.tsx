@@ -100,7 +100,7 @@ export default function CartPage() {
             </Link>
 
             <div className="mt-6 text-xs text-center text-white/50 tracking-widest">
-              Secure checkout • 100% Halal • 30-day returns
+              Secure checkout • 100% Halal • 14-day returns
             </div>
           </div>
         </div>

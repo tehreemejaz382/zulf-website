@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { trackFbEvent } from '../components/TrackingScripts';
 
 const images = [
   { src: '/images/product/front.webp', alt: 'ZULF Hair Elixir — Front' },
@@ -67,15 +68,27 @@ export default function ProductPage() {
           <h1 className="text-3xl md:text-5xl tracking-[-1.5px] font-serif mb-2">Hair Elixir by ZULF</h1>
           <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
 
-          <div className="text-3xl font-medium mb-6">Rs. {price}</div>
+          <div className="text-3xl font-medium mb-6">
+            Rs. {price} <span className="text-sm font-normal text-white/60 ml-2">+ Rs. 300 delivery</span>
+          </div>
 
-          <Link href="/checkout" className="block w-full text-center btn-gold py-4 text-base tracking-[2px] mb-4">
-            ADD TO CART — Rs. {price}
+          <Link 
+            href="/checkout" 
+            className="block w-full text-center btn-gold py-4 text-base tracking-[2px] mb-4"
+            onClick={() => trackFbEvent('AddToCart')}
+          >
+            BUY NOW — Rs. {price}
           </Link>
 
-          <p className="text-xs text-white/60 tracking-widest mb-10 text-center">
-            Dispatched within 24 hours • 15-day returns
+          <p className="text-xs text-white/60 tracking-widest mb-4 text-center">
+            Dispatched within 24 hours • 14-day returns
           </p>
+          
+          <div className="text-center mb-10">
+            <span className="inline-block px-3 py-1 bg-[#C5A46E]/10 text-[#C5A46E] text-xs tracking-widest rounded border border-[#C5A46E]/20">
+              Handcrafted in small batches — limited stock
+            </span>
+          </div>
 
           {/* Deep Copy Section */}
           <div className="space-y-8 md:space-y-10 text-white/80 leading-relaxed text-[15px] md:text-base">
@@ -95,11 +108,11 @@ export default function ProductPage() {
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">HOW HAIR ELIXIR TRANSFORMS YOUR HAIR</h3>
               <ul className="space-y-5">
-                <li><strong className="text-white">1. Hairfall Elimination:</strong> Fortifies the root architecture with such overwhelming density that shedding is not just reduced—it is systematically and visibly eliminated.</li>
-                <li><strong className="text-white">2. Delays Premature Greying:</strong> Packed with potent natural antioxidants from Onion and Rosemary, the elixir neutralizes oxidative stress in the scalp—a major factor in delaying the onset of early grey hair.</li>
-                <li><strong className="text-white">3. Hard Water Defense:</strong> The rich fatty acids in wood-pressed Mustard Oil create a protective lipid barrier over your hair shaft. This locks out harsh groundwater minerals, preventing your hair from drying out and snapping after every shower.</li>
+                <li><strong className="text-white">1. Hard Water Defense:</strong> The rich fatty acids in wood-pressed Mustard Oil create a protective lipid barrier over your hair shaft. This locks out harsh groundwater minerals, preventing your hair from drying out and snapping after every shower.</li>
+                <li><strong className="text-white">2. Hairfall Elimination:</strong> Fortifies the root architecture with such overwhelming density that shedding is not just reduced—it is systematically and visibly eliminated.</li>
+                <li><strong className="text-white">3. Delays Premature Greying:</strong> Packed with potent natural antioxidants from Onion and Rosemary, the elixir neutralizes oxidative stress in the scalp—a major factor in delaying the onset of early grey hair.</li>
                 <li><strong className="text-white">4. Clears Severe Dandruff & Scalp Itch:</strong> Onion's natural anti-bacterial and sulfur-rich properties detoxify the scalp. It clears stubborn dandruff and creates a clean, balanced environment that stops summer itching immediately.</li>
-                <li><strong className="text-white">5. Smooths Hair Texture & Frizz:</strong> Fenugreek acts as a powerful natural conditioner (rich in emollient lecithin). It intensely hydrates the hair cuticle, turning rough, humidity-frizzed hair into heavy, manageable silk.</li>
+                <li><strong className="text-white">5. Smooths Hair Texture & Frizz:</strong> Fenugreek acts as a powerful natural conditioner. It intensely hydrates the hair cuticle, turning rough, humidity-frizzed hair into heavy, manageable silk.</li>
               </ul>
             </div>
 
@@ -183,6 +196,17 @@ export default function ProductPage() {
           </button>
         </div>
       )}
+
+      {/* Sticky Mobile CTA */}
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#0A0A0A]/95 backdrop-blur border-t border-white/10 md:hidden z-40">
+        <Link 
+          href="/checkout" 
+          className="block w-full text-center btn-gold py-3 text-sm tracking-[2px]"
+          onClick={() => trackFbEvent('AddToCart')}
+        >
+          BUY NOW — Rs. {price}
+        </Link>
+      </div>
     </div>
   );
 }

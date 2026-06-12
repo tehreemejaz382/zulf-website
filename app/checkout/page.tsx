@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { trackFbEvent } from "../components/TrackingScripts";
 
 
 export default function CheckoutPage() {
@@ -15,6 +16,10 @@ export default function CheckoutPage() {
   const deliveryCharges = 300; // Rs. 300 delivery charge for Pakistan
 
   const totalAmount = (quantity * pricePerBottle) + deliveryCharges;
+
+  useEffect(() => {
+    trackFbEvent('InitiateCheckout');
+  }, []);
 
   const validatePhone = (phone: string): string => {
     // Remove spaces, dashes, and dots
@@ -216,10 +221,12 @@ export default function CheckoutPage() {
 
               <div className="flex gap-4 mb-6">
                 <div className="w-20 h-20 bg-zinc-950 border border-zinc-800 rounded-md overflow-hidden relative">
-                  {/* Ideally, we'd use next/image here, but fallback to simple div if no image */}
-                  <div className="absolute inset-0 flex items-center justify-center text-[#C5A46E] font-serif font-bold">
-                    ZULF
-                  </div>
+                  <Image 
+                    src="/images/product/front.webp" 
+                    alt="ZULF Hair Elixir" 
+                    fill 
+                    className="object-cover" 
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-lg">Zulf Hair Elixir</h3>

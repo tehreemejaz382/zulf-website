@@ -2,11 +2,16 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
+import { trackFbEvent } from "../../components/TrackingScripts";
 
 function ConfirmationContent() {
   const searchParams = useSearchParams();
   const orderId = searchParams.get("orderId");
+
+  useEffect(() => {
+    trackFbEvent('Purchase', { value: 2299, currency: 'PKR' });
+  }, []);
 
   return (
     <div className="bg-zinc-900/50 p-8 md:p-12 rounded-xl border border-zinc-800 text-center">
