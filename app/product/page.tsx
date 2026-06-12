@@ -69,7 +69,7 @@ export default function ProductPage() {
           <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
 
           <div className="text-3xl font-medium mb-6">
-            Rs. {price} <span className="text-sm font-normal text-white/60 ml-2">+ Rs. 300 delivery</span>
+            Rs. {price} <span className="text-sm font-normal text-white/60 ml-2">+ Rs. 299 delivery</span>
           </div>
 
           <Link 

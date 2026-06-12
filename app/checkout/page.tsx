@@ -13,7 +13,7 @@ export default function CheckoutPage() {
   const [quantity, setQuantity] = useState(1);
   const [phoneError, setPhoneError] = useState("");
   const pricePerBottle = 1999;
-  const deliveryCharges = 300; // Rs. 300 delivery charge for Pakistan
+  const deliveryCharges = 299; // Rs. 299 delivery charge for Pakistan
 
   const totalAmount = (quantity * pricePerBottle) + deliveryCharges;
 
