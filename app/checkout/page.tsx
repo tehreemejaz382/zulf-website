@@ -220,7 +220,7 @@ export default function CheckoutPage() {
               </h2>
 
               <div className="flex gap-4 mb-6">
-                <div className="w-20 h-20 bg-zinc-950 border border-zinc-800 rounded-md overflow-hidden relative">
+                <div className="w-20 h-20 shrink-0 bg-zinc-950 border border-zinc-800 rounded-md overflow-hidden relative">
                   <Image 
                     src="/images/product/front.webp" 
                     alt="ZULF Hair Elixir" 
