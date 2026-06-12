@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import { trackFbEvent } from "../components/TrackingScripts";
 
 
@@ -221,11 +220,10 @@ export default function CheckoutPage() {
 
               <div className="flex gap-4 mb-6">
                 <div className="w-20 h-20 shrink-0 bg-zinc-950 border border-zinc-800 rounded-md overflow-hidden relative">
-                  <Image 
+                  <img 
                     src="/images/product/front.webp" 
                     alt="ZULF Hair Elixir" 
-                    fill 
-                    className="object-cover" 
+                    className="w-full h-full object-cover" 
                   />
                 </div>
                 <div className="flex-1">

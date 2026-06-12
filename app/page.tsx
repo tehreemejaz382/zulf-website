@@ -77,9 +77,9 @@ export default function ZulfHomepage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.3 }}
             >
-              <a href="#product" className="btn-gold px-8 md:px-12 py-4 text-sm md:text-base tracking-[3px]">
+              <Link href="/product" className="btn-gold px-8 md:px-12 py-4 text-sm md:text-base tracking-[3px]">
                 OWN YOUR CROWN
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function ZulfHomepage() {
               A concentrated organic elixir formulated to address the root causes of hair fall —
               weakened follicles, scalp inflammation, and nutrient deprivation.
             </p>
-            <Link href="/checkout" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW - Rs. 1,999</Link>
+            <Link href="/product" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW - Rs. 1,999</Link>
           </div>
 
           <div className="mt-10 md:mt-0">
@@ -217,7 +217,7 @@ export default function ZulfHomepage() {
           <div>
             <h2 className="text-4xl md:text-6xl tracking-[-2px] font-serif leading-none mb-6 md:mb-8">Your Crown.<br />Your Ritual.<br />Your Choice.</h2>
             <p className="text-xl text-white/70 mb-8">Hair Elixir by ZULF — Four Ingredients · One Decision</p>
-            <Link href="/checkout" className="btn-gold tracking-[2px] px-10 py-4">SHOP HAIR ELIXIR - Rs. 1,999</Link>
+            <Link href="/product" className="btn-gold tracking-[2px] px-10 py-4">SHOP HAIR ELIXIR - Rs. 1,999</Link>
           </div>
 
           <div className="mt-12 md:mt-0">

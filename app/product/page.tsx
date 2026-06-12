@@ -95,7 +95,7 @@ export default function ProductPage() {
             
             {/* The Hook */}
             <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">YOUR CROWN DESERVES A RITUAL</h3>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">YOUR CROWN DESERVES A RITUAL</h3>
               <p className="mb-4">
                 In Pakistan, our hair faces extreme challenges—from harsh weather and hard water to severe daily stress. It is no surprise that an alarming 76% of people experience serious hair loss and thinning. You cannot fix these problems by masking them with chemical shampoos. You have to address the root cause.
               </p>
@@ -106,7 +106,7 @@ export default function ProductPage() {
 
             {/* Benefits */}
             <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">HOW HAIR ELIXIR TRANSFORMS YOUR HAIR</h3>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">HOW HAIR ELIXIR TRANSFORMS YOUR HAIR</h3>
               <ul className="space-y-5">
                 <li><strong className="text-white">1. Hard Water Defense:</strong> The rich fatty acids in wood-pressed Mustard Oil create a protective lipid barrier over your hair shaft. This locks out harsh groundwater minerals, preventing your hair from drying out and snapping after every shower.</li>
                 <li><strong className="text-white">2. Hairfall Elimination:</strong> Fortifies the root architecture with such overwhelming density that shedding is not just reduced—it is systematically and visibly eliminated.</li>
@@ -118,7 +118,7 @@ export default function ProductPage() {
 
             {/* Ingredients */}
             <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">FOUR INGREDIENTS. ONE PURPOSE.</h3>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">FOUR INGREDIENTS. ONE PURPOSE.</h3>
               <p className="mb-4">We honor centuries of South Asian tradition by using only what works. No fillers.</p>
               <ul className="space-y-2">
                 <li>• <strong className="text-white">Wood-Pressed Mustard Oil:</strong> Extracted cold (Kachi Ghani) to preserve its full nutritional profile, providing the ultimate defense and deep conditioning.</li>
@@ -130,7 +130,7 @@ export default function ProductPage() {
 
             {/* The Ritual */}
             <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4">THE RITUAL</h3>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE RITUAL</h3>
               <p>
                 Apply 6 to 8 drops of Hair Elixir directly to the scalp and roots. Using only your fingertips, massage gently in slow circles for three to five minutes. Leave the elixir on for a minimum of one hour to allow deep absorption, or leave it overnight for maximum nourishment. Cleanse with a mild shampoo. Use on alternate days for the best results.
               </p>
