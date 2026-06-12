@@ -152,11 +152,11 @@ export default function ProductPage() {
             </div>
 
             {/* Closing Statement */}
-            <div className="pt-4 text-center">
-              <p className="text-[#C5A46E] font-serif text-[18px] md:text-xl italic leading-relaxed">
+            <div className="pt-6 text-center border-t border-white/10 mt-8">
+              <p className="text-white/90 text-[17px] md:text-lg leading-relaxed font-medium">
                 The solution has always existed.<br />
                 Your hair just needed the right one.<br />
-                <span className="text-white font-medium not-italic tracking-[1px] mt-2 block uppercase text-sm">Feed the root. Own the crown.</span>
+                <span className="text-[#C5A46E] tracking-[2px] mt-4 block uppercase text-sm">FEED THE ROOT. OWN THE CROWN.</span>
               </p>
             </div>
           </div>
