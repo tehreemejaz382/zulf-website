@@ -151,14 +151,13 @@ export default function ProductPage() {
               </ul>
             </div>
 
-            {/* The Ritual */}
-            <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE RITUAL</h3>
-              <ul className="space-y-2">
-                <li><strong className="text-white">1. Apply:</strong> Put 6 to 8 drops directly on your scalp and roots.</li>
-                <li><strong className="text-white">2. Massage:</strong> Gently rub in slow circles for 3 to 5 minutes.</li>
-                <li><strong className="text-white">3. Wait & Wash:</strong> Leave it for at least 1 hour (or overnight) then wash with mild shampoo.</li>
-              </ul>
+            {/* Closing Statement */}
+            <div className="pt-4 text-center">
+              <p className="text-[#C5A46E] font-serif text-[18px] md:text-xl italic leading-relaxed">
+                The solution has always existed.<br />
+                Your hair just needed the right one.<br />
+                <span className="text-white font-medium not-italic tracking-[1px] mt-2 block uppercase text-sm">Feed the root. Own the crown.</span>
+              </p>
             </div>
           </div>
 
