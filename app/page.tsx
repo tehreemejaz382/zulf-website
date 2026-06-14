@@ -111,6 +111,18 @@ export default function ZulfHomepage() {
         </div>
       </section>
 
+      {/* ==================== THE FOUNDER'S STORY ==================== */}
+      <section className="section border-t border-white/10 bg-[#050505] px-4 md:px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="text-[#C5A46E] text-xs tracking-[3px] mb-4 uppercase">The Formulation Story</div>
+          <h2 className="text-3xl md:text-5xl tracking-[-1px] font-serif mb-8">Born From Necessity.</h2>
+          <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+            "My wife was one of the 76%. After hard water and stress led to severe, unstoppable hairfall, she tried every chemical shampoo and clinical serum available. Nothing worked. So, she spent months formulating this exact 100% halal, wood-pressed elixir. It stopped her hairfall completely. We launched ZULF because we know how many women are silently struggling with this same pain."
+          </p>
+          <div className="mt-8 text-white/50 text-sm tracking-widest uppercase">— The Founders</div>
+        </div>
+      </section>
+
       {/* ==================== PRODUCT FEATURE ==================== */}
       <section id="product" className="section border-t border-white/10 px-4 md:px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-x-16 items-center">
@@ -121,7 +133,7 @@ export default function ZulfHomepage() {
               A concentrated organic elixir formulated to address the root causes of hair fall —
               weakened follicles, scalp inflammation, and nutrient deprivation.
             </p>
-            <Link href="/product" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW - Rs. 1,999</Link>
+            <Link href="/product" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW - Rs. 2,299</Link>
           </div>
 
           <div className="mt-10 md:mt-0">
@@ -217,7 +229,7 @@ export default function ZulfHomepage() {
           <div>
             <h2 className="text-4xl md:text-6xl tracking-[-2px] font-serif leading-none mb-6 md:mb-8">Your Crown.<br />Your Ritual.<br />Your Choice.</h2>
             <p className="text-xl text-white/70 mb-8">Hair Elixir by ZULF — Four Ingredients · One Decision</p>
-            <Link href="/product" className="btn-gold tracking-[2px] px-10 py-4">SHOP HAIR ELIXIR - Rs. 1,999</Link>
+            <Link href="/product" className="btn-gold tracking-[2px] px-10 py-4">SHOP HAIR ELIXIR - Rs. 2,299</Link>
           </div>
 
           <div className="mt-12 md:mt-0">

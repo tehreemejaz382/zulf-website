@@ -15,7 +15,7 @@ const images = [
 export default function ProductPage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const price = 1999;
+  const price = 2299;
 
   const openLightbox = () => setLightboxOpen(true);
   const closeLightbox = () => setLightboxOpen(false);
@@ -86,7 +86,7 @@ export default function ProductPage() {
           <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
 
           <div className="text-3xl font-medium mb-6">
-            Rs. {price} <span className="text-sm font-normal text-white/60 ml-2">+ Rs. 299 delivery</span>
+            Rs. {price} <span className="text-sm font-bold text-[#25D366] ml-2 uppercase tracking-wider">Free Delivery</span>
           </div>
 
           <Link 
@@ -94,7 +94,7 @@ export default function ProductPage() {
             className="block w-full text-center btn-gold py-4 text-base tracking-[2px] mb-4"
             onClick={() => trackFbEvent('AddToCart')}
           >
-            BUY NOW — Rs. {price}
+            ORDER NOW — CASH ON DELIVERY
           </Link>
 
           <p className="text-xs text-white/60 tracking-widest mb-4 text-center">
@@ -132,6 +132,48 @@ export default function ProductPage() {
               <p>
                 <strong>Hair Elixir by ZULF</strong> is a 100% organic oil made to protect your hair. By mixing four of South Asia's most trusted natural ingredients, this oil stops hair fall, delays early white hair, and brings your hair back to life.
               </p>
+            </div>
+
+            {/* The Formulation Story */}
+            <div className="p-6 md:p-8 bg-white/5 border border-[#C5A46E]/30 rounded-xl">
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans uppercase">The Formulation Story</h3>
+              <p className="italic text-white/90">
+                "My wife was losing her hair due to the hard water in our city. She tried every chemical shampoo and clinical serum, but nothing worked. Desperate, she spent months formulating this exact 100% halal, wood-pressed elixir. It stopped her hairfall completely. We launched ZULF because no one should have to suffer in silence."
+              </p>
+            </div>
+
+            {/* The Ritual (How to Use) */}
+            <div>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE RITUAL (HOW TO USE)</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1 font-bold">1.</span>
+                  <span><strong>The Drop:</strong> Apply 6-8 drops directly to the scalp, focusing on thinning areas.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1 font-bold">2.</span>
+                  <span><strong>The Massage:</strong> Gently massage with your fingertips for 3-5 minutes to stimulate blood flow.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1 font-bold">3.</span>
+                  <span><strong>The Rest:</strong> Leave it in overnight, or for at least 2 hours before washing. Use on alternate nights.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Timeline */}
+            <div>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">WHAT TO EXPECT</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="p-5 border border-white/10 rounded-lg">
+                  <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 1</div>
+                  <p className="text-sm">Scalp detoxifies. Dandruff and itching significantly reduce. Hard water barrier forms.</p>
+                </div>
+                <div className="p-5 border border-white/10 rounded-lg">
+                  <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 4</div>
+                  <p className="text-sm">Roots anchor. Noticeable reduction in daily hairfall and shedding on the brush.</p>
+                </div>
+              </div>
             </div>
 
             {/* Benefits */}
@@ -206,6 +248,40 @@ export default function ProductPage() {
                   <span><strong className="text-white">Zero Filler Policy:</strong> If an ingredient doesn't actively stop hairfall, it is not in the bottle. No water, no artificial fragrances, and no cheap chemical extenders. Just 100% active, organic power.</span>
                 </li>
               </ul>
+            </div>
+
+            {/* FAQ */}
+            <div>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">FREQUENTLY ASKED QUESTIONS</h3>
+              <div className="space-y-4">
+                <div className="border-b border-white/10 pb-4">
+                  <h4 className="font-medium text-white mb-2">Is ZULF 100% Halal?</h4>
+                  <p className="text-sm text-white/70">Yes. It is entirely plant-derived with no animal byproducts and zero alcohol. Perfect for a halal lifestyle.</p>
+                </div>
+                <div className="border-b border-white/10 pb-4">
+                  <h4 className="font-medium text-white mb-2">Does it have a strong mustard smell?</h4>
+                  <p className="text-sm text-white/70">No. The rosemary and fenugreek beautifully balance the scent, giving it an earthy, botanical aroma.</p>
+                </div>
+                <div className="border-b border-white/10 pb-4">
+                  <h4 className="font-medium text-white mb-2">Will one bottle be enough?</h4>
+                  <p className="text-sm text-white/70">One 100ml bottle typically lasts 4-6 weeks with regular use (alternate nights), making it an excellent value.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Reviews */}
+            <div className="pt-6">
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-6 font-sans text-center">REAL RESULTS</h3>
+              <div className="space-y-4">
+                <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
+                  <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                  <p className="text-sm text-white/80 mb-2">"My hair was falling out in clumps because of the hard water here. This is the first thing that actually stopped it. My brush is finally clean."</p>
+                  <p className="text-xs text-white/50 uppercase tracking-widest">— Ayesha S.</p>
+                </div>
+                <div className="text-center mt-6">
+                  <p className="text-xs text-[#C5A46E]/60 italic tracking-widest uppercase">More reviews coming soon</p>
+                </div>
+              </div>
             </div>
 
             {/* Closing Statement */}
@@ -285,7 +361,7 @@ export default function ProductPage() {
           className="block w-full text-center btn-gold py-3 text-sm tracking-[2px]"
           onClick={() => trackFbEvent('AddToCart')}
         >
-          BUY NOW — Rs. {price}
+          ORDER NOW — CASH ON DELIVERY
         </Link>
       </div>
     </div>
