@@ -41,7 +41,7 @@ export default function ZulfHomepage() {
               <img
                 src={heroSlides[currentSlide]}
                 alt="ZULF Hair Elixir"
-                className="w-full h-full object-contain md:object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </motion.div>
           </AnimatePresence>
