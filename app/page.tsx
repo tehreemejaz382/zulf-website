@@ -117,7 +117,7 @@ export default function ZulfHomepage() {
           <div className="text-[#C5A46E] text-xs tracking-[3px] mb-4 uppercase">The Formulation Story</div>
           <h2 className="text-3xl md:text-5xl tracking-[-1px] font-serif mb-8">Born From Necessity.</h2>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            "My wife was one of the 76%. After hard water and stress led to severe, unstoppable hairfall, she tried every chemical shampoo and clinical serum available. Nothing worked. So, she spent months formulating this exact 100% halal, wood-pressed elixir. It stopped her hairfall completely. We launched ZULF because we know how many women are silently struggling with this same pain."
+            "ZULF was born from a very personal journey. When chemical shampoos failed to protect hair from the damage of harsh city water, we refused to compromise. We turned to the natural power of South Asian ingredients and spent months perfecting a 100% halal, wood-pressed elixir. It did not just stop the hair fall; it brought the hair back to life. We launched ZULF to share this standard of care with you."
           </p>
           <div className="mt-8 text-white/50 text-sm tracking-widest uppercase">— The Founders</div>
         </div>
