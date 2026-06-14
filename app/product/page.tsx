@@ -112,7 +112,7 @@ export default function ProductPage() {
           <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
 
           <div className="text-3xl font-medium mb-6">
-            Rs. {price}
+            Rs. {price.toLocaleString()}
           </div>
 
           <Link 
