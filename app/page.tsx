@@ -126,7 +126,7 @@ export default function ZulfHomepage() {
 
           <div className="mt-10 md:mt-0">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src="/images/product/front.webp" alt="ZULF Hair Elixir" className="w-full h-full object-cover" />
+              <img src="/images/product/1.webp" alt="ZULF Hair Elixir" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
