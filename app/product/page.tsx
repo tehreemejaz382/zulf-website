@@ -275,8 +275,8 @@ export default function ProductPage() {
               <div className="space-y-4">
                 <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
                   <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
-                  <p className="text-sm text-white/80 mb-2">"My hair was falling out in clumps because of the hard water here. This is the first thing that actually stopped it. My brush is finally clean."</p>
-                  <p className="text-xs text-white/50 uppercase tracking-widest">— Ayesha S.</p>
+                  <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of the lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
+                  <p className="text-xs text-white/50 uppercase tracking-widest">— Bushra</p>
                 </div>
                 <div className="text-center mt-6">
                   <p className="text-xs text-[#C5A46E]/60 italic tracking-widest uppercase">More reviews coming soon</p>

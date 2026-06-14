@@ -99,17 +99,7 @@ export default function ZulfHomepage() {
 
       </section>
 
-      {/* ==================== BRAND PROMISE ==================== */}
-      <section className="section border-t border-white/10 px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="gold-line mx-auto mb-8" />
-          <h2 className="text-2xl md:text-[42px] leading-tight tracking-[-1.2px] font-serif">
-            In Pakistan, an alarming 76% of people experience hair loss.<br className="hidden md:block" />
-            We built ZULF for the ones who refuse to accept it.
-          </h2>
-          <p className="mt-6 text-sm tracking-[2px] text-white/50">Source: Journal of Health and Rehabilitation Research, 2024</p>
-        </div>
-      </section>
+
 
       {/* ==================== THE FOUNDER'S STORY ==================== */}
       <section className="section border-t border-white/10 bg-[#050505] px-4 md:px-6">
