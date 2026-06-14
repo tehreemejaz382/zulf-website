@@ -81,9 +81,10 @@ export default function ProductPage() {
               </div>
             ))}
           </div>
+        </div>
           
-          {/* Desktop Reviews */}
-          <div className="hidden lg:block pt-6 border-t border-white/10">
+        {/* Desktop Reviews */}
+        <div className="hidden lg:block pt-6 border-t border-white/10">
             <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-6 font-sans text-center">REAL RESULTS</h3>
             <div className="space-y-4">
               <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
