@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { trackFbEvent } from '../components/TrackingScripts';
+import { ShieldCheck, Leaf, Droplet } from 'lucide-react';
 
 const images = [
   { src: '/images/product/1.webp', alt: 'ZULF Hair Elixir — Front' },
@@ -27,10 +28,12 @@ export default function ProductPage() {
     <div className="max-w-7xl mx-auto px-6 pt-10 pb-20">
       <div className="grid lg:grid-cols-2 gap-x-16 gap-y-12">
 
-        {/* Image Gallery */}
-        <div className="space-y-4">
+        {/* Left Column: Image Gallery + Reviews */}
+        <div className="flex flex-col gap-y-12">
+          {/* Image Gallery */}
+          <div className="space-y-4">
 
-          {/* Main Image */}
+            {/* Main Image */}
           <div
             className="relative aspect-[4/5] w-full overflow-hidden rounded-xl border border-white/10 cursor-zoom-in group"
             onClick={openLightbox}
@@ -78,6 +81,28 @@ export default function ProductPage() {
               </div>
             ))}
           </div>
+          
+          {/* Desktop Reviews */}
+          <div className="hidden lg:block pt-6 border-t border-white/10">
+            <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-6 font-sans text-center">REAL RESULTS</h3>
+            <div className="space-y-4">
+              <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
+                <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of the lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
+                <p className="text-xs text-white/50 uppercase tracking-widest">— Bushra</p>
+              </div>
+              <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
+                <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                <p className="text-sm text-white/80 mb-2">"hair brush use krnay k bad mjhy boht tension hoti q ky brush bilkul balon sy bharr jata tha, aur mery sar py patches banna start hi gy, esy lagta tha jesy ma ganji hony wali hon. bohut sari chezen try krny k bad Zulf ka hair Elixir oil mila, isy use krny k bad esy lagta ha jesy kabhi kuch hua hi ni mery balon k sath. ab to har waqt balon ko dekh shukar parhti hun."</p>
+                <p className="text-xs text-white/50 uppercase tracking-widest">— Tehreem</p>
+              </div>
+              <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
+                <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                <p className="text-sm text-white/80 mb-2">"Mujhy itna khas shoq ni ha hair care krny ka lekin mjhy dandruf ny bht tang kia hua tha. Ma ny market sy bht sy shampoo use kiye kafi salon tak, agar wo shampoo 1 y 2 week skip ho jayn to dandruf wapis a jata or layers ban jati han or ye 4 saal sy mjhy pareshan kiye huy ha. Lekin ye sary shampoo chor diye han jab sy Hair Elixir lagana start kia ha. Ab mjhy tasali ha."</p>
+                <p className="text-xs text-white/50 uppercase tracking-widest">— Talha</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Product Info */}
@@ -110,15 +135,15 @@ export default function ProductPage() {
           {/* Trust Bar for Lazy Readers */}
           <div className="grid grid-cols-3 gap-2 py-6 border-y border-white/10 mb-10">
             <div className="flex flex-col items-center justify-center text-center space-y-2">
-              <svg className="w-6 h-6 text-[#C5A46E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              <ShieldCheck className="w-6 h-6 text-red-500" strokeWidth={1.5} />
               <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Stops<br/>Hairfall</span>
             </div>
             <div className="flex flex-col items-center justify-center text-center space-y-2 border-l border-white/10">
-              <svg className="w-6 h-6 text-[#C5A46E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+              <Leaf className="w-6 h-6 text-green-500" strokeWidth={1.5} />
               <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">100%<br/>Organic</span>
             </div>
             <div className="flex flex-col items-center justify-center text-center space-y-2 border-l border-white/10">
-              <svg className="w-6 h-6 text-[#C5A46E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+              <Droplet className="w-6 h-6 text-blue-500" strokeWidth={1.5} />
               <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Hard Water<br/>Defense</span>
             </div>
           </div>
@@ -228,7 +253,7 @@ export default function ProductPage() {
 
             {/* The Zulf Difference */}
             <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE ZULF DIFFERENCE: NO SHORTCUTS.</h3>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">WHY ZULF IS DIFFERENT</h3>
               <p className="mb-4 text-white/90 italic">We do not mass-produce in factories. We do not dilute our formulas to cut costs. Here is why Hair Elixir is in a class of its own:</p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -269,8 +294,8 @@ export default function ProductPage() {
               </div>
             </div>
 
-            {/* Reviews */}
-            <div className="pt-6">
+            {/* Mobile Reviews */}
+            <div className="pt-6 lg:hidden">
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-6 font-sans text-center">REAL RESULTS</h3>
               <div className="space-y-4">
                 <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
@@ -278,8 +303,15 @@ export default function ProductPage() {
                   <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of the lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
                   <p className="text-xs text-white/50 uppercase tracking-widest">— Bushra</p>
                 </div>
-                <div className="text-center mt-6">
-                  <p className="text-xs text-[#C5A46E]/60 italic tracking-widest uppercase">More reviews coming soon</p>
+                <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
+                  <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                  <p className="text-sm text-white/80 mb-2">"hair brush use krnay k bad mjhy boht tension hoti q ky brush bilkul balon sy bharr jata tha, aur mery sar py patches banna start hi gy, esy lagta tha jesy ma ganji hony wali hon. bohut sari chezen try krny k bad Zulf ka hair Elixir oil mila, isy use krny k bad esy lagta ha jesy kabhi kuch hua hi ni mery balon k sath. ab to har waqt balon ko dekh shukar parhti hun."</p>
+                  <p className="text-xs text-white/50 uppercase tracking-widest">— Tehreem</p>
+                </div>
+                <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
+                  <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                  <p className="text-sm text-white/80 mb-2">"Mujhy itna khas shoq ni ha hair care krny ka lekin mjhy dandruf ny bht tang kia hua tha. Ma ny market sy bht sy shampoo use kiye kafi salon tak, agar wo shampoo 1 y 2 week skip ho jayn to dandruf wapis a jata or layers ban jati han or ye 4 saal sy mjhy pareshan kiye huy ha. Lekin ye sary shampoo chor diye han jab sy Hair Elixir lagana start kia ha. Ab mjhy tasali ha."</p>
+                  <p className="text-xs text-white/50 uppercase tracking-widest">— Talha</p>
                 </div>
               </div>
             </div>
