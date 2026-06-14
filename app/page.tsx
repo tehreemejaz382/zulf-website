@@ -13,17 +13,40 @@ const heroSlides = [
 
 export default function ZulfHomepage() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   useEffect(() => {
+    if (lightboxOpen) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [lightboxOpen]);
 
   return (
     <div className="bg-[#0A0A0A] text-white">
       
+      {/* Lightbox Modal */}
+      {lightboxOpen && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out"
+          onClick={() => setLightboxOpen(false)}
+        >
+          <img
+            src={heroSlides[currentSlide]}
+            alt="ZULF Zoomed Image"
+            className="max-w-full max-h-[90vh] object-contain rounded-xl cursor-default"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+             className="absolute top-6 right-6 text-white/60 hover:text-white text-3xl leading-none z-10 transition-colors"
+             onClick={() => setLightboxOpen(false)}
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       {/* ==================== HERO ==================== */}
       <section className="relative flex flex-col md:block h-[100dvh] overflow-hidden bg-[#0A0A0A]">
 
@@ -36,7 +59,19 @@ export default function ZulfHomepage() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-0"
+              className="absolute inset-0 cursor-grab active:cursor-grabbing md:cursor-zoom-in"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = Math.abs(offset.x) * velocity.x;
+                if (swipe < -10000) {
+                  setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+                } else if (swipe > 10000) {
+                  setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+                }
+              }}
+              onClick={() => setLightboxOpen(true)}
             >
               <img
                 src={heroSlides[currentSlide]}
