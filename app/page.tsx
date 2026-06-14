@@ -51,7 +51,7 @@ export default function ZulfHomepage() {
       <section className="relative flex flex-col md:block h-[100dvh] overflow-hidden bg-[#0A0A0A]">
 
         {/* Sliding Images (Top 60% on mobile, Full screen on desktop) */}
-        <div className="relative w-full h-[60dvh] md:h-full md:absolute md:inset-0 z-[0]">
+        <div className="relative w-full aspect-[4/3] sm:aspect-video md:aspect-auto md:h-full md:absolute md:inset-0 z-[0]">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
@@ -76,7 +76,7 @@ export default function ZulfHomepage() {
               <img
                 src={heroSlides[currentSlide]}
                 alt="ZULF Hair Elixir"
-                className="w-full h-full object-contain md:object-cover"
+                className="w-full h-full object-cover object-center"
                 draggable={false}
               />
             </motion.div>
