@@ -84,6 +84,19 @@ export default function ZulfHomepage() {
 
           {/* Dark Overlay for Text Readability (Only on desktop) */}
           <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent z-[1]" />
+
+          {/* Slide Indicators */}
+          <div className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 z-[3] flex gap-2">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentSlide(i)}
+                className={`h-[2px] rounded-full transition-all duration-500 ${
+                  i === currentSlide ? 'w-8 bg-[#C5A46E]' : 'w-4 bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Hero Text Content (Bottom 40% on mobile, Top-Left Overlay on desktop) */}
@@ -120,18 +133,7 @@ export default function ZulfHomepage() {
           </div>
         </div>
 
-        {/* Slide Indicators */}
-        <div className="absolute top-[60dvh] md:top-auto md:bottom-10 -translate-y-8 md:translate-y-0 left-1/2 -translate-x-1/2 z-[3] flex gap-2">
-          {heroSlides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentSlide(i)}
-              className={`h-[2px] rounded-full transition-all duration-500 ${
-                i === currentSlide ? 'w-8 bg-[#C5A46E]' : 'w-4 bg-white/30 hover:bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
+
 
       </section>
 
