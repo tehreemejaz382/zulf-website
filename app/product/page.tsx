@@ -15,7 +15,7 @@ const images = [
 export default function ProductPage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const price = 2299;
+  const price = 1999;
 
   const openLightbox = () => setLightboxOpen(true);
   const closeLightbox = () => setLightboxOpen(false);
@@ -86,7 +86,7 @@ export default function ProductPage() {
           <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
 
           <div className="text-3xl font-medium mb-6">
-            Rs. {price} <span className="text-sm font-bold text-[#25D366] ml-2 uppercase tracking-wider">Free Delivery</span>
+            Rs. {price}
           </div>
 
           <Link 
