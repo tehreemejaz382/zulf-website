@@ -113,7 +113,7 @@ export default function ProductPage() {
 
           <div className="text-3xl font-medium mb-6 flex items-center gap-3">
             <span className="line-through text-white/50 text-2xl">Rs. 1,999</span>
-            <span className="text-[#C5A46E]">Rs. {price.toLocaleString()}</span>
+            <span className="text-white">Rs. {price.toLocaleString()}</span>
           </div>
 
           <Link 
@@ -121,7 +121,7 @@ export default function ProductPage() {
             className="block w-full text-center btn-gold py-4 text-base tracking-[2px] mb-4"
             onClick={() => trackFbEvent('AddToCart')}
           >
-            ORDER NOW — CASH ON DELIVERY
+            ORDER NOW
           </Link>
 
           <p className="text-xs text-white/60 tracking-widest mb-4 text-center">
@@ -395,7 +395,7 @@ export default function ProductPage() {
           className="block w-full text-center btn-gold py-3 text-sm tracking-[2px]"
           onClick={() => trackFbEvent('AddToCart')}
         >
-          ORDER NOW — CASH ON DELIVERY
+          ORDER NOW
         </Link>
       </div>
     </div>
