@@ -16,7 +16,7 @@ const images = [
 export default function ProductPage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const price = 1999;
+  const price = 1499;
 
   const openLightbox = () => setLightboxOpen(true);
   const closeLightbox = () => setLightboxOpen(false);
@@ -111,8 +111,9 @@ export default function ProductPage() {
           <h1 className="text-3xl md:text-5xl tracking-[-1.5px] font-serif mb-2">Hair Elixir by ZULF</h1>
           <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
 
-          <div className="text-3xl font-medium mb-6">
-            Rs. {price.toLocaleString()}
+          <div className="text-3xl font-medium mb-6 flex items-center gap-3">
+            <span className="line-through text-white/50 text-2xl">Rs. 1,999</span>
+            <span className="text-[#C5A46E]">Rs. {price.toLocaleString()}</span>
           </div>
 
           <Link 
