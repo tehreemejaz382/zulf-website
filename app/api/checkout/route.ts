@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     // 1. Send Premium Customer Email via Brevo (Instant, Professional)
     if (data.email) {
       const quantity = parseInt(data.quantity || '1');
-      const unitPrice = data.unitPrice || 1999;
+      const unitPrice = data.unitPrice || 1499;
       const shippingCharges = data.shippingCharges || 0;
       const discount = data.discount || 0;
       const total = (unitPrice * quantity) + shippingCharges - discount;
@@ -74,12 +74,12 @@ export async function POST(req: Request) {
               },
               custom_data: {
                 currency: "PKR",
-                value: (data.unitPrice || 1999) * parseInt(data.quantity || '1') + (data.shippingCharges || 0) - (data.discount || 0),
+                value: (data.unitPrice || 1499) * parseInt(data.quantity || '1') + (data.shippingCharges || 0) - (data.discount || 0),
                 contents: [
                   {
                     id: "ZULF_HAIR_ELIXIR",
                     quantity: parseInt(data.quantity || '1'),
-                    item_price: data.unitPrice || 1999
+                    item_price: data.unitPrice || 1499
                   }
                 ]
               }

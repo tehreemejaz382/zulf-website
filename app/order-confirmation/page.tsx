@@ -41,7 +41,7 @@ export default function OrderConfirmationPage() {
           </div>
           <div className="flex justify-between">
             <span className="text-white/60">Total Paid</span>
-            <span>Rs. 2,249</span>
+            <span>Rs. 1,798</span>
           </div>
           <div className="flex justify-between pt-2 border-t border-white/10">
             <span className="text-white/60">Expected Delivery</span>

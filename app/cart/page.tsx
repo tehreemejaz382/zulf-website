@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function CartPage() {
   const [quantity, setQuantity] = useState(1);
 
-  const price = 1999;
+  const price = 1499;
   const shipping = 299;
   const total = price * quantity + shipping;
 
