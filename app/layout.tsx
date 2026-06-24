@@ -37,6 +37,10 @@ export const metadata: Metadata = {
     // Replace this with your actual domain verification tag content if needed
     'facebook-domain-verification': process.env.NEXT_PUBLIC_FACEBOOK_DOMAIN_VERIFICATION || '',
   },
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({
