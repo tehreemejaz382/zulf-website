@@ -227,10 +227,6 @@ export default function ProductPage() {
                   <span className="text-[#C5A46E] mt-1">✓</span>
                   <span><strong className="text-white">Smooths Frizz:</strong> Deeply hydrates rough hair, turning it into smooth, manageable silk.</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Four Ingredients Measurement:</strong> Many hair oils on the market mix 30 to 50 ingredients — mustard oil, coconut oil, castor oil, shikakai, amla, and more — together in bulk, unmeasured batches. When that many things are competing for space in one bottle, each individual ingredient ends up more diluted, and the ratio can vary batch to batch. ZULF uses four ingredients, each measured precisely, every time — so what's on the label is actually what's in the bottle, consistently.</span>
-                </li>
               </ul>
             </div>
 
@@ -277,6 +273,10 @@ export default function ProductPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">•</span>
                   <span><strong className="text-white">Zero Filler Policy:</strong> If an ingredient isn't one of our four actives, it's not in the bottle. No water, no artificial fragrances, no cheap chemical extenders. Just 100% active, organic ingredients.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#C5A46E] mt-1">•</span>
+                  <span><strong className="text-white">Four Ingredients Measurement:</strong> Many hair oils on the market mix 30 to 50 ingredients — mustard oil, coconut oil, castor oil, shikakai, amla, and more — together in bulk, unmeasured batches. When that many things are competing for space in one bottle, each individual ingredient ends up more diluted, and the ratio can vary batch to batch. ZULF uses four ingredients, each measured precisely, every time — so what's on the label is actually what's in the bottle, consistently.</span>
                 </li>
               </ul>
             </div>
