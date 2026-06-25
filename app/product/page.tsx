@@ -9,7 +9,7 @@ const images = [
   { src: '/images/product/1.webp', alt: 'ZULF Hair Elixir — Front' },
   { src: '/images/product/2.webp', alt: 'ZULF Hair Elixir — Ingredients' },
   { src: '/images/product/3.webp', alt: 'ZULF Hair Elixir — Texture' },
-  { src: '/images/product/4.webp', alt: 'ZULF Hair Elixir — Healthy Hair' },
+  { src: '/images/product/4.webp', alt: 'ZULF Hair Elixir — Wooden Brush' },
   { src: '/images/product/5.webp', alt: 'ZULF Hair Elixir — The Ritual' },
 ];
 
