@@ -213,8 +213,8 @@ export default function ZulfHomepage() {
          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { label: "PRIMARY BENEFIT", title: "Hairfall Elimination", desc: "Formulated to support the scalp and follicles — fenugreek and onion are traditionally used to help reduce the appearance of shedding with regular use." },
-              { label: "SCALP HEALTH", title: "Clears Dandruff & Itch", desc: "Rosemary has a long history of use for scalp comfort — many people find it soothing for an irritated scalp." },
+              { label: "PRIMARY BENEFIT", title: "Hairfall Elimination", desc: "Anchors roots deeply into the scalp with overwhelming density to systematically eliminate shedding." },
+              { label: "SCALP HEALTH", title: "Clears Dandruff & Itch", desc: "Detoxifies the scalp from fungal buildup to create a balanced environment that stops itching immediately." },
               { label: "ENVIRONMENTAL SHIELD", title: "Hard Water Defense", desc: "Forms a protective lipid barrier to lock out harsh groundwater minerals and prevent dry, snapping hair." }
             ].map((item, i) => (
               <div key={i}>
