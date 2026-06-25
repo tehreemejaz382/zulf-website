@@ -264,7 +264,7 @@ export default function ProductPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">•</span>
-                  <span><strong className="text-white">100% Pure, Undiluted Rosemary:</strong> Commercial brands heavily dilute their rosemary in cheap carrier oils to save money. ZULF uses a pure, undiluted rosemary extraction to deliver unparalleled scalp stimulation and density support.</span>
+                  <span><strong className="text-white">Sourced for Purity — Rosemary:</strong> Commercial brands often dilute their rosemary in cheap carrier oils to save money. We tested six different suppliers before choosing one that doesn't cut corners — so what's in the bottle is rosemary, not rosemary stretched with filler oil.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">•</span>
@@ -272,7 +272,7 @@ export default function ProductPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">•</span>
-                  <span><strong className="text-white">Zero Filler Policy:</strong> If an ingredient doesn't actively stop hairfall, it is not in the bottle. No water, no artificial fragrances, and no cheap chemical extenders. Just 100% active, organic power.</span>
+                  <span><strong className="text-white">Zero Filler Policy:</strong> If an ingredient isn't one of our four actives, it's not in the bottle. No water, no artificial fragrances, no cheap chemical extenders. Just 100% active, organic ingredients.</span>
                 </li>
               </ul>
             </div>
@@ -282,8 +282,8 @@ export default function ProductPage() {
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">FREQUENTLY ASKED QUESTIONS</h3>
               <div className="space-y-4">
                 <div className="border-b border-white/10 pb-4">
-                  <h4 className="font-medium text-white mb-2">Is ZULF 100% Halal?</h4>
-                  <p className="text-sm text-white/70">Yes. It is entirely plant-derived with no animal byproducts and zero alcohol. Perfect for a halal lifestyle.</p>
+                  <h4 className="font-medium text-white mb-2">How long before I see a difference?</h4>
+                  <p className="text-sm text-white/70">Hair grows in cycles, so the exact timeline isn't identical for everyone — but you don't have to wait long to notice change. With consistent use, most people notice a real difference within 2 to 3 weeks, and the most visible improvement typically shows by around the 4-week mark. Stick with it — the results build the longer you stay consistent.</p>
                 </div>
                 <div className="border-b border-white/10 pb-4">
                   <h4 className="font-medium text-white mb-2">Does it have a strong mustard smell?</h4>
