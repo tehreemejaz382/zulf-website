@@ -108,7 +108,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="text-[40px] sm:text-[46px] md:text-[52px] lg:text-[62px] leading-[0.95] tracking-[-2px] font-serif mb-4"
             >
-              The Antidote<br />To The City.
+              Stop Hairfall.<br />Strengthen Roots.
             </motion.h1>
 
             <motion.p
@@ -117,8 +117,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, delay: 0.15 }}
               className="max-w-md text-[15px] md:text-base text-white/70 tracking-wide mb-8"
             >
-              Engineered to defend your hair against Pakistan's harsh urban water (Khara Pani).<br className="hidden md:block" />
-              Four ancestral ingredients, measured with clinical precision.
+              A clinical-grade formula engineered to visibly stop hairfall and defend against Pakistan's harsh urban water (Khara Pani).
             </motion.p>
 
             <motion.div
@@ -145,7 +144,7 @@ export default function ZulfHomepage() {
           <div className="text-[#C5A46E] text-xs tracking-[3px] mb-4 uppercase">The Formulation Story</div>
           <h2 className="text-3xl md:text-5xl tracking-[-1px] font-serif mb-8">Born From Necessity.</h2>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            "When commercial oils failed to protect our hair from the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it forms a waterproof protective shield against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
+            "When commercial oils failed to stop our hair from falling out due to the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it stops hairfall at the root and forms a waterproof protective shield against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
           </p>
           <div className="mt-8 text-white/50 text-sm tracking-widest uppercase">— The Founders</div>
         </div>
@@ -213,8 +212,8 @@ export default function ZulfHomepage() {
          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { label: "PRIMARY DEFENSE", title: "Hard Water (Khara Pani) Shield", desc: "Forms a waterproof protective shield to lock out harsh Khara Pani minerals and prevent dry, snapping hair." },
-              { label: "STRUCTURAL HEALTH", title: "Reduces Hairfall", desc: "Formulated to anchor the follicle — fenugreek and onion are traditionally used to help reduce shedding with regular use." },
+              { label: "STRUCTURAL HEALTH", title: "Stops Hairfall", desc: "Strengthens hair from the roots. Fenugreek and onion work together to visibly stop hair from falling out." },
+              { label: "PRIMARY DEFENSE", title: "Hard Water (Khara Pani) Shield", desc: "Forms a waterproof protective shield to lock out harsh minerals and prevent dry, snapping hair." },
               { label: "SCALP DETOX", title: "Clears Dandruff & Itch", desc: "Rosemary has a long history of use for scalp comfort — many people find it instantly soothing for a mineral-irritated scalp." }
             ].map((item, i) => (
               <div key={i}>
