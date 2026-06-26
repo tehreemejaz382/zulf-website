@@ -257,6 +257,11 @@ export default function ProductPage() {
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">WHY ZULF IS DIFFERENT</h3>
               <p className="mb-4 text-white/90 italic">We do not mass-produce in factories. We do not dilute our formulas to cut costs. Here is why Hair Elixir is in a class of its own:</p>
+              
+              <div className="relative w-full aspect-[16/9] mb-8 mt-6 rounded-xl overflow-hidden border border-white/10">
+                <img src="/images/product/kachi-ghani.webp" alt="Kachi Ghani Wood-Pressed Extraction" className="w-full h-full object-cover" />
+              </div>
+
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">•</span>

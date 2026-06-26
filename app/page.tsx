@@ -181,7 +181,7 @@ export default function ZulfHomepage() {
 
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
-              { name: "Mustard Oil", src: "/images/ingredients/mustard-oil.webp" },
+              { name: "Mustard Oil", src: "/images/ingredients/mustard-oil-v2.webp" },
               { name: "Fenugreek", src: "/images/ingredients/fenugreek.webp" },
               { name: "Onion", src: "/images/ingredients/onion.webp" },
               { name: "Rosemary", src: "/images/ingredients/rosemary.webp" }
