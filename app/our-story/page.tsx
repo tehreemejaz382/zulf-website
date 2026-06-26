@@ -21,15 +21,15 @@ export default function OurStoryPage() {
       {/* Story Content */}
       <div className="prose prose-invert max-w-none text-lg leading-relaxed text-white/90">
         <p>
-          Zulf is an Urdu word. It means a lock of hair. Something precious. Something personal. Something worth protecting.
+          Zulf is an Urdu word. It means a lock of hair — something precious, something personal.
         </p>
 
         <p>
-          In Pakistan, an alarming 76% of people experience hair loss. For one woman, the search for a solution led back to what generations before her had always trusted: four simple ingredients rooted in South Asian tradition — wood-pressed mustard oil, fenugreek, onion, and rosemary.
+          It started with a frustration almost every household in Pakistan will recognize: hair oils that promised a lot and changed very little, while the hard water (Khara Pani) coming out of the tap quietly worked against every one of them. For one woman, the answer wasn't a new invention — it was going back to four ingredients her own family had trusted for generations, and finally giving them the precision they'd never had.
         </p>
 
         <p>
-          She prepared the recipe with care. It worked. Her hair fall reduced. Her scalp felt calmer. Her strands grew stronger.
+          She prepared the recipe with care. Her hair fall reduced. Her scalp felt calmer. Her strands grew stronger.
         </p>
 
         <p>
