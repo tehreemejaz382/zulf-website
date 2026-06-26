@@ -194,9 +194,9 @@ export default function ZulfHomepage() {
                   <h4 className="text-2xl font-serif tracking-tight mb-3">{item.name}</h4>
                   <p className="text-white/70 text-[15px]">
                     {index === 0 && "Forms a waterproof protective shield to block hard water (Khara Pani) minerals from penetrating the hair shaft."}
-                    {index === 1 && "Rich in steroidal saponins that support follicle anchoring and structural strand strength."}
-                    {index === 2 && "High dietary sulfur content forms keratin disulfide bonds, halting environmental breakage."}
-                    {index === 3 && "Clinically backed vasodilatory properties to force microcirculation into blocked hair follicles."}
+                    {index === 1 && "Naturally rich in proteins that anchor hair roots firmly to the scalp, visibly stopping premature shedding."}
+                    {index === 2 && "Packed with natural sulfur, which rebuilds broken hair bonds and stops strands from snapping."}
+                    {index === 3 && "Proven to boost blood flow directly to the roots, waking up tired follicles and soothing the scalp."}
                   </p>
                 </div>
               </div>
