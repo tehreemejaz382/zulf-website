@@ -88,9 +88,9 @@ export default function ProductPage() {
             <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-6 font-sans text-center">REAL RESULTS</h3>
             <div className="space-y-4">
               <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
-                <div className="flex text-[#C5A46E] mb-2">★★★★<span className="text-white/20">★</span></div>
-                <p className="text-sm text-white/80 mb-2">"It took about 3 weeks to see results, and the smell of real mustard oil takes getting used to. But my hair has finally stopped snapping. First oil that actually helps with Karachi water."</p>
-                <p className="text-xs text-white/50 uppercase tracking-widest">— Ayesha</p>
+                <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of the lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
+                <p className="text-xs text-white/50 uppercase tracking-widest">— Bushra</p>
               </div>
               <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
                 <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
