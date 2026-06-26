@@ -117,7 +117,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, delay: 0.15 }}
               className="max-w-md text-[15px] md:text-base text-white/70 tracking-wide mb-8"
             >
-              Engineered to defend your hair against Pakistan's harsh urban water.<br className="hidden md:block" />
+              Engineered to defend your hair against Pakistan's harsh urban water (Khara Pani).<br className="hidden md:block" />
               Four ancestral ingredients, measured with clinical precision.
             </motion.p>
 
@@ -145,7 +145,7 @@ export default function ZulfHomepage() {
           <div className="text-[#C5A46E] text-xs tracking-[3px] mb-4 uppercase">The Formulation Story</div>
           <h2 className="text-3xl md:text-5xl tracking-[-1px] font-serif mb-8">Born From Necessity.</h2>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            "When commercial oils failed to protect our hair from the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it forms an impenetrable lipid barrier against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
+            "When commercial oils failed to protect our hair from the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it forms a waterproof protective shield against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
           </p>
           <div className="mt-8 text-white/50 text-sm tracking-widest uppercase">— The Founders</div>
         </div>
@@ -194,7 +194,7 @@ export default function ZulfHomepage() {
                 <div className="p-7">
                   <h4 className="text-2xl font-serif tracking-tight mb-3">{item.name}</h4>
                   <p className="text-white/70 text-[15px]">
-                    {index === 0 && "Forms a hydrophobic lipid barrier to block hard water minerals from penetrating the hair shaft."}
+                    {index === 0 && "Forms a waterproof protective shield to block hard water (Khara Pani) minerals from penetrating the hair shaft."}
                     {index === 1 && "Rich in steroidal saponins that support follicle anchoring and structural strand strength."}
                     {index === 2 && "High dietary sulfur content forms keratin disulfide bonds, halting environmental breakage."}
                     {index === 3 && "Clinically backed vasodilatory properties to force microcirculation into blocked hair follicles."}
@@ -213,7 +213,7 @@ export default function ZulfHomepage() {
          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { label: "PRIMARY DEFENSE", title: "Hard Water Shield", desc: "Forms an impenetrable lipid barrier to lock out harsh Khara Pani minerals and prevent dry, snapping hair." },
+              { label: "PRIMARY DEFENSE", title: "Hard Water (Khara Pani) Shield", desc: "Forms a waterproof protective shield to lock out harsh Khara Pani minerals and prevent dry, snapping hair." },
               { label: "STRUCTURAL HEALTH", title: "Reduces Hairfall", desc: "Formulated to anchor the follicle — fenugreek and onion are traditionally used to help reduce shedding with regular use." },
               { label: "SCALP DETOX", title: "Clears Dandruff & Itch", desc: "Rosemary has a long history of use for scalp comfort — many people find it instantly soothing for a mineral-irritated scalp." }
             ].map((item, i) => (

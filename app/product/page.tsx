@@ -146,7 +146,7 @@ export default function ProductPage() {
             </div>
             <div className="flex flex-col items-center justify-center text-center space-y-2 border-l border-white/10">
               <Droplet className="w-6 h-6 text-blue-500" strokeWidth={1.5} />
-              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Hard Water<br/>Defense</span>
+              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Hard Water<br/>(Khara Pani)</span>
             </div>
           </div>
 
@@ -157,7 +157,7 @@ export default function ProductPage() {
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE ANTIDOTE TO THE CITY</h3>
               <p>
-                <strong>Hair Elixir by ZULF</strong> is a clinical-grade botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to form an impenetrable shield against hard water and environmental stress.
+                <strong>Hair Elixir by ZULF</strong> is a clinical-grade botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to form a waterproof protective shield against hard water (Khara Pani) and environmental stress.
               </p>
             </div>
 
@@ -165,7 +165,7 @@ export default function ProductPage() {
             <div className="p-6 md:p-8 bg-white/5 border border-[#C5A46E]/30 rounded-xl">
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans uppercase">The Formulation Story</h3>
               <p className="italic text-white/90">
-                "When commercial oils failed to protect our hair from the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it forms an impenetrable lipid barrier against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
+                "When commercial oils failed to protect our hair from the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it forms a waterproof protective shield against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
               </p>
             </div>
 
@@ -183,7 +183,7 @@ export default function ProductPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1 font-bold">3.</span>
-                  <span><strong>The Rest:</strong> Leave it in overnight, or for at least 2 hours before washing. Use on alternate nights.</span>
+                  <span><strong>The Rest:</strong> Short on time? A targeted 30 to 60-minute pre-wash mask is highly effective. It absorbs quickly to form the protective shield, and washes out completely with a standard double-cleanse, leaving zero greasy residue.</span>
                 </li>
               </ul>
             </div>
@@ -209,7 +209,7 @@ export default function ProductPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Hard Water Defense:</strong> Creates a protective layer that blocks harsh water minerals from drying out and breaking your hair.</span>
+                  <span><strong className="text-white">Hard Water Defense (Khara Pani):</strong> Creates a waterproof protective shield that blocks harsh water minerals from drying out and breaking your hair.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
@@ -296,6 +296,14 @@ export default function ProductPage() {
                 <div className="border-b border-white/10 pb-4">
                   <h4 className="font-medium text-white mb-2">Will one bottle be enough?</h4>
                   <p className="text-sm text-white/70">One 100ml bottle typically lasts 4-6 weeks with regular use (alternate nights), making it an excellent value.</p>
+                </div>
+                <div className="border-b border-white/10 pb-4">
+                  <h4 className="font-medium text-white mb-2">Will it stain dyed hair or cause forehead breakouts?</h4>
+                  <p className="text-sm text-white/70">Pure mustard oil is naturally golden and highly rich. To prevent any tinting on light-colored hair and to avoid clogged pores on your forehead, apply the 6-8 drops <strong>directly to your scalp and roots only</strong>. It is designed to be a root defense system, not a full-length hair mask.</p>
+                </div>
+                <div className="pb-4">
+                  <h4 className="font-medium text-white mb-2">What is your Return Policy?</h4>
+                  <p className="text-sm text-white/70">Due to strict hygiene standards, we cannot accept standard returns on opened bottles. However, we stand entirely by our formulation. <strong>The 30-Day Root Guarantee:</strong> If you use ZULF consistently for 4 weeks and do not see a noticeable reduction in shedding, we will refund your money—even if the bottle is empty.</p>
                 </div>
               </div>
             </div>
