@@ -48,7 +48,7 @@ export default function ProductPage() {
             {activeIndex === 3 && (
               <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none">
                 <p className="text-white text-[22px] md:text-2xl font-serif font-medium leading-tight drop-shadow-lg">
-                  Week 1: Clears Scalp.<br/>Week 4: Stops Hairfall.
+                  Week 1: Scalp Detox.<br/>Week 4: Roots Anchor.
                 </p>
               </div>
             )}
@@ -88,9 +88,9 @@ export default function ProductPage() {
             <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-6 font-sans text-center">REAL RESULTS</h3>
             <div className="space-y-4">
               <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
-                <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
-                <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of the lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
-                <p className="text-xs text-white/50 uppercase tracking-widest">— Bushra</p>
+                <div className="flex text-[#C5A46E] mb-2">★★★★<span className="text-white/20">★</span></div>
+                <p className="text-sm text-white/80 mb-2">"It took about 3 weeks to see results, and the smell of real mustard oil takes getting used to. But my hair has finally stopped snapping. First oil that actually helps with Karachi water."</p>
+                <p className="text-xs text-white/50 uppercase tracking-widest">— Ayesha</p>
               </div>
               <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
                 <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
@@ -138,7 +138,7 @@ export default function ProductPage() {
           <div className="grid grid-cols-3 gap-2 py-6 border-y border-white/10 mb-10">
             <div className="flex flex-col items-center justify-center text-center space-y-2">
               <ShieldCheck className="w-6 h-6 text-red-500" strokeWidth={1.5} />
-              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Stops<br/>Hairfall</span>
+              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Reduces<br/>Shedding</span>
             </div>
             <div className="flex flex-col items-center justify-center text-center space-y-2 border-l border-white/10">
               <Leaf className="w-6 h-6 text-green-500" strokeWidth={1.5} />
@@ -155,9 +155,9 @@ export default function ProductPage() {
             
             {/* The Hook */}
             <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">YOUR CROWN DESERVES A RITUAL</h3>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE ANTIDOTE TO THE CITY</h3>
               <p>
-                <strong>Hair Elixir by ZULF</strong> is a 100% organic oil made to protect your hair. By mixing four of South Asia's most trusted natural ingredients, this oil stops hair fall, delays early white hair, and brings your hair back to life.
+                <strong>Hair Elixir by ZULF</strong> is a clinical-grade botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to form an impenetrable shield against hard water and environmental stress.
               </p>
             </div>
 
@@ -165,7 +165,7 @@ export default function ProductPage() {
             <div className="p-6 md:p-8 bg-white/5 border border-[#C5A46E]/30 rounded-xl">
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans uppercase">The Formulation Story</h3>
               <p className="italic text-white/90">
-                "ZULF was born from a very personal journey. When chemical shampoos failed to protect hair from the damage of harsh city water, we refused to compromise. We turned to the natural power of South Asian ingredients and spent months perfecting a 100% halal, wood-pressed elixir. It did not just stop the hair fall; it brought the hair back to life. We launched ZULF to share this standard of care with you."
+                "When commercial oils failed to protect our hair from the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it forms an impenetrable lipid barrier against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
               </p>
             </div>
 
@@ -194,11 +194,11 @@ export default function ProductPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="p-5 border border-white/10 rounded-lg">
                   <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 1</div>
-                  <p className="text-sm">Scalp detoxifies. Dandruff and itching significantly reduce. Hard water barrier forms.</p>
+                  <p className="text-sm">Mineral buildup begins to clear. Scalp breathes. Hydrophobic barrier forms against Khara Pani.</p>
                 </div>
                 <div className="p-5 border border-white/10 rounded-lg">
                   <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 4</div>
-                  <p className="text-sm">Roots anchor. Noticeable reduction in daily hairfall and shedding on the brush.</p>
+                  <p className="text-sm">Roots anchor. Noticeable reduction in environmental breakage and shedding on the brush.</p>
                 </div>
               </div>
             </div>
@@ -213,15 +213,15 @@ export default function ProductPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Stops Hairfall:</strong> Strengthens your hair roots to visibly stop shedding within weeks.</span>
+                  <span><strong className="text-white">Reduces Shedding:</strong> Strengthens your hair roots to visibly reduce breakage and shedding within weeks.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Delays Greying:</strong> Natural antioxidants nourish your scalp to help delay early white hair.</span>
+                  <span><strong className="text-white">Supports Scalp Longevity:</strong> Natural antioxidants soothe inflammation and maintain a healthy, balanced scalp environment.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Clears Dandruff:</strong> Cleans the scalp, clears stubborn dandruff, and stops itching immediately.</span>
+                  <span><strong className="text-white">Clears Mineral Buildup:</strong> Gently dissolves the calcification caused by hard water, relieving scalp irritation and flaking.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>

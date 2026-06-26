@@ -108,7 +108,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="text-[40px] sm:text-[46px] md:text-[52px] lg:text-[62px] leading-[0.95] tracking-[-2px] font-serif mb-4"
             >
-              Your Crown<br />Deserves a Ritual.
+              The Antidote<br />To The City.
             </motion.h1>
 
             <motion.p
@@ -117,8 +117,8 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, delay: 0.15 }}
               className="max-w-md text-[15px] md:text-base text-white/70 tracking-wide mb-8"
             >
-              Fortified with mustard oil, fenugreek, onion, and rosemary —<br className="hidden md:block" />
-              crafted for every crown that refuses to thin.
+              Engineered to defend your hair against Pakistan's harsh urban water.<br className="hidden md:block" />
+              Four ancestral ingredients, measured with clinical precision.
             </motion.p>
 
             <motion.div
@@ -145,7 +145,7 @@ export default function ZulfHomepage() {
           <div className="text-[#C5A46E] text-xs tracking-[3px] mb-4 uppercase">The Formulation Story</div>
           <h2 className="text-3xl md:text-5xl tracking-[-1px] font-serif mb-8">Born From Necessity.</h2>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            "ZULF was born from a very personal journey. When chemical shampoos failed to protect hair from the damage of harsh city water, we refused to compromise. We turned to the natural power of South Asian ingredients and spent months perfecting a 100% halal, wood-pressed elixir. It did not just stop the hair fall; it brought the hair back to life. We launched ZULF to share this standard of care with you."
+            "When commercial oils failed to protect our hair from the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it forms an impenetrable lipid barrier against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
           </p>
           <div className="mt-8 text-white/50 text-sm tracking-widest uppercase">— The Founders</div>
         </div>
@@ -158,8 +158,8 @@ export default function ZulfHomepage() {
             <div className="uppercase tracking-[3px] text-[#C5A46E] text-sm mb-3">BY ZULF</div>
             <h2 className="text-4xl md:text-6xl tracking-[-2px] font-serif leading-none mb-6 md:mb-8">Hair Elixir</h2>
             <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              A concentrated organic elixir formulated to address the root causes of hair fall —
-              weakened follicles, scalp inflammation, and nutrient deprivation.
+              A clinical-grade botanical defense system formulated to address the environmental causes of hair fall —
+              hard water mineral buildup, scalp inflammation, and structural breakage.
             </p>
             <Link href="/product" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW - Rs. 1,499</Link>
           </div>
@@ -194,10 +194,10 @@ export default function ZulfHomepage() {
                 <div className="p-7">
                   <h4 className="text-2xl font-serif tracking-tight mb-3">{item.name}</h4>
                   <p className="text-white/70 text-[15px]">
-                    {index === 0 && "Wood-pressed to preserve its full nutritional profile."}
-                    {index === 1 && "Rich in proteins traditionally used to support hair thickness."}
-                    {index === 2 && "Contains natural sulfur compounds known to support scalp health."}
-                    {index === 3 && "A powerful botanical with a long history of use for hair care."}
+                    {index === 0 && "Forms a hydrophobic lipid barrier to block hard water minerals from penetrating the hair shaft."}
+                    {index === 1 && "Rich in steroidal saponins that support follicle anchoring and structural strand strength."}
+                    {index === 2 && "High dietary sulfur content forms keratin disulfide bonds, halting environmental breakage."}
+                    {index === 3 && "Clinically backed vasodilatory properties to force microcirculation into blocked hair follicles."}
                   </p>
                 </div>
               </div>
@@ -213,9 +213,9 @@ export default function ZulfHomepage() {
          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { label: "PRIMARY BENEFIT", title: "Reduces Hairfall", desc: "Formulated to support the scalp and follicles — fenugreek and onion are traditionally used to help reduce the appearance of shedding with regular use." },
-              { label: "SCALP HEALTH", title: "Clears Dandruff & Itch", desc: "Rosemary has a long history of use for scalp comfort — many people find it soothing for an irritated scalp." },
-              { label: "ENVIRONMENTAL SHIELD", title: "Hard Water Defense", desc: "Forms a protective lipid barrier to lock out harsh groundwater minerals and prevent dry, snapping hair." }
+              { label: "PRIMARY DEFENSE", title: "Hard Water Shield", desc: "Forms an impenetrable lipid barrier to lock out harsh Khara Pani minerals and prevent dry, snapping hair." },
+              { label: "STRUCTURAL HEALTH", title: "Reduces Hairfall", desc: "Formulated to anchor the follicle — fenugreek and onion are traditionally used to help reduce shedding with regular use." },
+              { label: "SCALP DETOX", title: "Clears Dandruff & Itch", desc: "Rosemary has a long history of use for scalp comfort — many people find it instantly soothing for a mineral-irritated scalp." }
             ].map((item, i) => (
               <div key={i}>
                 <div className="text-[#C5A46E] text-xs tracking-[2.5px] mb-3">{item.label}</div>
