@@ -138,7 +138,7 @@ export default function ProductPage() {
           <div className="grid grid-cols-3 gap-2 py-6 border-y border-white/10 mb-10">
             <div className="flex flex-col items-center justify-center text-center space-y-2">
               <ShieldCheck className="w-6 h-6 text-red-500" strokeWidth={1.5} />
-              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Reduces<br/>Shedding</span>
+              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Stops<br/>Hairfall</span>
             </div>
             <div className="flex flex-col items-center justify-center text-center space-y-2 border-l border-white/10">
               <Leaf className="w-6 h-6 text-green-500" strokeWidth={1.5} />
@@ -198,7 +198,7 @@ export default function ProductPage() {
                 </div>
                 <div className="p-5 border border-white/10 rounded-lg">
                   <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 4</div>
-                  <p className="text-sm">Roots get stronger. Noticeable reduction in hairfall and shedding on the brush.</p>
+                  <p className="text-sm">Roots get stronger. Noticeable reduction in hairfall on the brush.</p>
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function ProductPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Stops Hairfall:</strong> Strengthens your hair roots to visibly reduce breakage and stop shedding within weeks.</span>
+                  <span><strong className="text-white">Stops Hairfall:</strong> Strengthens your hair roots to visibly reduce breakage and stop hairfall within weeks.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
@@ -308,7 +308,7 @@ export default function ProductPage() {
                 </div>
                 <div className="pb-4">
                   <h4 className="font-medium text-white mb-2">What is your Return Policy?</h4>
-                  <p className="text-sm text-white/70">Due to strict hygiene standards, we cannot accept standard returns on opened bottles. However, we stand entirely by our formulation. <strong>The 30-Day Root Guarantee:</strong> If you use ZULF consistently for 4 weeks and do not see a noticeable reduction in shedding, we will refund your money—even if the bottle is empty.</p>
+                  <p className="text-sm text-white/70">Due to strict hygiene standards, we cannot accept standard returns on opened bottles. However, we stand entirely by our formulation. <strong>The 30-Day Root Guarantee:</strong> If you use ZULF consistently for 4 weeks and do not see a noticeable reduction in hairfall, we will refund your money—even if the bottle is empty.</p>
                 </div>
               </div>
             </div>
