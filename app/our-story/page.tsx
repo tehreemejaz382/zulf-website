@@ -37,7 +37,7 @@ export default function OurStoryPage() {
         </p>
 
         <p>
-          We did not create something new. We took what had always worked and gave it the precision, the packaging, and the intentionality it deserved. A measured dropper. UV-protective glass. Wood-pressed oil to preserve every nutrient. Every decision was made to honour the ingredients and the ritual of care.
+          We did not create a chemical miracle. We took the four ancestral ingredients that had always worked, stripped away the cheap fillers, and gave them the absolute clinical precision they deserved. Wood-pressed extraction to preserve every nutrient. Zero water. Zero artificial fragrances. Every decision was made to defend your hair at the highest possible standard.
         </p>
 
         <p>
@@ -52,7 +52,7 @@ export default function OurStoryPage() {
       {/* Pull Quote */}
       <div className="my-16 text-center">
         <p className="text-2xl md:text-3xl font-serif tracking-tight text-[#C5A46E]">
-          “We gave Pakistan’s most trusted hair ingredients the packaging they always deserved.”
+          “No cheap fillers. No synthetic miracles. Just absolute botanical precision.”
         </p>
       </div>
 

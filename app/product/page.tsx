@@ -194,11 +194,11 @@ export default function ProductPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="p-5 border border-white/10 rounded-lg">
                   <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 1</div>
-                  <p className="text-sm">Mineral buildup begins to clear. Scalp breathes. Hydrophobic barrier forms against Khara Pani.</p>
+                  <p className="text-sm">Hard water buildup begins to clear. Scalp breathes. A waterproof protective shield forms against Khara Pani.</p>
                 </div>
                 <div className="p-5 border border-white/10 rounded-lg">
                   <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 4</div>
-                  <p className="text-sm">Roots anchor. Noticeable reduction in environmental breakage and shedding on the brush.</p>
+                  <p className="text-sm">Roots get stronger. Noticeable reduction in hairfall and shedding on the brush.</p>
                 </div>
               </div>
             </div>
