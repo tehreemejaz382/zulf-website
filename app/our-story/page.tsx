@@ -37,7 +37,7 @@ export default function OurStoryPage() {
         </p>
 
         <p>
-          We did not create a chemical miracle. We took the four ancestral ingredients that had always worked, stripped away the cheap fillers, and gave them the absolute clinical precision they deserved. Wood-pressed extraction to preserve every nutrient. Zero water. Zero artificial fragrances. Every decision was made to defend your hair at the highest possible standard.
+          We did not create a chemical miracle. We took the four ancestral ingredients that had always worked, stripped away the cheap fillers, and gave them the absolute botanical precision they deserved. Wood-pressed extraction to preserve every nutrient. Zero water. Zero artificial fragrances. Every decision was made to defend your hair at the highest possible standard.
         </p>
 
         <p>

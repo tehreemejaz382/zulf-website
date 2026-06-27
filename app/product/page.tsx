@@ -89,18 +89,13 @@ export default function ProductPage() {
             <div className="space-y-4">
               <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
                 <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
-                <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of the lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
+                <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of a lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
                 <p className="text-xs text-white/50 uppercase tracking-widest">— Bushra</p>
               </div>
               <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
                 <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
-                <p className="text-sm text-white/80 mb-2">"hair brush use krnay k bad mjhy boht tension hoti q ky brush bilkul balon sy bharr jata tha, aur mery sar py patches banna start hi gy, esy lagta tha jesy ma ganji hony wali hon. bohut sari chezen try krny k bad Zulf ka hair Elixir oil mila, isy use krny k bad esy lagta ha jesy kabhi kuch hua hi ni mery balon k sath. ab to har waqt balon ko dekh shukar parhti hun."</p>
+                <p className="text-sm text-white/80 mb-2">"I used to get so stressed after brushing my hair because the brush would be completely full of fallen hair. Patches even started forming on my scalp, and it felt like I was going bald. After trying so many things, I found ZULF Hair Elixir. Since using it, it feels as if nothing bad ever happened to my hair. Now, every time I look at my hair, I am so grateful."</p>
                 <p className="text-xs text-white/50 uppercase tracking-widest">— Tehreem</p>
-              </div>
-              <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
-                <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
-                <p className="text-sm text-white/80 mb-2">"Mujhy itna khas shoq ni ha hair care krny ka lekin mjhy dandruf ny bht tang kia hua tha. Ma ny market sy bht sy shampoo use kiye kafi salon tak, agar wo shampoo 1 y 2 week skip ho jayn to dandruf wapis a jata or layers ban jati han or ye 4 saal sy mjhy pareshan kiye huy ha. Lekin ye sary shampoo chor diye han jab sy Hair Elixir lagana start kia ha. Ab mjhy tasali ha."</p>
-                <p className="text-xs text-white/50 uppercase tracking-widest">— Talha</p>
               </div>
             </div>
           </div>
@@ -157,7 +152,7 @@ export default function ProductPage() {
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">STOP HAIRFALL. STRENGTHEN ROOTS.</h3>
               <p>
-                <strong>Hair Elixir by ZULF</strong> is a clinical-grade botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to visibly stop hairfall and form a waterproof protective shield against hard water (Khara Pani).
+                <strong>Hair Elixir by ZULF</strong> is a high-potency botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to visibly stop hairfall and form a waterproof protective shield against hard water (Khara Pani).
               </p>
             </div>
 
@@ -319,18 +314,13 @@ export default function ProductPage() {
               <div className="space-y-4">
                 <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
                   <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
-                  <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of the lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
+                  <p className="text-sm text-white/80 mb-2">"I am the mother of two kids and my hair was falling out in clumps because of a lot of reasons. This oil is the first thing that actually stopped it. My brush is finally clean."</p>
                   <p className="text-xs text-white/50 uppercase tracking-widest">— Bushra</p>
                 </div>
                 <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
                   <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
-                  <p className="text-sm text-white/80 mb-2">"hair brush use krnay k bad mjhy boht tension hoti q ky brush bilkul balon sy bharr jata tha, aur mery sar py patches banna start hi gy, esy lagta tha jesy ma ganji hony wali hon. bohut sari chezen try krny k bad Zulf ka hair Elixir oil mila, isy use krny k bad esy lagta ha jesy kabhi kuch hua hi ni mery balon k sath. ab to har waqt balon ko dekh shukar parhti hun."</p>
+                  <p className="text-sm text-white/80 mb-2">"I used to get so stressed after brushing my hair because the brush would be completely full of fallen hair. Patches even started forming on my scalp, and it felt like I was going bald. After trying so many things, I found ZULF Hair Elixir. Since using it, it feels as if nothing bad ever happened to my hair. Now, every time I look at my hair, I am so grateful."</p>
                   <p className="text-xs text-white/50 uppercase tracking-widest">— Tehreem</p>
-                </div>
-                <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
-                  <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
-                  <p className="text-sm text-white/80 mb-2">"Mujhy itna khas shoq ni ha hair care krny ka lekin mjhy dandruf ny bht tang kia hua tha. Ma ny market sy bht sy shampoo use kiye kafi salon tak, agar wo shampoo 1 y 2 week skip ho jayn to dandruf wapis a jata or layers ban jati han or ye 4 saal sy mjhy pareshan kiye huy ha. Lekin ye sary shampoo chor diye han jab sy Hair Elixir lagana start kia ha. Ab mjhy tasali ha."</p>
-                  <p className="text-xs text-white/50 uppercase tracking-widest">— Talha</p>
                 </div>
               </div>
             </div>

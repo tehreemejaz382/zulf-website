@@ -117,7 +117,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, delay: 0.15 }}
               className="max-w-md text-[15px] md:text-base text-white/70 tracking-wide mb-8"
             >
-              A clinical-grade formula engineered to visibly stop hairfall and defend against Pakistan's harsh urban water (Khara Pani).
+              A high-potency formula engineered to visibly stop hairfall and defend against Pakistan's harsh urban water (Khara Pani).
             </motion.p>
 
             <motion.div
@@ -157,7 +157,7 @@ export default function ZulfHomepage() {
             <div className="uppercase tracking-[3px] text-[#C5A46E] text-sm mb-3">BY ZULF</div>
             <h2 className="text-4xl md:text-6xl tracking-[-2px] font-serif leading-none mb-6 md:mb-8">Hair Elixir</h2>
             <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              A clinical-grade botanical defense system formulated to address the environmental causes of hair fall —
+              A high-potency botanical defense system formulated to address the environmental causes of hair fall —
               hard water mineral buildup, scalp inflammation, and structural breakage.
             </p>
             <Link href="/product" className="btn-gold tracking-[2px] px-9 py-4">SHOP NOW - Rs. 1,499</Link>
