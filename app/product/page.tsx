@@ -104,7 +104,7 @@ export default function ProductPage() {
         {/* Product Info */}
         <div className="flex flex-col">
           <h1 className="text-3xl md:text-5xl tracking-[-1.5px] font-serif mb-2">Hair Elixir by ZULF</h1>
-          <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Organic • Handcrafted in Pakistan</p>
+          <p className="text-[#C5A46E] tracking-[2px] text-sm mb-6">100ml • Pure • Handcrafted in Pakistan</p>
 
           <div className="text-3xl font-medium mb-6 flex items-center gap-3">
             <span className="line-through text-white/50 text-2xl">Rs. 1,999</span>
@@ -133,11 +133,11 @@ export default function ProductPage() {
           <div className="grid grid-cols-3 gap-2 py-6 border-y border-white/10 mb-10">
             <div className="flex flex-col items-center justify-center text-center space-y-2">
               <ShieldCheck className="w-6 h-6 text-red-500" strokeWidth={1.5} />
-              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Stops<br/>Hairfall</span>
+              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Targets<br/>Hairfall</span>
             </div>
             <div className="flex flex-col items-center justify-center text-center space-y-2 border-l border-white/10">
               <Leaf className="w-6 h-6 text-green-500" strokeWidth={1.5} />
-              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">100%<br/>Organic</span>
+              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">100%<br/>Natural</span>
             </div>
             <div className="flex flex-col items-center justify-center text-center space-y-2 border-l border-white/10">
               <Droplet className="w-6 h-6 text-blue-500" strokeWidth={1.5} />
@@ -152,7 +152,7 @@ export default function ProductPage() {
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">TARGET HAIRFALL. STRENGTHEN ROOTS.</h3>
               <p>
-                <strong>Hair Elixir by ZULF</strong> is a high-potency botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to visibly stop hairfall and form a waterproof protective shield against hard water (Khara Pani).
+                <strong>Hair Elixir by ZULF</strong> is a high-potency botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to target the root causes of hairfall and form a protective defensive layer against hard water (Khara Pani).
               </p>
             </div>
 
@@ -178,7 +178,7 @@ export default function ProductPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1 font-bold">3.</span>
-                  <span><strong>The Rest:</strong> Short on time? A targeted 30 to 60-minute pre-wash mask is highly effective. It absorbs quickly to form the protective shield, and washes out completely with a standard double-cleanse, leaving zero greasy residue.</span>
+                  <span><strong>The Rest:</strong> Short on time? A targeted 30 to 60-minute pre-wash mask is highly effective. It absorbs quickly to form a protective layer, and washes out completely with a standard double-cleanse, leaving zero greasy residue.</span>
                 </li>
               </ul>
             </div>
@@ -189,7 +189,7 @@ export default function ProductPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="p-5 border border-white/10 rounded-lg">
                   <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 1</div>
-                  <p className="text-sm">Hard water buildup begins to clear. Scalp breathes. A waterproof protective shield forms against Khara Pani.</p>
+                  <p className="text-sm">Scalp breathes. The lipid barrier begins to restore. A protective defensive layer begins forming against Khara Pani mineral damage.</p>
                 </div>
                 <div className="p-5 border border-white/10 rounded-lg">
                   <div className="text-[#C5A46E] font-serif text-xl mb-2">Week 4</div>
@@ -204,11 +204,11 @@ export default function ProductPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Stops Hairfall:</strong> Strengthens your hair roots to visibly reduce breakage and stop hairfall within weeks.</span>
+                  <span><strong className="text-white">Targets Hairfall:</strong> Strengthens your hair roots to visibly reduce breakage and support a noticeable reduction in hairfall with consistent use.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Hard Water Defense (Khara Pani):</strong> Creates a waterproof protective shield that blocks harsh water minerals from drying out and breaking your hair.</span>
+                  <span><strong className="text-white">Hard Water Defense (Khara Pani):</strong> Forms a protective defensive layer that helps defend against harsh water minerals — reducing dryness and breakage caused by Khara Pani.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
@@ -216,7 +216,7 @@ export default function ProductPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Clears Mineral Buildup:</strong> Gently dissolves the calcification caused by hard water, relieving scalp irritation and flaking.</span>
+                  <span><strong className="text-white">Defends Against Mineral Damage:</strong> Natural antioxidants neutralise the oxidative damage caused by hard water minerals, relieving scalp irritation and flaking.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
