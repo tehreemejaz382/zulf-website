@@ -150,7 +150,7 @@ export default function ProductPage() {
             
             {/* The Hook */}
             <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">STOP HAIRFALL. STRENGTHEN ROOTS.</h3>
+              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">TARGET HAIRFALL. STRENGTHEN ROOTS.</h3>
               <p>
                 <strong>Hair Elixir by ZULF</strong> is a high-potency botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to visibly stop hairfall and form a waterproof protective shield against hard water (Khara Pani).
               </p>
@@ -160,7 +160,7 @@ export default function ProductPage() {
             <div className="p-6 md:p-8 bg-white/5 border border-[#C5A46E]/30 rounded-xl">
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans uppercase">The Formulation Story</h3>
               <p className="italic text-white/90">
-                "When commercial oils failed to stop our hair from falling out due to the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it stops hairfall at the root and forms a waterproof protective shield against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
+                "When commercial oils failed to stop our hair from falling out due to the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it targets hairfall at the root and forms a protective defensive layer against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
               </p>
             </div>
 

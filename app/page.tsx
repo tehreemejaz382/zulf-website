@@ -108,7 +108,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="text-[40px] sm:text-[46px] md:text-[52px] lg:text-[62px] leading-[0.95] tracking-[-2px] font-serif mb-4"
             >
-              Stop Hairfall.<br />Strengthen Roots.
+              Target Hairfall.<br />Strengthen Roots.
             </motion.h1>
 
             <motion.p
@@ -117,7 +117,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, delay: 0.15 }}
               className="max-w-md text-[15px] md:text-base text-white/70 tracking-wide mb-8"
             >
-              A high-potency formula engineered to visibly stop hairfall and defend against Pakistan's harsh urban water (Khara Pani).
+              A high-potency formula crafted to target the root causes of hairfall and defend against Pakistan's harsh urban water (Khara Pani).
             </motion.p>
 
             <motion.div
@@ -144,7 +144,7 @@ export default function ZulfHomepage() {
           <div className="text-[#C5A46E] text-xs tracking-[3px] mb-4 uppercase">The Formulation Story</div>
           <h2 className="text-3xl md:text-5xl tracking-[-1px] font-serif mb-8">Born From Necessity.</h2>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-            "When commercial oils failed to stop our hair from falling out due to the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it stops hairfall at the root and forms a waterproof protective shield against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
+            "When commercial oils failed to stop our hair from falling out due to the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it targets hairfall at the root and forms a protective defensive layer against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
           </p>
           <div className="mt-8 text-white/50 text-sm tracking-widest uppercase">— The Founders</div>
         </div>
@@ -193,10 +193,10 @@ export default function ZulfHomepage() {
                 <div className="p-7">
                   <h4 className="text-2xl font-serif tracking-tight mb-3">{item.name}</h4>
                   <p className="text-white/70 text-[15px]">
-                    {index === 0 && "Forms a waterproof protective shield to block hard water (Khara Pani) minerals from penetrating the hair shaft."}
-                    {index === 1 && "Naturally rich in proteins that anchor hair roots firmly to the scalp, visibly stopping premature shedding."}
-                    {index === 2 && "Packed with natural sulfur, which rebuilds broken hair bonds and stops strands from snapping."}
-                    {index === 3 && "Proven to boost blood flow directly to the roots, waking up tired follicles and soothing the scalp."}
+                    {index === 0 && "Restores the scalp's natural lipid barrier — forming a protective layer that helps defend the hair shaft against hard water (Khara Pani) mineral damage."}
+                    {index === 1 && "Naturally rich in proteins that nourish and strengthen hair roots, helping reduce premature hairfall."}
+                    {index === 2 && "Packed with natural sulfur compounds that support keratin structure and help reduce strand breakage."}
+                    {index === 3 && "Studied for its ability to boost blood flow to the roots, supporting tired follicles and soothing the scalp."}
                   </p>
                 </div>
               </div>
@@ -212,8 +212,8 @@ export default function ZulfHomepage() {
          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { label: "STRUCTURAL HEALTH", title: "Stops Hairfall", desc: "Strengthens hair from the roots. Fenugreek and onion work together to visibly stop hair from falling out." },
-              { label: "PRIMARY DEFENSE", title: "Hard Water (Khara Pani) Shield", desc: "Forms a waterproof protective shield to lock out harsh minerals and prevent dry, snapping hair." },
+              { label: "STRUCTURAL HEALTH", title: "Stops Hairfall", desc: "Strengthens hair from the roots. Fenugreek and onion work together to target the structural causes of hairfall." },
+              { label: "PRIMARY DEFENSE", title: "Hard Water (Khara Pani) Shield", desc: "Forms a protective defensive layer that helps defend against harsh minerals and prevent dry, snapping hair." },
               { label: "SCALP DETOX", title: "Clears Dandruff & Itch", desc: "Rosemary has a long history of use for scalp comfort — many people find it instantly soothing for a mineral-irritated scalp." }
             ].map((item, i) => (
               <div key={i}>
