@@ -108,7 +108,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="text-[40px] sm:text-[46px] md:text-[52px] lg:text-[62px] leading-[0.95] tracking-[-2px] font-serif mb-4"
             >
-              Target Hairfall.<br />Strengthen Roots.
+              Reduce Hairfall.<br />Strengthen Roots.
             </motion.h1>
 
             <motion.p
@@ -117,7 +117,7 @@ export default function ZulfHomepage() {
               transition={{ duration: 0.9, delay: 0.15 }}
               className="max-w-md text-[15px] md:text-base text-white/70 tracking-wide mb-8"
             >
-              A high-potency formula crafted to target the root causes of hairfall and defend against Pakistan's harsh urban water (Khara Pani).
+              A high-potency formula crafted to help reduce hairfall and defend against Pakistan's harsh urban water (Khara Pani).
             </motion.p>
 
             <motion.div
@@ -212,7 +212,7 @@ export default function ZulfHomepage() {
          
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { label: "STRUCTURAL HEALTH", title: "Stops Hairfall", desc: "Strengthens hair from the roots. Fenugreek and onion work together to target the structural causes of hairfall." },
+              { label: "STRUCTURAL HEALTH", title: "Reduces Hairfall", desc: "Strengthens hair from the roots. Fenugreek and onion work together to help reduce hairfall." },
               { label: "PRIMARY DEFENSE", title: "Hard Water (Khara Pani) Shield", desc: "Forms a protective defensive layer that helps defend against harsh minerals and prevent dry, snapping hair." },
               { label: "SCALP DETOX", title: "Clears Dandruff & Itch", desc: "Rosemary has a long history of use for scalp comfort — many people find it instantly soothing for a mineral-irritated scalp." }
             ].map((item, i) => (

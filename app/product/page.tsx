@@ -133,7 +133,7 @@ export default function ProductPage() {
           <div className="grid grid-cols-3 gap-2 py-6 border-y border-white/10 mb-10">
             <div className="flex flex-col items-center justify-center text-center space-y-2">
               <ShieldCheck className="w-6 h-6 text-red-500" strokeWidth={1.5} />
-              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Targets<br/>Hairfall</span>
+              <span className="text-[10px] md:text-xs text-white/80 tracking-widest uppercase font-medium">Reduces<br/>Hairfall</span>
             </div>
             <div className="flex flex-col items-center justify-center text-center space-y-2 border-l border-white/10">
               <Leaf className="w-6 h-6 text-green-500" strokeWidth={1.5} />
@@ -152,7 +152,7 @@ export default function ProductPage() {
             <div>
               <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">TARGET HAIRFALL. STRENGTHEN ROOTS.</h3>
               <p>
-                <strong>Hair Elixir by ZULF</strong> is a high-potency botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to target the root causes of hairfall and form a protective defensive layer against hard water (Khara Pani).
+                <strong>Hair Elixir by ZULF</strong> is a high-potency botanical defense system. We take four ancestral ingredients, strip away the chemical fillers, and measure them with precision to help reduce hairfall and form a protective defensive layer against hard water (Khara Pani).
               </p>
             </div>
 
@@ -204,7 +204,7 @@ export default function ProductPage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Targets Hairfall:</strong> Strengthens your hair roots to visibly reduce breakage and support a noticeable reduction in hairfall with consistent use.</span>
+                  <span><strong className="text-white">Reduces Hairfall:</strong> Strengthens your hair roots to visibly reduce breakage and support a noticeable reduction in hairfall with consistent use.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
