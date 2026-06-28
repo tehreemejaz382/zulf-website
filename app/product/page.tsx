@@ -156,32 +156,7 @@ export default function ProductPage() {
               </p>
             </div>
 
-            {/* The Formulation Story */}
-            <div className="p-6 md:p-8 bg-white/5 border border-[#C5A46E]/30 rounded-xl">
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans uppercase">The Formulation Story</h3>
-              <p className="italic text-white/90">
-                "When commercial oils failed to stop our hair from falling out due to the heavy mineral damage of Pakistan's city tap water, we stopped looking for new inventions and returned to what generations before us trusted. We spent months perfecting a wood-pressed, zero-filler formulation that doesn’t just nourish the scalp—it targets hairfall at the root and forms a protective defensive layer against hard water (Khara Pani). We didn't create a miracle. We created a defense system."
-              </p>
-            </div>
 
-            {/* The Ritual (How to Use) */}
-            <div>
-              <h3 className="text-[#C5A46E] tracking-[2px] text-sm mb-4 font-sans">THE RITUAL (HOW TO USE)</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#C5A46E] mt-1 font-bold">1.</span>
-                  <span><strong>The Drop:</strong> Apply 6-8 drops directly to the scalp, focusing on thinning areas.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#C5A46E] mt-1 font-bold">2.</span>
-                  <span><strong>The Massage:</strong> Gently massage with your fingertips for 3-5 minutes to stimulate blood flow.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#C5A46E] mt-1 font-bold">3.</span>
-                  <span><strong>The Rest:</strong> Short on time? A targeted 30 to 60-minute pre-wash mask is highly effective. It absorbs quickly to form a protective layer, and washes out completely with a standard double-cleanse, leaving zero greasy residue.</span>
-                </li>
-              </ul>
-            </div>
 
             {/* Timeline */}
             <div>
