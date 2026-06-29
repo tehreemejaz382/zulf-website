@@ -97,6 +97,11 @@ export default function ProductPage() {
                 <p className="text-sm text-white/80 mb-2">"I used to get so stressed after brushing my hair because the brush would be completely full of fallen hair. Patches even started forming on my scalp, and it felt like I was going bald. After trying so many things, I found ZULF Hair Elixir. Since using it, it feels as if nothing bad ever happened to my hair. Now, every time I look at my hair, I am so grateful."</p>
                 <p className="text-xs text-white/50 uppercase tracking-widest">— Tehreem</p>
               </div>
+              <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
+                <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                <p className="text-sm text-white/80 mb-2">"After using zulfhair oil my my hair fall reduced. I felt prominent reduced of dandruff..it moisturize my dry scalp and reduced itching..an exceptional result was it also help to minimize head lices😊😊"</p>
+                <p className="text-xs text-white/50 uppercase tracking-widest">— EQRA. H</p>
+              </div>
             </div>
           </div>
         </div>
@@ -296,6 +301,11 @@ export default function ProductPage() {
                   <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
                   <p className="text-sm text-white/80 mb-2">"I used to get so stressed after brushing my hair because the brush would be completely full of fallen hair. Patches even started forming on my scalp, and it felt like I was going bald. After trying so many things, I found ZULF Hair Elixir. Since using it, it feels as if nothing bad ever happened to my hair. Now, every time I look at my hair, I am so grateful."</p>
                   <p className="text-xs text-white/50 uppercase tracking-widest">— Tehreem</p>
+                </div>
+                <div className="p-6 bg-[#050505] border border-white/10 rounded-xl">
+                  <div className="flex text-[#C5A46E] mb-2">★★★★★</div>
+                  <p className="text-sm text-white/80 mb-2">"After using zulfhair oil my my hair fall reduced. I felt prominent reduced of dandruff..it moisturize my dry scalp and reduced itching..an exceptional result was it also help to minimize head lices😊😊"</p>
+                  <p className="text-xs text-white/50 uppercase tracking-widest">— EQRA. H</p>
                 </div>
               </div>
             </div>
