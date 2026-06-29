@@ -196,7 +196,7 @@ export default function ProductPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
-                  <span><strong className="text-white">Defends Against Mineral Damage:</strong> Natural antioxidants neutralise the oxidative damage caused by hard water minerals, relieving scalp irritation and flaking.</span>
+                  <span><strong className="text-white">Soothes Scalp Stress:</strong> Natural antioxidants help calm the irritation and flaking that come with daily hard water exposure.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">✓</span>
@@ -219,11 +219,11 @@ export default function ProductPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">•</span>
-                  <span><strong className="text-white">Onion:</strong> Naturally cleans the scalp and helps delay hair aging.</span>
+                  <span><strong className="text-white">Onion:</strong> Naturally cleans the scalp and supports a healthier follicle environment.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#C5A46E] mt-1">•</span>
-                  <span><strong className="text-white">Rosemary:</strong> A famous natural herb proven to soothe the scalp and promote thicker hair.</span>
+                  <span><strong className="text-white">Rosemary:</strong> A well-studied herb known to soothe the scalp and support thicker-looking hair over time.</span>
                 </li>
               </ul>
             </div>
