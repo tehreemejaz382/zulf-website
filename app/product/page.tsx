@@ -103,6 +103,9 @@ export default function ProductPage() {
                 <p className="text-xs text-white/50 uppercase tracking-widest">— EQRA. H</p>
               </div>
             </div>
+            <p className="text-[11px] text-white/40 text-center mt-6 tracking-wide leading-relaxed">
+              * Individual results may vary. These are real customer experiences shared with their permission — not guaranteed outcomes.
+            </p>
           </div>
         </div>
 
